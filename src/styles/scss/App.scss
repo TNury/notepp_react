@@ -1,0 +1,22 @@
+@use '../assets/variables/_colors.scss' as *;
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: Iosevka;
+  font-weight: 100;
+}
+
+body {
+  padding: 0;
+  background-color: $bg-primary;
+}
+
+// main {
+//   height: 100%;
+//   margin-left: 5rem;
+//   display: flex;
+//   flex-direction: row;
+// }

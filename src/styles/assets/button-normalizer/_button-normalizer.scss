@@ -1,0 +1,26 @@
+@use '../variables/colors' as *;
+
+
+.button {
+  border: none;
+  outline: none;
+  background: none;
+  // fill: $text-secondary;
+  color: $text-secondary;
+  transition: 600ms;
+
+  svg {
+    fill: $text-secondary;
+    transition: 600ms;
+  }
+  
+  &:hover {
+    cursor: pointer;
+    color: $text-primary;
+
+    svg {
+      fill: $text-primary;
+    }
+  }
+}
+
