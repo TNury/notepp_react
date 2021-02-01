@@ -1,0 +1,52 @@
+@use '../../assets/variables/_colors.scss' as *;
+@use '../../assets/button-normalizer/_button-normalizer.scss' as *;
+
+.note {
+  width: 70vw;
+  height: 100vh;
+  padding: 2rem;
+  background-color: #0f111f;
+  box-sizing: border-box;
+
+  textarea {
+    resize: none;
+    border: none;  
+    outline: none;
+    background: inherit;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+
+    &::placeholder {
+      color: $text-placeholder;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $text-primary;
+  }
+
+  &__body {
+    font-size: 1.5rem;
+    color: $text-secondary;
+    height: 85%;
+  }
+  
+
+  &-save {
+    @extend .button;
+    position: fixed; 
+    bottom: 0; 
+    right: 1%;
+    border-radius: 25px;
+    font-size: 1.8rem;
+    padding: 10px;
+
+    svg {
+      max-width: 2rem;
+      min-width: 2rem;
+      pointer-events: none;
+    }
+  }
+}
