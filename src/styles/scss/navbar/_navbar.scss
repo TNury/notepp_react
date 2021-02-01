@@ -1,0 +1,65 @@
+@use '../../assets/variables/_colors.scss' as *;
+
+.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  transition: .2s;
+  background-color: $bg-primary;
+
+  // LOGO STYLES
+
+  &-item:first-child {
+    width: 100%;
+
+    .navbar-button {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .navbar-text {
+      font-size: 1.5rem;  
+      font-weight: 400;
+      font-family: 'Futura';
+      letter-spacing: 0.2ch;
+      transition: .2s;
+      text-transform: uppercase;
+    }
+  }
+
+  // ICON STYLES
+
+  &-icon {
+    min-width: 2rem;
+    max-width: 2rem;
+    margin: .5rem 1.15rem 0 1.15rem;
+    transition: 600ms;
+  }
+
+  // TEXT STYLES
+
+  &-text {
+    visibility: hidden;
+    margin-left: 1.5rem;
+  }
+
+  // HOVER ANIMATION
+
+  &:hover {
+    width: 14rem;
+
+    @keyframes fadein {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+
+    .navbar-text {
+      animation: fadein 600ms;
+      visibility: visible;
+    }
+  }
+}
