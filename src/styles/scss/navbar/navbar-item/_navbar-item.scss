@@ -1,0 +1,11 @@
+.navbar-item {
+  width: 100%;
+
+  &:nth-last-child(2) {
+    margin-top: auto;
+  }
+
+  &:nth-child(2) {
+    margin-top: 1rem;
+  }
+}
