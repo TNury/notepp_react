@@ -1,7 +1,7 @@
 // LIBRARIES
 import React from 'react-dom';
 
-function Icon({icon}) {
+function Icon({ icon }) {
   if (icon === "logo") {
     return (
       <g>
