@@ -1,0 +1,15 @@
+@use '../../../assets//button-normalizer/button-normalizer.scss' as *;
+@use '../../../assets/variables/_colors.scss' as *;
+
+.navbar-button {
+  @extend .button;
+  width: 100%;
+  height: 5rem;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $bg-tertiary;
+  }
+}
