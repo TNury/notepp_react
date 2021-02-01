@@ -373,7 +373,7 @@ template {
 .navbar-icon {
   min-width: 2rem;
   max-width: 2rem;
-  margin: 0.5rem 1.15rem 0 1.15rem;
+  margin: 0 1.15rem;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
@@ -406,6 +406,10 @@ template {
   -webkit-animation: fadein 600ms;
           animation: fadein 600ms;
   visibility: visible;
+}
+.navbar:hover .navbar-item:first-child svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .navbar-items {
@@ -470,6 +474,143 @@ template {
   margin-top: 1rem;
 }
 
+.button, .note-save, .notes-create {
+  border: none;
+  outline: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+.button svg, .note-save svg, .notes-create svg {
+  fill: #8f93a2;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+.button:hover, .note-save:hover, .notes-create:hover {
+  cursor: pointer;
+  color: #FEFEFE;
+}
+.button:hover svg, .note-save:hover svg, .notes-create:hover svg {
+  fill: #FEFEFE;
+}
+
+.notes {
+  width: 30vw;
+  height: 100vh;
+  padding: 0;
+  overflow: auto;
+  background-color: #1B2C33;
+}
+.notes::-webkit-scrollbar {
+  width: 0.35rem;
+}
+.notes::-webkit-scrollbar-track {
+  background-color: #1B2C33;
+}
+.notes::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #FEFEFE;
+}
+.notes-prev {
+  height: 5rem;
+  padding: 1rem;
+  color: #FEFEFE;
+  background-color: rgba(254, 254, 254, 0.2);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.notes-prev p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.notes-prev .notes-prev__title {
+  margin: 0;
+}
+.notes-prev .notes-prev__body {
+  color: #8f93a2;
+}
+.notes-prev:hover {
+  cursor: pointer;
+  background-color: rgba(254, 254, 254, 0.3);
+}
+.notes__line {
+  margin: 0.5rem;
+  color: #8f93a2;
+}
+.notes-create {
+  position: fixed;
+  bottom: 0;
+  left: 29%;
+  padding: 10px;
+  border-radius: 25px;
+}
+.notes-create svg {
+  position: relative;
+  min-width: 2.5rem;
+  max-width: 2.5rem;
+  fill: #8f93a2;
+  pointer-events: none;
+}
+
+.note {
+  width: 70vw;
+  height: 100vh;
+  padding: 2rem;
+  background-color: #0f111f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.note textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  background: inherit;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+.note textarea::-webkit-input-placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note textarea::-moz-placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note textarea:-ms-input-placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note textarea::-ms-input-placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note textarea::placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note__title {
+  font-size: 2rem;
+  color: #FEFEFE;
+}
+.note__body {
+  font-size: 1.5rem;
+  color: #8f93a2;
+  height: 85%;
+}
+.note-save {
+  position: fixed;
+  bottom: 0;
+  right: 1%;
+  border-radius: 25px;
+  font-size: 1.8rem;
+  padding: 10px;
+}
+.note-save svg {
+  max-width: 2rem;
+  min-width: 2rem;
+  pointer-events: none;
+}
+
 :root {
   font-size: 16px;
 }
@@ -482,4 +623,16 @@ template {
 body {
   padding: 0;
   background-color: #23354A;
+}
+
+main {
+  height: 100vh;
+  margin-left: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
