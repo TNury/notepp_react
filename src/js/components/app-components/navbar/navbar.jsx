@@ -11,6 +11,7 @@ function Navbar() {
         <NavbarItem text="Notes" icon="notes"/>
         <NavbarItem text="Search" icon="search"/>
         <NavbarItem text="Themes" icon="themes"/>
+        <NavbarItem text="About" icon="about"/>
         <NavbarItem text="Logout" icon="logout"/>
         <NavbarItem text="Configs" icon="configs"/>
       </div>
