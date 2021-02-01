@@ -1,8 +1,12 @@
+// LIBRARIES
 import React from 'react';
 import ReactDOM from 'react-dom';
+// STYLES
 import './styles/css/index.css';
+// COMPONENTS
 import App from './js/App.js';
-import reportWebVitals from './js/app_testing/web_vitals/reportWebVitals';
+// PERFORMANCE MEASURING
+import reportWebVitals from './js/web_vitals/reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
