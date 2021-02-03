@@ -1,8 +1,8 @@
-@use '../../../assets//button-normalizer/_button-normalizer.scss' as *;
+@use '../../../assets/mixins/_mixins.scss' as *;
 @use '../../../assets/variables/_colors.scss' as *;
 
 .navbar-button {
-  @extend .button;
+  @include button-styles;
   width: 100%;
   height: 5rem;
   background-color: inherit;
