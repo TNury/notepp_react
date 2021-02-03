@@ -362,7 +362,7 @@ template {
           flex-direction: row-reverse;
 }
 .navbar-item:first-child .navbar-text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   font-family: "Futura";
   letter-spacing: 0.2ch;
@@ -370,12 +370,14 @@ template {
   transition: 0.2s;
   text-transform: uppercase;
 }
+.navbar-item:first-child i {
+  font-size: 2.5rem;
+}
 .navbar-icon {
-  min-width: 2rem;
-  max-width: 2rem;
+  font-size: 2rem;
   margin: 0 1.15rem;
-  -webkit-transition: 600ms;
-  transition: 600ms;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 .navbar-text {
   font-family: Gill Sans;
@@ -407,7 +409,7 @@ template {
           animation: fadein 600ms;
   visibility: visible;
 }
-.navbar:hover .navbar-item:first-child svg {
+.navbar:hover .navbar-item:first-child i {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -428,28 +430,13 @@ template {
           align-items: center;
 }
 
-.button, .navbar-button {
+.navbar-button {
   border: none;
   outline: none;
   background: none;
   color: #8f93a2;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-.button svg, .navbar-button svg {
-  fill: #8f93a2;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-.button:hover, .navbar-button:hover {
-  cursor: pointer;
-  color: #FEFEFE;
-}
-.button:hover svg, .navbar-button:hover svg {
-  fill: #FEFEFE;
-}
-
-.navbar-button {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   width: 100%;
   height: 5rem;
   background-color: inherit;
@@ -459,6 +446,10 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.navbar-button:hover {
+  cursor: pointer;
+  color: #FEFEFE;
 }
 .navbar-button:hover {
   background-color: #23354A;
@@ -472,27 +463,6 @@ template {
 }
 .navbar-item:nth-child(2) {
   margin-top: 1rem;
-}
-
-.button, .note-save, .notes-create {
-  border: none;
-  outline: none;
-  background: none;
-  color: #8f93a2;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-.button svg, .note-save svg, .notes-create svg {
-  fill: #8f93a2;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-.button:hover, .note-save:hover, .notes-create:hover {
-  cursor: pointer;
-  color: #FEFEFE;
-}
-.button:hover svg, .note-save:hover svg, .notes-create:hover svg {
-  fill: #FEFEFE;
 }
 
 .notes {
@@ -509,7 +479,7 @@ template {
   background-color: #1B2C33;
 }
 .notes::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background-color: #FEFEFE;
 }
 .notes-prev {
@@ -526,10 +496,10 @@ template {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.notes-prev .notes-prev__title {
+.notes-prev__title {
   margin: 0;
 }
-.notes-prev .notes-prev__body {
+.notes-prev__body {
   color: #8f93a2;
 }
 .notes-prev:hover {
@@ -541,17 +511,23 @@ template {
   color: #8f93a2;
 }
 .notes-create {
+  border: none;
+  outline: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 1rem;
   position: fixed;
   bottom: 0;
   left: 29%;
-  padding: 10px;
-  border-radius: 25px;
 }
-.notes-create svg {
-  position: relative;
-  min-width: 2.5rem;
-  max-width: 2.5rem;
-  fill: #8f93a2;
+.notes-create:hover {
+  cursor: pointer;
+  color: #FEFEFE;
+}
+.notes-create i {
+  font-size: 2rem;
   pointer-events: none;
 }
 
@@ -598,16 +574,23 @@ template {
   height: 85%;
 }
 .note-save {
+  border: none;
+  outline: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 1rem;
   position: fixed;
   bottom: 0;
-  right: 1%;
-  border-radius: 25px;
-  font-size: 1.8rem;
-  padding: 10px;
+  right: 0;
 }
-.note-save svg {
-  max-width: 2rem;
-  min-width: 2rem;
+.note-save:hover {
+  cursor: pointer;
+  color: #FEFEFE;
+}
+.note-save i {
+  font-size: 2rem;
   pointer-events: none;
 }
 
