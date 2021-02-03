@@ -1,0 +1,18 @@
+@use '../../assets/normalizer/_normalizer.scss' as *;
+@use '../../assets/variables/_colors.scss' as *;
+@use './navbar/_navbar.scss' as *;
+@use './content/content.styles' as *;
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: Iosevka;
+  font-weight: 100;
+}
+
+body {
+  padding: 0;
+  background-color: $bg-primary;
+}

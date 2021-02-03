@@ -1,0 +1,46 @@
+@use '../../../assets/variables/_colors.scss' as *;
+
+.header {
+  background-color: $bg-tertiary;
+}
+
+.navbar {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  background-color: inherit;
+
+  &__link {
+    color: $text-primary;
+    text-decoration: none;
+  }
+
+  a:nth-last-child(2) {
+    margin-left: auto;
+  }
+
+  a:last-child {
+    margin-left: 1rem;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    font-family: Futura;
+    text-transform: uppercase;
+  }
+
+  &__login {
+    font-size: 1.1rem;
+    background-color: $bg-quaternary;
+    border: 1px solid $text-primary;
+    padding: 1rem;
+    transition: 600ms;
+
+    &:hover {
+      background: $bg-quaternary-hv;
+    }
+  }
+}
