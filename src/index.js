@@ -6,7 +6,7 @@ import './styles/css/index.css';
 // COMPONENTS
 import {App} from './js/App.js';
 // PERFORMANCE MEASURING
-import reportWebVitals from './js/web_vitals/reportWebVitals';
+import reportWebVitals from './js/Tools/reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
