@@ -1,7 +1,10 @@
+// FIREBASE IMPORT
 import firebase from 'firebase/app';
+// FIREBASE LIBRARIES
 import 'firebase/firestore';
 import 'firebase/firebase-auth';
 
+// FIREBASE API KEY
 const firebaseConfig = {
   apiKey: "AIzaSyBzrmbvQJ3tEfoPj-H1_ArpkK0gWQX1pKs",
   authDomain: "notepp-react.firebaseapp.com",
