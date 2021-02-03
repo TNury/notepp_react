@@ -1,17 +1,19 @@
 // LIBRARIES
-import React from 'react';
-import ReactDOM from 'react-dom';
+import {React} from 'react';
+import {ReactDOM} from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
 // STYLES
 import './styles/css/index.css';
 // COMPONENTS
-import {App} from './js/App.js';
+
+import {Notepp} from './Scripts/Notepp.js';
 // PERFORMANCE MEASURING
-import reportWebVitals from './js/Tools/reportWebVitals';
+import {reportWebVitals} from './Scripts/Tools/reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Notepp />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
