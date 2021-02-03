@@ -1,11 +1,11 @@
 // PROTO
 import {Route} from 'react-router-dom';
 // STYLES
-import '../../Styles/css/app.css';
+import '../../../Styles/css/app.css';
 // COMPONENTS
-import {Navbar} from './app-components/navbar/navbar.jsx';
-import {Notes} from './app-components/notes/notes.jsx';
-import {Note} from './app-components/note/note.jsx';
+import {Navbar} from './navbar/navbar.jsx';
+import {Notes} from './notes/notes.jsx';
+import {Note} from './note/note.jsx';
 
 function App() {
   return (
