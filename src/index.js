@@ -1,9 +1,7 @@
 // LIBRARIES
-import {React} from 'react';
-import {ReactDOM} from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
-// STYLES
-import './styles/css/index.css';
 // COMPONENTS
 
 import {Notepp} from './Scripts/Notepp.js';
