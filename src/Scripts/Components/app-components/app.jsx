@@ -1,7 +1,3 @@
-// PROTO
-import {Route} from 'react-router-dom';
-// STYLES
-import '../../../Styles/css/app.css';
 // COMPONENTS
 import {Navbar} from './navbar/navbar.jsx';
 import {Notes} from './notes/notes.jsx';
