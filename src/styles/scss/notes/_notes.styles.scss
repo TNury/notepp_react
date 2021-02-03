@@ -1,5 +1,5 @@
 @use '../../assets/variables/_colors.scss' as *;
-@use '../../assets/button-normalizer/_button-normalizer.scss' as *;
+@use '../../assets/mixins/_mixins.scss' as *;
 
 .notes {
   width: 30vw;
@@ -17,7 +17,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background-color: $text-primary;
   }
 
@@ -35,11 +35,11 @@
       -webkit-box-orient: vertical;
     }
     
-    .notes-prev__title {
+    &__title {
       margin: 0;
     }
     
-    .notes-prev__body {
+    &__body {
       color: $text-secondary;
     }
 
@@ -55,19 +55,10 @@
   }
 
   &-create {
-    @extend .button;
+    @include button-styles;
+    @include special-button-styles;
     position: fixed;
     bottom: 0;
     left: 29%;
-    padding: 10px;
-    border-radius: 25px;
-
-    svg {
-      position: relative;
-      min-width: 2.5rem;
-      max-width: 2.5rem;
-      fill: $text-secondary;
-      pointer-events: none;
-    }
   }
 }
