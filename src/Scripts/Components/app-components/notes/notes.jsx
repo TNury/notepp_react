@@ -1,5 +1,4 @@
 
-
 function Notes() {
   return (
     <div className="notes">
@@ -10,4 +9,4 @@ function Notes() {
   )
 }
 
-export { Notes };
+export {Notes};

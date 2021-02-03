@@ -1,5 +1,4 @@
 
-
 function Note() {
   return (
     <div className="note">
@@ -10,4 +9,4 @@ function Note() {
   )
 }
 
-export { Note };
+export {Note};

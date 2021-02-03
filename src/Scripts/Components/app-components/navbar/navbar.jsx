@@ -1,5 +1,5 @@
 // COMPONENTS
-import { NavbarItem } from './navbar-item/navbar-item.jsx';
+import {NavbarItem} from './navbar-item/navbar-item.jsx';
 
 function Navbar() {
   return (
@@ -17,8 +17,4 @@ function Navbar() {
   )
 }
 
-// <i class="fas fa-edit"></i>
-
-
-
-export { Navbar };
+export {Navbar};

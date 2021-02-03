@@ -12,4 +12,4 @@ function NavbarItem ({text, icon}) {
   )
 }
 
-export { NavbarItem };
+export {NavbarItem};
