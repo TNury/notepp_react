@@ -1,9 +1,5 @@
 @use '../../../assets/variables/_colors.scss' as *;
 
-* {
-  color: $text-primary;
-}
-
 .content-wrapper {
   width: 70%;
   margin: 0 auto;
@@ -13,6 +9,7 @@
   grid-template-areas: 
   "header header header"
   "content image image";
+  color: $text-primary;
 }
 
 .content-header {
