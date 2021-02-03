@@ -1,0 +1,40 @@
+@use '../variables/colors' as *;
+
+
+@mixin button-styles {
+  border: none;
+  outline: none;
+  background: none;
+  color: $text-secondary;
+  transition: .2s;
+
+  &:hover {
+    cursor: pointer;
+    color: $text-primary;
+  }
+}
+
+@mixin special-button-styles {
+  padding: 1rem;
+
+  i {
+    font-size: 2rem;
+    pointer-events: none;
+  }
+}
+
+@mixin textarea-styles {
+  textarea {
+    resize: none;
+    border: none;  
+    outline: none;
+    background: inherit;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+
+    &::placeholder {
+      color: $text-placeholder;
+    }
+  }
+}
