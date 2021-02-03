@@ -1,5 +1,5 @@
-@use '../../assets/variables/_colors.scss' as *;
-@use '../../assets/mixins/_mixins.scss' as *;
+@use '../../../assets/variables/_colors.scss' as *;
+@use '../../../assets/mixins/_mixins.scss' as *;
 
 .note {
   @include textarea-styles;

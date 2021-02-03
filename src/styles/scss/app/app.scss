@@ -1,0 +1,29 @@
+@use '../../assets/normalizer/_normalizer.scss' as *;
+@use '../../assets/variables/colors.scss' as *;
+@use './navbar/navbar' as *;
+@use './navbar/navbar-items/_navbar-items.scss' as *;
+@use './navbar/navbar-button/_navbar-button.scss' as *;
+@use './navbar/navbar-item/_navbar-item.scss' as *;
+@use './notes/_notes.styles.scss' as *;
+@use './note/_note.styles.scss' as *;
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: Iosevka;
+  font-weight: 100;
+}
+
+body {
+  padding: 0;
+  background-color: $bg-tertiary;
+}
+
+.Wrap {
+  height: 100vh;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: row;
+}
