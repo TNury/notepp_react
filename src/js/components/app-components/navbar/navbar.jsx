@@ -1,5 +1,3 @@
-// LIBRARIES
-import React from 'react-dom';
 // COMPONENTS
 import { NavbarItem } from './navbar-item/navbar-item.jsx';
 

@@ -1,4 +1,4 @@
-import React from 'react-dom';
+
 
 function Note() {
   return (
