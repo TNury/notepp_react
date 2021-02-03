@@ -608,7 +608,7 @@ body {
   background-color: #23354A;
 }
 
-main {
+.Wrap {
   height: 100vh;
   margin-left: 5rem;
   display: -webkit-box;
