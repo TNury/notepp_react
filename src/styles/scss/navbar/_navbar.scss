@@ -18,22 +18,25 @@
     }
 
     .navbar-text {
-      font-size: 1.5rem;  
+      font-size: 1.8rem;  
       font-weight: 400;
       font-family: 'Futura';
       letter-spacing: 0.2ch;
       transition: .2s;
       text-transform: uppercase;
     }
+
+    i {
+      font-size: 2.5rem;
+    }
   }
 
   // ICON STYLES
 
   &-icon {
-    min-width: 2rem;
-    max-width: 2rem;
+    font-size: 2rem;
     margin: 0 1.15rem;
-    transition: 600ms;
+    transition: .2s;
   }
 
   // TEXT STYLES
@@ -64,7 +67,7 @@
       visibility: visible;
     }
 
-    .navbar-item:first-child svg {
+    .navbar-item:first-child i {
       transform: rotate(180deg);
     }
   }
