@@ -11,9 +11,10 @@ import '../Styles/css/Notepp.css';
 
 function Notepp() {
   return (
-    <div>
-      <App />
-    </div>
+    <>
+      <Route exact={true} path='/' component={Home}/>
+      <Route exact={true} path='/app' component={App}/>
+    </>
   );
 }
 
