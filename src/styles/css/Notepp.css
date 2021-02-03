@@ -1,0 +1,364 @@
+.header {
+  background-color: #23354A;
+}
+
+.home-navbar {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  background-color: inherit;
+}
+.home-navbar__link {
+  color: #FEFEFE;
+  text-decoration: none;
+}
+.home-navbar a:nth-last-child(2) {
+  margin-left: auto;
+}
+.home-navbar a:last-child {
+  margin-left: 1rem;
+}
+.home-navbar__logo {
+  font-size: 2rem;
+  font-family: Futura;
+  text-transform: uppercase;
+}
+.home-navbar__login {
+  font-size: 1.1rem;
+  background-color: rgba(254, 254, 254, 0.2);
+  border: 1px solid #FEFEFE;
+  padding: 1rem;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+.home-navbar__login:hover {
+  background: rgba(254, 254, 254, 0.3);
+}
+
+.content-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "header header header" "content image image";
+  color: #FEFEFE;
+}
+
+.content-header {
+  text-align: center;
+  grid-area: header;
+}
+.content-header h1 {
+  font-size: 4rem;
+}
+.content-header p {
+  font-size: 1.5rem;
+}
+.content-header span {
+  font-family: Futura;
+}
+
+.content-p {
+  grid-area: content;
+  padding: 1rem;
+}
+
+.content-image {
+  padding: 1rem;
+  grid-area: image;
+}
+.content-image div {
+  height: 100%;
+  background-color: #23354A;
+  border: 1px solid #FEFEFE;
+}
+
+.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #1B2633;
+}
+.navbar-item:first-child {
+  width: 100%;
+}
+.navbar-item:first-child .navbar-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.navbar-item:first-child .navbar-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Futura";
+  letter-spacing: 0.2ch;
+  text-transform: uppercase;
+}
+.navbar-item:first-child i {
+  font-size: 2.5rem;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.navbar-icon {
+  font-size: 2rem;
+  margin: 0 1.15rem;
+}
+.navbar-text {
+  font-family: Gill Sans;
+  font-weight: 400;
+  visibility: hidden;
+  margin-left: 1.5rem;
+}
+.navbar:hover {
+  width: 14rem;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar:hover .navbar-text {
+  -webkit-animation: fadein 600ms;
+          animation: fadein 600ms;
+  visibility: visible;
+}
+.navbar:hover .navbar-item:first-child i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.navbar-items {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-button {
+  border: none;
+  outline: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 100%;
+  height: 5rem;
+  background-color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navbar-button:hover {
+  cursor: pointer;
+  color: #FEFEFE;
+}
+.navbar-button:hover {
+  background-color: #23354A;
+}
+
+.navbar-item {
+  width: 100%;
+}
+.navbar-item:nth-last-child(2) {
+  margin-top: auto;
+}
+.navbar-item:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.notes {
+  width: 30vw;
+  height: 100vh;
+  padding: 0;
+  overflow: auto;
+  background-color: #1B2C33;
+}
+.notes::-webkit-scrollbar {
+  width: 0.35rem;
+}
+.notes::-webkit-scrollbar-track {
+  background-color: #1B2C33;
+}
+.notes::-webkit-scrollbar-thumb {
+  border-radius: 0.625rem;
+  background-color: #FEFEFE;
+}
+.notes-prev {
+  height: 5rem;
+  padding: 1rem;
+  color: #FEFEFE;
+  background-color: rgba(254, 254, 254, 0.2);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.notes-prev p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.notes-prev__title {
+  margin: 0;
+}
+.notes-prev__body {
+  color: #8f93a2;
+}
+.notes-prev:hover {
+  cursor: pointer;
+  background-color: rgba(254, 254, 254, 0.3);
+}
+.notes__line {
+  margin: 0.5rem;
+  color: #8f93a2;
+}
+.notes-create {
+  border: none;
+  outline: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 29%;
+}
+.notes-create:hover {
+  cursor: pointer;
+  color: #FEFEFE;
+}
+.notes-create i {
+  font-size: 2rem;
+  pointer-events: none;
+}
+
+.note {
+  width: 70vw;
+  height: 100vh;
+  padding: 2rem;
+  background-color: #0f111f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.note textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  background: inherit;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+.note textarea::-webkit-input-placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note textarea::-moz-placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note textarea:-ms-input-placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note textarea::-ms-input-placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note textarea::placeholder {
+  color: rgba(143, 147, 162, 0.3);
+}
+.note__title {
+  font-size: 2rem;
+  color: #FEFEFE;
+}
+.note__body {
+  font-size: 1.5rem;
+  color: #8f93a2;
+  height: 85%;
+}
+.note-save {
+  border: none;
+  outline: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.note-save:hover {
+  cursor: pointer;
+  color: #FEFEFE;
+}
+.note-save i {
+  font-size: 2rem;
+  pointer-events: none;
+}
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: Iosevka;
+  font-weight: 100;
+}
+
+body {
+  padding: 0;
+  background-color: #23354A;
+}
+
+.Wrap {
+  height: 100vh;
+  margin-left: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
