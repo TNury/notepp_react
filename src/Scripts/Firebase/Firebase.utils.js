@@ -1,5 +1,6 @@
 // FIREBASE IMPORT
 import firebase from 'firebase/app';
+
 // FIREBASE LIBRARIES
 import 'firebase/firestore';
 import 'firebase/firebase-auth';
@@ -19,3 +20,15 @@ firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+
+// TBD
+
+export const provider = new firebase.auth.GoogleAuthProvider();
+
+// auth.onAuthStateChanged((user) => {
+//   if (user) {
+//     console.log(user.uid)
+//   } else {
+//     console.log('There is noone logged');
+//   }
+// });
