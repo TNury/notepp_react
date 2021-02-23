@@ -22,9 +22,13 @@
     margin-left: auto;
   }
 
-  a:last-child {
+  button {
     margin-left: 1rem;
   }
+
+  // a:last-child {
+  //   margin-left: 1rem;
+  // }
 
   &__logo {
     font-size: 2rem;
