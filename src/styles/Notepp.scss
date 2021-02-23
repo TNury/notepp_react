@@ -2,6 +2,9 @@
 @use './scss/home/navbar/_navbar.scss' as *;
 @use './scss/home/content/content.styles' as *;
 
+// ABOUT STYLES
+@use './scss/about/about.scss' as *;
+
 // APP STYLES
 @use './scss/app/navbar/navbar' as *;
 @use './scss/app/navbar/navbar-items/_navbar-items.scss' as *;
@@ -11,9 +14,9 @@
 @use './scss/app/note/_note.styles.scss' as *;
 
 // LIBRARY STYLES
-
 @use './assets/variables/_colors.scss' as *;
 
+// DEFAULT STYLES
 :root {
   font-size: 16px;
 }
