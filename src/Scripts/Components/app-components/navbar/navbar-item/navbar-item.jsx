@@ -1,5 +1,4 @@
-// LIBRARIES
-import React from 'react';
+
 
 function NavbarItem ({text, icon}) {
   return (

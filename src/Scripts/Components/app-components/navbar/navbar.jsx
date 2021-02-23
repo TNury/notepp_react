@@ -1,6 +1,7 @@
 // COMPONENTS
 import {NavbarItem} from './navbar-item/navbar-item.jsx';
 
+
 function Navbar() {
   return (
     <nav className="navbar">
