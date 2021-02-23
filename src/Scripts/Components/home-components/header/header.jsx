@@ -1,15 +1,19 @@
-import React from 'react';
+// TBD
+import '../handlers/manageUser.js';
+// COMPONENTS
+import {Link, withRouter} from 'react-router-dom';
 
-function Header() {
+
+const Header = () => {
   return (
     <header className="header">
       <nav className="home-navbar">
-        <a className="home-navbar__link home-navbar__logo" href="/">Notepp</a>
-        <a className="home-navbar__link" href="/">About</a>
-        <a className="home-navbar__link home-navbar__login" href="/">Sign in with Google</a>
+        <Link className="home-navbar__link home-navbar__logo" to="/">Notepp</Link>
+        <Link className="home-navbar__link" to="/about">About</Link>
+        <button className="home-navbar__link home-navbar__login">Sign in with Google</button>
       </nav>
     </header>
   )
 }
 
-export {Header};
+export default withRouter(Header);
