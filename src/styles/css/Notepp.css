@@ -81,10 +81,72 @@
   border: 1px solid #FEFEFE;
 }
 
-.about-h1 {
-  color: white;
+.wrap-form {
+  color: #FEFEFE;
+  width: 60%;
+  max-width: 500px;
+  margin: 0 auto;
   text-align: center;
-  font-size: 5rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.wrap-form__head {
+  text-align: center;
+}
+.wrap-form .wrap-btn-group {
+  margin: 1rem 0;
+}
+.wrap-form .input-wrap {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrap-form .input-wrap__item {
+  text-align: left;
+  width: 80%;
+  margin: 0.5rem auto;
+  background: inherit;
+}
+.wrap-form .input-wrap .label {
+  font-size: 1.1rem;
+}
+.wrap-form .input-wrap .input {
+  height: 2rem;
+  color: inherit;
+  font-size: 1.1rem;
+  border: 1px solid #FEFEFE;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 0.5rem;
+}
+.wrap-form .wrap-btn {
+  border: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 80%;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+  background: inherit;
+  border: 1px solid #FEFEFE;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap-form .wrap-btn:hover {
+  cursor: pointer;
+  color: #FEFEFE;
+}
+.wrap-form .wrap-btn .wrap-btn__text {
+  font-family: NovaMono;
+  margin-left: 0.5rem;
+}
+.wrap-form .wrap-btn:hover {
+  background: rgba(254, 254, 254, 0.3);
 }
 
 .navbar {
@@ -178,7 +240,6 @@
 
 .navbar-button {
   border: none;
-  outline: none;
   background: none;
   color: #8f93a2;
   -webkit-transition: 0.4s;
@@ -258,7 +319,6 @@
 }
 .notes-create {
   border: none;
-  outline: none;
   background: none;
   color: #8f93a2;
   -webkit-transition: 0.4s;
@@ -321,7 +381,6 @@
 }
 .note-save {
   border: none;
-  outline: none;
   background: none;
   color: #8f93a2;
   -webkit-transition: 0.4s;
@@ -345,7 +404,7 @@
 }
 
 * {
-  font-family: Iosevka;
+  font-family: Gill Sans;
   font-weight: 100;
 }
 
