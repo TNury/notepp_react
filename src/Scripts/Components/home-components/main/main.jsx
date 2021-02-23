@@ -1,10 +1,10 @@
 
+
 function Main() {
   return(
     <main className="content-wrapper">
       <section className="content-header">
         <h1>Simply Simple</h1>
-        <p><span>NOTEPP</span> is a simple note-taking web app i wrote for my portfolio.</p>
       </section>
       <section className="content-p">
         <p>
