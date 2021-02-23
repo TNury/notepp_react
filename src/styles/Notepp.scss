@@ -3,7 +3,7 @@
 @use './scss/home/content/content.styles' as *;
 
 // ABOUT STYLES
-@use './scss/about/about.scss' as *;
+@use './scss/signIn/_signIn.scss' as *;
 
 // APP STYLES
 @use './scss/app/navbar/navbar' as *;
@@ -22,7 +22,7 @@
 }
 
 * {
-  font-family: Iosevka;
+  font-family: Gill Sans;
   font-weight: 100;
 }
 
