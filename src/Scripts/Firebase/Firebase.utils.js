@@ -18,17 +18,15 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-export const auth = firebase.auth();
-export const firestore = firebase.firestore();
+// Libraries variables
+const auth = firebase.auth();
+const firestore = firebase.firestore();
 
-// TBD
+// Auth defaults
 
-export const provider = new firebase.auth.GoogleAuthProvider();
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({ prompt: 'select_account' });
 
-// auth.onAuthStateChanged((user) => {
-//   if (user) {
-//     console.log(user.uid)
-//   } else {
-//     console.log('There is noone logged');
-//   }
-// });
+const signInWithGoogle = () => auth.signInWithPopup(provider);
+
+export {auth, firestore, signInWithGoogle};

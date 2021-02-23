@@ -1,5 +1,5 @@
 // COMPONENTS
-import Header from './header/header.jsx';
+import {Header} from './header/header.jsx';
 import {Main} from './main/main.jsx';
 
 

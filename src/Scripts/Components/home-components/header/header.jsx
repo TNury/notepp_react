@@ -1,7 +1,5 @@
-// TBD
-import '../handlers/manageUser.js';
-// COMPONENTS
-import {Link, withRouter} from 'react-router-dom';
+// REACT-ROUTER COMPONENTS
+import {Link} from 'react-router-dom';
 
 
 const Header = () => {
@@ -16,4 +14,4 @@ const Header = () => {
   )
 }
 
-export default withRouter(Header);
+export {Header};
