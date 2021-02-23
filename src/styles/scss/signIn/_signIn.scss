@@ -1,0 +1,64 @@
+@use '../../assets/variables/_colors.scss' as *;
+@use '../../assets/mixins/mixins' as *;
+
+.wrap-form {
+  color: $text-primary;
+  width: 60%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: content-box;
+  
+  &__head {
+    text-align: center;
+  }
+
+  .wrap-btn-group {
+    margin: 1rem 0;
+  }
+
+  .input-wrap {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      text-align: left;
+      width: 80%;
+      margin: .5rem auto;
+      background: inherit;
+    }
+
+    .label {
+      font-size: 1.1rem;
+    }
+
+    .input {
+      height: 2rem;
+      color: inherit;
+      font-size: 1.1rem;
+      border: 1px solid $text-primary;
+      box-sizing: border-box;
+      padding: 0 .5rem; 
+    }
+  }
+
+  .wrap-btn {
+    @include button-styles;
+    width: 80%;
+    height: 2.5rem;
+    margin: .5rem 0;
+    background: inherit;
+    border: 1px solid $text-primary;
+    -webkit-font-smoothing: antialiased;
+
+    .wrap-btn__text {
+      font-family: NovaMono;
+      margin-left: .5rem;
+    }
+
+    &:hover {
+      background: $bg-quaternary-hv;
+    }
+  }
+}
