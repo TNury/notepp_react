@@ -1,4 +1,5 @@
 @use '../../../assets/variables/_colors.scss' as *;
+@use '../../../assets/mixins/_mixins.scss' as *;
 
 .header {
   background-color: $bg-tertiary;
@@ -31,9 +32,7 @@
   // }
 
   &__logo {
-    font-size: 2rem;
-    font-family: Futura;
-    text-transform: uppercase;
+    @include logo-styles;
   }
 
   &__login {
