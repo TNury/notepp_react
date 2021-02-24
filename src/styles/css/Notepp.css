@@ -25,7 +25,7 @@
 .home-navbar a:nth-last-child(2) {
   margin-left: auto;
 }
-.home-navbar button {
+.home-navbar a:last-child {
   margin-left: 1rem;
 }
 .home-navbar__logo {
