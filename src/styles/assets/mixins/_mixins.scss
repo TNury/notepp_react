@@ -1,11 +1,18 @@
 @use '../variables/colors' as *;
 
+@mixin logo-styles {
+  color: $text-primary;
+  text-decoration: none;
+  font-family: Futura;
+  font-size: 2.5rem;
+}
+
 
 @mixin button-styles {
   border: none;
   background: none;
   color: $text-secondary;
-  transition: .4s;
+  transition: all .4s;
 
   &:hover {
     cursor: pointer;
