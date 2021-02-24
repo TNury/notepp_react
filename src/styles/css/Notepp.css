@@ -29,9 +29,10 @@
   margin-left: 1rem;
 }
 .home-navbar__logo {
-  font-size: 2rem;
+  color: #FEFEFE;
+  text-decoration: none;
   font-family: Futura;
-  text-transform: uppercase;
+  font-size: 2.5rem;
 }
 .home-navbar__login {
   font-size: 1.1rem;
@@ -81,23 +82,72 @@
   border: 1px solid #FEFEFE;
 }
 
-.wrap-form {
+.wrap-login {
+  text-align: center;
+}
+.wrap-login .wrap-head {
+  border-bottom: 1px solid white;
+  padding: 1.3rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #23354A;
+  width: 100%;
+}
+.wrap-login .wrap-head__logo {
+  color: #FEFEFE;
+  text-decoration: none;
+  font-family: Futura;
+  font-size: 2.5rem;
+}
+.wrap-login .wrap-form {
   color: #FEFEFE;
   width: 60%;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 31.25rem;
+  margin: 2rem auto;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
 }
-.wrap-form__head {
-  text-align: center;
+.wrap-login .wrap-form__head {
+  font-family: Futura;
 }
-.wrap-form .wrap-btn-group {
-  margin: 1rem 0;
+.wrap-login .wrap-form .wrap-btn {
+  border: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 80%;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+  background: inherit;
+  border: 1px solid #FEFEFE;
+  -webkit-font-smoothing: antialiased;
 }
-.wrap-form .input-wrap {
-  margin: 1rem 0;
+.wrap-login .wrap-form .wrap-btn:hover {
+  cursor: pointer;
+  color: #FEFEFE;
+}
+.wrap-login .wrap-form .wrap-btn__text {
+  margin-left: 0.5rem;
+  color: #FEFEFE;
+  font-family: NovaMono;
+}
+.wrap-login .wrap-form ._brand-g {
+  background: linear-gradient(110deg, #DB4437 25%, #F4B400 25%, #F4B400 50%, #0F9D58 50%, #0F9D58 75%, #4285F4 75%, #4285F4 100%);
+}
+.wrap-login .wrap-form ._brand-t {
+  background: #55ACEE;
+}
+.wrap-login .wrap-form ._brand-f {
+  background: #177BF2;
+}
+.wrap-login .wrap-form ._brand-a {
+  background: #000;
+}
+.wrap-login .wrap-form ._submit {
+  background: rgba(254, 254, 254, 0.2);
+}
+.wrap-login .wrap-form .wrap-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,17 +156,17 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.wrap-form .input-wrap__item {
+.wrap-login .wrap-form .wrap-input__item {
   text-align: left;
   width: 80%;
   margin: 0.5rem auto;
   background: inherit;
 }
-.wrap-form .input-wrap .label {
+.wrap-login .wrap-form .wrap-input .label {
   font-size: 1.1rem;
 }
-.wrap-form .input-wrap .input {
-  height: 2rem;
+.wrap-login .wrap-form .wrap-input .input {
+  height: 2.5rem;
   color: inherit;
   font-size: 1.1rem;
   border: 1px solid #FEFEFE;
@@ -124,29 +174,24 @@
           box-sizing: border-box;
   padding: 0 0.5rem;
 }
-.wrap-form .wrap-btn {
-  border: none;
-  background: none;
-  color: #8f93a2;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+.wrap-login .wrap-form .wrap-divider {
   width: 80%;
-  height: 2.5rem;
-  margin: 0.5rem 0;
-  background: inherit;
-  border: 1px solid #FEFEFE;
-  -webkit-font-smoothing: antialiased;
+  position: relative;
+  margin: 0.5rem auto;
 }
-.wrap-form .wrap-btn:hover {
-  cursor: pointer;
-  color: #FEFEFE;
+.wrap-login .wrap-form .wrap-divider span:first-child {
+  display: block;
+  position: absolute;
+  top: 9px;
+  height: 1px;
+  width: 100%;
+  background-color: #FEFEFE;
+  z-index: -1;
 }
-.wrap-form .wrap-btn .wrap-btn__text {
-  font-family: NovaMono;
-  margin-left: 0.5rem;
-}
-.wrap-form .wrap-btn:hover {
-  background: rgba(254, 254, 254, 0.3);
+.wrap-login .wrap-form .wrap-divider__span {
+  display: block;
+  background-color: #1B2633;
+  margin: 3rem 6.5rem;
 }
 
 .navbar {
@@ -242,8 +287,8 @@
   border: none;
   background: none;
   color: #8f93a2;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   width: 100%;
   height: 5rem;
   background-color: inherit;
@@ -321,8 +366,8 @@
   border: none;
   background: none;
   color: #8f93a2;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   padding: 1rem;
   position: fixed;
   bottom: 0;
@@ -383,8 +428,8 @@
   border: none;
   background: none;
   color: #8f93a2;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   padding: 1rem;
   position: fixed;
   bottom: 0;
