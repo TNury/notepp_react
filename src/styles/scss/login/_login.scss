@@ -1,0 +1,139 @@
+@use '../../assets/variables/_colors.scss' as *;
+@use '../../assets/mixins/mixins' as *;
+
+// LOGIN DIV WRAPPER
+.wrap-login {
+  text-align: center;
+
+  // HEAD WRAPPER
+  .wrap-head {
+    border-bottom: 1px solid white;
+    padding: 1.3rem 0;
+    box-sizing: border-box;
+    background: $bg-tertiary;
+    width: 100%;
+
+    // LOGO STYLES
+    &__logo {
+      @include logo-styles;
+    }
+  }
+
+  // FROM WRAPPER
+  .wrap-form {
+    color: $text-primary;
+    width: 60%;
+    max-width: 31.25rem;
+    margin: 2rem auto;
+    box-sizing: content-box;
+
+    // WRAP FORM HEAD STYLES
+    &__head {
+      font-family: Futura;
+    }
+
+    // BUTTON STYLES
+    .wrap-btn {
+      @include button-styles;
+      width: 80%;
+      height: 2.5rem;
+      margin: .5rem 0;
+      background: inherit;
+      border: 1px solid $text-primary;
+      -webkit-font-smoothing: antialiased;
+
+      // BUTTON TEXT STYLES
+      &__text {
+        margin-left: .5rem;
+        color: $text-primary;
+        font-family: NovaMono;
+      }
+    }
+
+    // GOOGLE BUTTON STYLES
+    ._brand-g {
+      background: linear-gradient(110deg, 
+      #DB4437 25%, 
+      #F4B400 25%, 
+      #F4B400 50%,
+      #0F9D58 50%, 
+      #0F9D58 75%,
+      #4285F4 75%,
+      #4285F4 100%);
+    }
+
+    // FACEBOOK BUTTON STYLES
+    ._brand-t {
+      background: #55ACEE;
+    }
+
+    // TWITTER BUTTON STYLES
+    ._brand-f {
+      background: #177BF2;
+    }
+
+    // APPLE BUTTON STYLES
+    ._brand-a {
+      background: #000;
+    }
+
+    // LOGIN BUTTON STYLES
+    ._submit {
+      background: $bg-quaternary;
+    }
+
+    // INPUT STYLES
+    .wrap-input {
+      display: flex;
+      flex-direction: column;
+
+      // LABEL & INPUT SHARED STYLES
+      &__item {
+        text-align: left;
+        width: 80%;
+        margin: .5rem auto;
+        background: inherit;
+      }
+
+      // LABEL STYLES
+      .label {
+        font-size: 1.1rem;
+      }
+
+      // INPUT STYLES
+      .input {
+        height: 2.5rem;
+        color: inherit;
+        font-size: 1.1rem;
+        border: 1px solid $text-primary;
+        box-sizing: border-box;
+        padding: 0 .5rem;
+      }
+    }
+
+    // "OR" WRAPPER STYLES
+    .wrap-divider {
+      width: 80%;
+      position: relative;
+      margin: .5rem auto;
+      
+      // LINE BEHIND "OR" STYLES
+      span:first-child {
+        display: block;
+        position: absolute;
+        top: 9px;
+        height: 1px;
+        width: 100%;
+        background-color: $text-primary;
+        z-index: -1;
+      }
+      
+      // "OR" STYLES
+      &__span {
+        display: block;
+        background-color: $bg-primary;
+        margin: 3rem 6.5rem;
+      }
+    }
+  }
+}
