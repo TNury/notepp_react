@@ -1,4 +1,12 @@
+// REACT ROUTER LINK COMPONENT
 import {Link} from 'react-router-dom';
+// FONTAWESOME ICON LIBRARY COMPONENT
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// FONTAWESOME BRAND LIBRARY ICON
+import {faGoogle, faTwitter, faFacebookF, faApple} from '@fortawesome/free-brands-svg-icons';
+// FONTAWESOME LIBRARY DEFAULT ICON
+import {faSignInAlt} from '@fortawesome/free-solid-svg-icons';
+
 
 function Login() {
   return(
@@ -10,19 +18,20 @@ function Login() {
         <h2 className="wrap-form__head">Login with</h2>
         <div className="wrap-btn-group">
           <button className="wrap-btn _brand-g">
-            <i className="fab fa-google"></i>
+            {/* <i className="fab fa-google"></i> */}
+            <FontAwesomeIcon icon={faGoogle}/>
             <span className="wrap-btn__text">Google</span>
           </button>
           <button className="wrap-btn _brand-t">
-            <i className="fab fa-twitter"></i>
+            <FontAwesomeIcon icon={faTwitter} />
             <span className="wrap-btn__text">Twitter</span>
           </button>
           <button className="wrap-btn _brand-f">
-            <i className="fab fa-facebook-f"></i>
+            <FontAwesomeIcon icon={faFacebookF} />
             <span className="wrap-btn__text">Facebook</span>
           </button>
           <button className="wrap-btn _brand-a">
-            <i className="fab fa-apple"></i>
+            <FontAwesomeIcon icon={faApple} />
             <span className="wrap-btn__text">Apple</span>
           </button>
         </div>
@@ -37,7 +46,7 @@ function Login() {
           <input className="wrap-input__item input" type="password" placeholder="12345"></input>
         </div>
         <button className="wrap-btn _submit" type="submit">
-          <i className="fas fa-sign-in-alt"></i>
+          <FontAwesomeIcon icon={faSignInAlt} />
           <span className="wrap-btn__text">Submit</span>
         </button>    
       </form>

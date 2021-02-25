@@ -1,18 +1,24 @@
 // COMPONENTS
 import {NavbarItem} from './navbar-item/navbar-item.jsx';
+// FONTAWESOME LIBRARY DEFAULT ICON
+import {
+  faAngleDoubleRight, faStickyNote, 
+  faSearch, faTint, faAddressCard,
+  faSignOutAlt,faCogs
+} from '@fortawesome/free-solid-svg-icons';
 
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-items">
-        <NavbarItem text="Notepp" icon="fa-angle-double-right"/>
-        <NavbarItem text="Notes" icon="fa-sticky-note"/>
-        <NavbarItem text="Search" icon="fa-search"/>
-        <NavbarItem text="Themes" icon="fa-tint"/>
-        <NavbarItem text="About" icon="fa-address-card"/>
-        <NavbarItem text="Logout" icon="fa-sign-out-alt"/>
-        <NavbarItem text="Configs" icon="fa-cogs"/>
+        <NavbarItem text="Notepp" icon={faAngleDoubleRight}/>
+        <NavbarItem text="Notes" icon={faStickyNote}/>
+        <NavbarItem text="Search" icon={faSearch}/>
+        <NavbarItem text="Themes" icon={faTint}/>
+        <NavbarItem text="About" icon={faAddressCard}/>
+        <NavbarItem text="Logout" icon={faSignOutAlt}/>
+        <NavbarItem text="Configs" icon={faCogs}/>
       </div>
     </nav>
   )
