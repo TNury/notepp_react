@@ -22,9 +22,9 @@
 
 @mixin special-button-styles {
   padding: 1rem;
-
-  i {
-    font-size: 2rem;
+  font-size: 2rem;
+  
+  svg {
     pointer-events: none;
   }
 }
