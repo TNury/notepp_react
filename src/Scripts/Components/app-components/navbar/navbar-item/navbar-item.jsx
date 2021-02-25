@@ -2,7 +2,6 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 function NavbarItem ({text, icon}) {
-  console.log(icon);
   return (
     <div className="navbar-item">
       <button className="navbar-button">
