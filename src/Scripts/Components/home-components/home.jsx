@@ -1,12 +1,14 @@
+// FIREBASE 
+import {auth} from '../../Firebase/Firebase.utils.js';
 // COMPONENTS
 import {Header} from './header/header.jsx';
 import {Main} from './main/main.jsx';
 
 
-function Home() {
+function Home({currentUser}) {
   return (
-    <div className="Home">
-      <Header />
+    <div className="home">
+      <Header currentUser={currentUser}/>
       <Main />
     </div>
   )
