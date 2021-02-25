@@ -169,7 +169,7 @@
   height: 2.5rem;
   color: inherit;
   font-size: 1.1rem;
-  border: 1px solid #FEFEFE;
+  border: 0.063rem solid #FEFEFE;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 0.5rem;
@@ -179,11 +179,11 @@
   position: relative;
   margin: 0.5rem auto;
 }
-.wrap-login .wrap-form .wrap-divider span:first-child {
+.wrap-login .wrap-form .wrap-divider span:last-child {
   display: block;
   position: absolute;
-  top: 9px;
-  height: 1px;
+  top: 0.563rem;
+  height: 0.063rem;
   width: 100%;
   background-color: #FEFEFE;
   z-index: -1;
