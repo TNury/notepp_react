@@ -8,7 +8,6 @@
   background-color: $bg-primary;
 
   // LOGO STYLES
-
   &-item:first-child {
     width: 100%;
 
@@ -18,28 +17,25 @@
     }
 
     .navbar-text {
-      font-size: 1.8rem;  
+      font-size: 1.9rem;  
       font-weight: 400;
       font-family: 'Futura';
       letter-spacing: 0.2ch;
-      text-transform: uppercase;
     }
 
-    i {
+    .navbar-icon {
       font-size: 2.5rem;
       transition: transform .4s;
     }
   }
 
   // ICON STYLES
-
   &-icon {
     font-size: 2rem;
     margin: 0 1.15rem;
   }
 
   // TEXT STYLES
-
   &-text {
     font-family: Gill Sans;
     font-weight: 400;
@@ -48,7 +44,6 @@
   }
 
   // HOVER ANIMATION
-
   &:hover {
     width: 14rem;
 
@@ -66,7 +61,7 @@
       visibility: visible;
     }
 
-    .navbar-item:first-child i {
+    .navbar-item:first-child svg {
       transform: rotate(180deg);
     }
   }
