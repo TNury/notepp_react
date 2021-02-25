@@ -7,6 +7,9 @@ import {faGoogle, faTwitter, faFacebookF, faApple} from '@fortawesome/free-brand
 // FONTAWESOME LIBRARY DEFAULT ICON
 import {faSignInAlt} from '@fortawesome/free-solid-svg-icons';
 
+// COMPONENTS
+import {Button} from './button-component/button.jsx';
+
 
 function Login() {
   return(
@@ -17,27 +20,14 @@ function Login() {
       <form className="wrap-form">
         <h2 className="wrap-form__head">Login with</h2>
         <div className="wrap-btn-group">
-          <button className="wrap-btn _brand-g">
-            {/* <i className="fab fa-google"></i> */}
-            <FontAwesomeIcon icon={faGoogle}/>
-            <span className="wrap-btn__text">Google</span>
-          </button>
-          <button className="wrap-btn _brand-t">
-            <FontAwesomeIcon icon={faTwitter} />
-            <span className="wrap-btn__text">Twitter</span>
-          </button>
-          <button className="wrap-btn _brand-f">
-            <FontAwesomeIcon icon={faFacebookF} />
-            <span className="wrap-btn__text">Facebook</span>
-          </button>
-          <button className="wrap-btn _brand-a">
-            <FontAwesomeIcon icon={faApple} />
-            <span className="wrap-btn__text">Apple</span>
-          </button>
+          <Button className="_brand-g" icon={faGoogle} text="Google"/>
+          <Button className="_brand-t" icon={faTwitter} text="Twitter"/>
+          <Button className="_brand-f" icon={faFacebookF} text="Facebook"/>
+          <Button className="_brand-a" icon={faApple} text="Apple"/>
         </div>
         <div className="wrap-divider">
-          <span></span>
           <span className="wrap-divider__span">Or</span>
+          <span></span>
         </div>
         <div className="wrap-input">
           <label className="wrap-input__item label">Email</label>
@@ -45,10 +35,7 @@ function Login() {
           <label className="wrap-input__item label">Password</label>
           <input className="wrap-input__item input" type="password" placeholder="12345"></input>
         </div>
-        <button className="wrap-btn _submit" type="submit">
-          <FontAwesomeIcon icon={faSignInAlt} />
-          <span className="wrap-btn__text">Submit</span>
-        </button>    
+        <Button className="_submit" icon={faSignInAlt} text="Submit" />
       </form>
     </div>
   )
