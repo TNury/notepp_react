@@ -1,17 +1,13 @@
 // REACT
 import React from 'react';
-
 // REACT-ROUTER COMPONENTS
 import {Route, Switch} from 'react-router-dom';
-
-// FIREBASE 
+// FIREBASE AUTH
 import {auth} from './Firebase/Firebase.utils.js';
-
 // COMPONENTS
 import {App} from './Components/app-components/app.jsx';
 import {Home} from './Components/home-components/home.jsx';
 import {Login} from './Components/login-component/login.jsx';
-
 // APP STYLES 
 import '../Styles/css/normalizer.css';
 import '../Styles/css/Notepp.css';
