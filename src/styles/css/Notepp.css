@@ -215,13 +215,12 @@
           flex-direction: row-reverse;
 }
 .navbar-item:first-child .navbar-text {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 400;
   font-family: "Futura";
   letter-spacing: 0.2ch;
-  text-transform: uppercase;
 }
-.navbar-item:first-child i {
+.navbar-item:first-child .navbar-icon {
   font-size: 2.5rem;
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
@@ -262,7 +261,7 @@
           animation: fadein 600ms;
   visibility: visible;
 }
-.navbar:hover .navbar-item:first-child i {
+.navbar:hover .navbar-item:first-child svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -369,6 +368,7 @@
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   padding: 1rem;
+  font-size: 2rem;
   position: fixed;
   bottom: 0;
   left: 29%;
@@ -377,8 +377,7 @@
   cursor: pointer;
   color: #FEFEFE;
 }
-.notes-create i {
-  font-size: 2rem;
+.notes-create svg {
   pointer-events: none;
 }
 
@@ -431,6 +430,7 @@
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   padding: 1rem;
+  font-size: 2rem;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -439,8 +439,7 @@
   cursor: pointer;
   color: #FEFEFE;
 }
-.note-save i {
-  font-size: 2rem;
+.note-save svg {
   pointer-events: none;
 }
 
