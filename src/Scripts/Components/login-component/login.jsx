@@ -8,7 +8,6 @@ import {faGoogle, faTwitter, faFacebookF, faApple} from '@fortawesome/free-brand
 import {faSignInAlt} from '@fortawesome/free-solid-svg-icons';
 
 
-
 function Login() {
   return(
     <div className="wrap-login">
