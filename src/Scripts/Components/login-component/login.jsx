@@ -1,14 +1,12 @@
 // REACT ROUTER LINK COMPONENT
 import {Link} from 'react-router-dom';
-// FONTAWESOME ICON LIBRARY COMPONENT
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// COMPONENTS
+import { Button } from './button-component/button.jsx';
 // FONTAWESOME BRAND LIBRARY ICON
 import {faGoogle, faTwitter, faFacebookF, faApple} from '@fortawesome/free-brands-svg-icons';
 // FONTAWESOME LIBRARY DEFAULT ICON
 import {faSignInAlt} from '@fortawesome/free-solid-svg-icons';
 
-// COMPONENTS
-import {Button} from './button-component/button.jsx';
 
 
 function Login() {
