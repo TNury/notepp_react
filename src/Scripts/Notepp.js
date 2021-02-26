@@ -8,7 +8,8 @@ import {auth} from './Firebase/Firebase.utils.js';
 import {App} from './Components/app-components/app.jsx';
 import {Home} from './Components/home-components/home.jsx';
 import {Login} from './Components/login-components/login.jsx';
-import {notFound} from './Components/not-found-component/notFound.jsx';
+import {NotFound} from './Components/not-found-component/notFound.jsx';
+import {Loading} from './Components/loading-component/loading.jsx';
 // APP STYLES 
 import '../Styles/css/normalizer.css';
 import '../Styles/css/Notepp.css';
@@ -27,7 +28,6 @@ class Notepp extends React.Component {
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({currentUser: user});
-      console.log(user);
     });
   }
 
@@ -35,36 +35,35 @@ class Notepp extends React.Component {
     this.unsubscribeFromAuth();
   }
 
-  /*
-    What needs to happen:
-
-    1. 
-  */
-
   render() {
     return (
       <>
         <Switch>
           <Route exact path='/'>
-            <Home currentUser={this.state.currentUser}/>
+            {this.state.currentUser
+              ?
+              <Redirect from='/' to='/app' />
+              :
+              <Home currentUser={this.state.currentUser}/>
+            }
           </Route>
           <Route path='/app'>
             {this.state.currentUser 
               ? 
-                <App currentUser={this.state.currentUser} />
-              :
-                <Redirect to='/login'/>
+              <App currentUser={this.state.currentUser} />
+              : 
+              <Redirect from='/app' to='/login'/>
             }
           </Route>
           <Route path='/login'>
             {this.state.currentUser
               ?
-                <Redirect to='/app'/>
+              <Redirect from='/login' to='/app'/>
               :
-                <Login />
+              <Login />
             }
           </Route>
-          <Route path='/*' component={notFound} />
+          <Route path='/*' component={NotFound} />
         </Switch>
       </>
     );
