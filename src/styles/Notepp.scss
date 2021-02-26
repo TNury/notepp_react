@@ -2,8 +2,11 @@
 @use './scss/home/navbar/_navbar.scss' as *;
 @use './scss/home/content/content.styles' as *;
 
-// ABOUT STYLES
+// LOGIN STYLES
 @use './scss/login/_login.scss' as *;
+
+// NOT-FOUND STYLES
+@use './scss/no-route/no-route' as *;
 
 // APP STYLES
 @use './scss/app/navbar/navbar' as *;
