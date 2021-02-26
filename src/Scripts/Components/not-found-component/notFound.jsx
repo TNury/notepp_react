@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 
 
-export const notFound = () => {
+export const NotFound = () => {
   return(
     <div className="not-found">
       <div className="not-found-div">
