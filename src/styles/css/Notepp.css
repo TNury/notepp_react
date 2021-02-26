@@ -194,6 +194,28 @@
   margin: 3rem 6.5rem;
 }
 
+.not-found {
+  color: #FEFEFE;
+  background: #23354A;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  text-align: center;
+  grid-template-rows: repeat(3, 1fr);
+}
+.not-found .not-found-div {
+  grid-row: 2/3;
+  margin: 0 auto;
+}
+.not-found__head {
+  font-size: 2.5rem;
+}
+.not-found__text {
+  font-size: 1.3rem;
+}
+
 .navbar {
   width: 5rem;
   height: 100vh;
