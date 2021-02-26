@@ -6,7 +6,9 @@
 @use './scss/login/_login.scss' as *;
 
 // NOT-FOUND STYLES
-@use './scss/no-route/no-route' as *;
+@use './scss/not-found/not-found' as *;
+
+@use '../Styles/scss/loading/_loading.scss' as *;
 
 // APP STYLES
 @use './scss/app/navbar/navbar' as *;
