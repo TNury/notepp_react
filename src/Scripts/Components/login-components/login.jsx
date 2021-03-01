@@ -27,10 +27,10 @@ function Login() {
           <span></span>
         </div>
         <div className="wrap-input">
-          <label className="wrap-input__item label">Email</label>
-          <input className="wrap-input__item input" type="email" placeholder="jon-doe@something.com"></input>
-          <label className="wrap-input__item label">Password</label>
-          <input className="wrap-input__item input" type="password" placeholder="12345"></input>
+          <label for="email" className="wrap-input__item label">Email</label>
+          <input id="email" className="wrap-input__item input" type="email" placeholder="jon-doe@something.com"></input>
+          <label for="password" className="wrap-input__item label">Password</label>
+          <input id="password" className="wrap-input__item input" type="password" placeholder="12345"></input>
         </div>
         <Button className="_submit" icon={faSignInAlt} text="Submit" />
       </form>
