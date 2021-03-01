@@ -11,7 +11,10 @@ const Header = ({currentUser}) => {
         <Link className="header-nav__link header-nav__logo" to="/">Notepp</Link>
         {
           currentUser ? // if
-            <button onClick={() => auth.signOut()} className="header-nav__button header-nav__item">Logout</button>
+            <>
+              <button onClick={() => auth.signOut()} className="header-nav__button header-nav__item">Logout</button>
+              <Link className="header-nav__link header-nav__item" to="/app">Go To App</Link>
+            </>
           : // else
           <>
             <Link className="header-nav__link header-nav__item _left" to="/login">Login</Link>
