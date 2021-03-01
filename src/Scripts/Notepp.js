@@ -49,15 +49,14 @@ class Notepp extends React.Component {
             available, if he tries to manually change to 
             /app he will be redirected to login page
           */}
-          {/* <Route path='/app'>
+          <Route path='/app'>
             { this.state.currentUser 
               ? 
               <App currentUser={this.state.currentUser} />
               : 
               <Redirect from='/app' to='/login' />
             }
-          </Route> */}
-          <Route path='/app' component={App}/>
+          </Route>
           {/* LOGIN ROUTE 
             
             If the user is logged in, the /login route becomes
