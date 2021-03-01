@@ -25,6 +25,7 @@
 }
 .header-nav__button {
   margin-left: auto;
+  margin-right: 1rem;
 }
 .header-nav__logo {
   color: #FEFEFE;
@@ -481,6 +482,13 @@
   pointer-events: none;
 }
 
+/*
+=========================================================
+
+ ----->> DONT FORGET TO CHANGE SCSS COMPILE PATH! <<-----
+
+==========================================================
+*/
 :root {
   font-size: 16px;
 }
