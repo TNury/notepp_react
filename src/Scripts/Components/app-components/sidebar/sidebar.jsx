@@ -11,7 +11,6 @@ import {
 function Sidebar() {
   return (
     <nav className="sidebar">
-      {/* <Button text="Notepp" icon={faAngleDoubleRight}/> */}
       <Button text="Notes" icon={faStickyNote}/>
       <Button text="Search" icon={faSearch}/>
       <Button text="Themes" icon={faTint}/>
