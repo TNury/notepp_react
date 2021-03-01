@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 
 // COMPONENTS
-import {Notepp} from './Scripts/Notepp.js';
+import {Notepp} from './scripts/Notepp.script.jsx';
 
 // PERFORMANCE MEASURING
-import {reportWebVitals} from './Scripts/Tools/reportWebVitals';
+import {reportWebVitals} from './scripts/Tools/reportWebVitals';
 
 ReactDOM.render(
   <BrowserRouter>
