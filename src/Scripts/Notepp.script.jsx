@@ -5,14 +5,13 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 // FIREBASE AUTH
 import {auth} from './Firebase/Firebase.utils.js';
 // COMPONENTS
-import {App} from './Components/app-components/app.jsx';
-import {Home} from './Components/home-components/home.jsx';
-import {Login} from './Components/login-components/login.jsx';
-import {NotFound} from './Components/not-found-component/notFound.jsx';
-import {Loading} from './Components/loading-component/loading.jsx';
+import {App} from './Components/app-components/app.component.jsx';
+import {Home} from './Components/home-components/home.component.jsx';
+import {Login} from './Components/login-components/login.component.jsx';
+import {NotFound} from './Components/not-found-component/notFound.component.jsx';
 // APP STYLES 
-import '../Styles/css/normalizer.css';
-import '../Styles/css/Notepp.css';
+import './normalizer.scss';
+import './Notepp.styles.scss';
 
 
 class Notepp extends React.Component {

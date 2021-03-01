@@ -1,7 +1,7 @@
 // COMPONENTS
-import {Sidebar} from './sidebar/sidebar.jsx';
-import {Notes} from './notes/notes.jsx';
-import {Note} from './note/note.jsx';
+import {Sidebar} from './sidebar/sidebar.component.jsx';
+import {Notes} from './notes/notes.component.jsx';
+import {Note} from './note/note.component.jsx';
 
 
 function App() {

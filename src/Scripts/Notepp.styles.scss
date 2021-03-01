@@ -1,0 +1,38 @@
+// HOME STYLES
+@import './Components/home-components/header/_header.styles.scss';
+@import './Components/home-components/_home.styles.scss';
+
+// LOGIN STYLES
+@import './Components/login-components/_login.styles.scss';
+
+// NOT-FOUND STYLES
+@import './Components/not-found-component/_notFound.styles.scss';
+
+// APP STYLES
+@import './Components/app-components/sidebar/_sidebar.styles.scss';
+@import './Components/app-components/note/_note.styles.scss';
+@import './Components/app-components/notes/_notes.styles.scss';
+
+// LIBRARY STYLES
+@import '../assets/variables/_colors.styles.scss';
+
+// DEFAULT STYLES
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: Gill Sans;
+}
+
+body {
+  padding: 0;
+  background-color: $bg-primary;
+}
+
+.Wrap {
+  height: 100vh;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: row;
+}

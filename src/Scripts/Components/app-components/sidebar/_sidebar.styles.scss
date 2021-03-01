@@ -1,0 +1,62 @@
+@import '../../../../assets/variables/_colors.styles.scss';
+@import '../../../../assets/mixins/_mixins.styles.scss';
+
+.sidebar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  transition: .2s;
+  background: $bg-primary;
+  display: flex;
+  flex-direction: column;
+
+  // LOGO STYLES 
+
+  // BUTTON STYLES 
+  &-button {
+    @include button-styles;
+    height: 5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+
+    &:hover {
+      background: $bg-tertiary;
+    }
+
+    &:nth-last-child(2) {
+      margin-top: auto;
+    }
+
+    &__icon {
+      font-size: 2rem;
+      margin: 0 auto;
+      align-self: center;
+    }
+
+    &__text {
+      margin-right: 2rem;
+      align-self: center;
+      visibility: hidden;
+    }
+  }
+
+  // HOVER ANIMATION
+  &:hover {
+    width: 14rem;
+
+    @keyframes fadein {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+
+    .sidebar-button__text {
+      animation: fadein 600ms;
+      visibility: visible;
+    }
+  }
+}
