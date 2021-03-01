@@ -7,10 +7,18 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 function Button({className, icon, text}) {
   return (
     <>
-      <button onClick={() => signInWithGoogle()} className={`wrap-btn ${className}`} type="button">
-        <FontAwesomeIcon icon={icon} />
-        <span className="wrap-btn__text">{text}</span>
-      </button>
+      { text == "Google" ?
+        <button onClick={() => signInWithGoogle()} className={`wrap-btn ${className}`} type="button">
+          <FontAwesomeIcon icon={icon} />
+          <span className="wrap-btn__text">{text}</span>
+        </button>
+        :
+        <button className={`wrap-btn ${className}`} type="button">
+          <FontAwesomeIcon icon={icon} />
+          <span className="wrap-btn__text">{text}</span>
+        </button>
+      }
+      
     </>
   )
 }
