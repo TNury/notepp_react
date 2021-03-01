@@ -1,5 +1,5 @@
 // COMPONENTS
-import {Button} from './button/button.jsx';
+import {Button} from './button/button.component.jsx';
 // FONTAWESOME LIBRARY DEFAULT ICON
 import {
   faAngleDoubleRight, faStickyNote, 

@@ -1,0 +1,42 @@
+@import '../../../assets/variables/_colors.styles.scss';
+
+.content-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header header"
+  "content image image";
+  color: $text-primary;
+}
+
+.content-header {
+  text-align: center;
+  grid-area: header;
+  
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.content-p {
+  grid-area: content;
+  padding: 1rem;
+}
+
+.content-image {
+  padding: 1rem;
+  grid-area: image;
+
+  div {
+    height: 100%;
+    background-color: $bg-tertiary;
+    border: 1px solid $text-primary;
+  }
+}

@@ -1,8 +1,8 @@
 // FIREBASE 
 import {auth} from '../../Firebase/Firebase.utils.js';
 // COMPONENTS
-import {Header} from './header/header.jsx';
-import {Main} from './main/main.jsx';
+import {Header} from './header/header.component.jsx';
+import {Main} from './main/main.component.jsx';
 
 
 function Home({currentUser}) {
