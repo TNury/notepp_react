@@ -112,6 +112,7 @@
   font-family: Futura;
 }
 .wrap-login .wrap-form .wrap-btn {
+  padding: 0;
   border: none;
   background: none;
   color: #8f93a2;
@@ -233,50 +234,56 @@
   align-self: center;
 }
 
-.navbar {
+.sidebar {
   width: 5rem;
   height: 100vh;
   position: fixed;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   background-color: #1B2633;
-}
-.navbar-item:first-child {
-  width: 100%;
-}
-.navbar-item:first-child .navbar-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.navbar-item:first-child .navbar-text {
-  font-size: 1.9rem;
-  font-weight: 400;
-  font-family: "Futura";
-  letter-spacing: 0.2ch;
+.sidebar-button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #8f93a2;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  height: 5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5rem 1fr;
 }
-.navbar-item:first-child .navbar-icon {
-  font-size: 2.5rem;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+.sidebar-button:hover {
+  cursor: pointer;
+  color: #FEFEFE;
 }
-.navbar-icon {
+.sidebar-button:hover {
+  background: #23354A;
+}
+.sidebar-button:nth-last-child(2) {
+  margin-top: auto;
+}
+.sidebar-button__icon {
   font-size: 2rem;
-  margin: 0 1.15rem;
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
-.navbar-text {
-  font-family: Gill Sans;
-  font-weight: 400;
+.sidebar-button__text {
+  margin-right: 2rem;
+  -ms-flex-item-align: center;
+      align-self: center;
   visibility: hidden;
-  margin-left: 1.5rem;
 }
-.navbar:hover {
+.sidebar:hover {
   width: 14rem;
 }
 @-webkit-keyframes fadein {
@@ -295,64 +302,10 @@
     opacity: 1;
   }
 }
-.navbar:hover .navbar-text {
+.sidebar:hover .sidebar-button__text {
   -webkit-animation: fadein 600ms;
           animation: fadein 600ms;
   visibility: visible;
-}
-.navbar:hover .navbar-item:first-child svg {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.navbar-items {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navbar-button {
-  border: none;
-  background: none;
-  color: #8f93a2;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  width: 100%;
-  height: 5rem;
-  background-color: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.navbar-button:hover {
-  cursor: pointer;
-  color: #FEFEFE;
-}
-.navbar-button:hover {
-  background-color: #23354A;
-}
-
-.navbar-item {
-  width: 100%;
-}
-.navbar-item:nth-last-child(2) {
-  margin-top: auto;
-}
-.navbar-item:nth-child(2) {
-  margin-top: 1rem;
 }
 
 .notes {
@@ -401,6 +354,7 @@
   color: #8f93a2;
 }
 .notes-create {
+  padding: 0;
   border: none;
   background: none;
   color: #8f93a2;
@@ -463,6 +417,7 @@
   height: 85%;
 }
 .note-save {
+  padding: 0;
   border: none;
   background: none;
   color: #8f93a2;
@@ -482,20 +437,12 @@
   pointer-events: none;
 }
 
-/*
-=========================================================
-
- ----->> DONT FORGET TO CHANGE SCSS COMPILE PATH! <<-----
-
-==========================================================
-*/
 :root {
   font-size: 16px;
 }
 
 * {
   font-family: Gill Sans;
-  font-weight: 100;
 }
 
 body {
