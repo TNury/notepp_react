@@ -1,7 +1,7 @@
 // REACT ROUTER LINK COMPONENT
 import {Link} from 'react-router-dom';
 // COMPONENTS
-import { Button } from './button-component/button.jsx';
+import { Button } from './button-component/button.component.jsx';
 // FONTAWESOME BRAND LIBRARY ICON
 import {faGoogle, faTwitter, faFacebookF, faApple} from '@fortawesome/free-brands-svg-icons';
 // FONTAWESOME LIBRARY DEFAULT ICON
@@ -27,9 +27,9 @@ function Login() {
           <span></span>
         </div>
         <div className="wrap-input">
-          <label for="email" className="wrap-input__item label">Email</label>
+          <label htmlFor="email" className="wrap-input__item label">Email</label>
           <input id="email" className="wrap-input__item input" type="email" placeholder="jon-doe@something.com"></input>
-          <label for="password" className="wrap-input__item label">Password</label>
+          <label htmlFor="password" className="wrap-input__item label">Password</label>
           <input id="password" className="wrap-input__item input" type="password" placeholder="12345"></input>
         </div>
         <Button className="_submit" icon={faSignInAlt} text="Submit" />
