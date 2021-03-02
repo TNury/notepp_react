@@ -7,10 +7,10 @@ import {faPlus} from '@fortawesome/free-solid-svg-icons';
 function Notes() {
   return (
     <div className="notes">
-      <button className="notes-create">
+      <button onClick={() => alert()} className="notes-create">
         <FontAwesomeIcon icon={faPlus} />
       </button>
-    </div>   
+    </div>
   )
 }
 
