@@ -43,5 +43,10 @@
     &::placeholder {
       color: $text-placeholder;
     }
+
+    &::-webkit-scrollbar {
+      width: .3rem;
+      background: $bg-primary;
+    }
   }
 }
