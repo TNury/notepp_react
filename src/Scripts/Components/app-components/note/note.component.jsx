@@ -7,6 +7,8 @@ import {faEdit} from '@fortawesome/free-solid-svg-icons';
 function Note() {
   return (
     <div className="note">
+      <textarea className="note__title" placeholder="Title"></textarea>
+      <textarea className="note__body" placeholder="Write here"></textarea>
       <button className="note-save">
         <FontAwesomeIcon icon={faEdit}/>
       </button>
