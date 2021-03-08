@@ -9,6 +9,7 @@
 
 
 @mixin button-styles {
+  outline: none;
   padding: 0;
   border: none;
   background: none;
@@ -17,6 +18,10 @@
 
   &:hover {
     cursor: pointer;
+    color: $text-primary;
+  }
+
+  &:focus {
     color: $text-primary;
   }
 }
