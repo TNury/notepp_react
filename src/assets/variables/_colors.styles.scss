@@ -3,11 +3,39 @@
 $bg-primary: #1B2633;
 $bg-secondary: #1B2C33;
 $bg-tertiary: #23354A;
-$bg-quaternary: rgba(254, 254, 254, .2);
-$bg-quaternary-hv: rgba(254, 254, 254, .3);
+$bg-proto: #131524;
+$bg-quaternary: #ffffff44;
+$bg-quaternary-hv: #fefefe4d;
 
 // Font colors
 
 $text-primary:  #FEFEFE;
 $text-secondary: #8f93a2;
-$text-placeholder: rgba(143,147,162, .3);
+$text-placeholder: #8f93a24d;
+
+$test1: #ff7300;
+$test2: #ffffff73;
+
+/*
+  THEMES
+
+  DARK-MINIMAL
+  
+  .sidebar{
+    background: $bg-proto;
+    border-right: 1px solid $text-placeholder;
+  }
+
+  .notes {
+    background: $bg-proto;
+    border-right: 1px solid $text-placeholder;
+  }
+
+  DARK-HALOWEEN 
+  
+  still on the works!
+
+  DEFAULT
+
+  use the homepage color pallete!!!!!
+*/ 
