@@ -20,7 +20,8 @@ firebase.initializeApp(firebaseConfig);
 
 // Libraries variables
 const auth = firebase.auth();
-const firestore = firebase.firestore();
+const db = firebase.firestore();
+
 
 // Auth defaults
 
@@ -29,4 +30,4 @@ provider.setCustomParameters({ prompt: 'select_account' });
 
 const signInWithGoogle = () => auth.signInWithPopup(provider);
 
-export {auth, firestore, signInWithGoogle};
+export {auth, db, signInWithGoogle};
