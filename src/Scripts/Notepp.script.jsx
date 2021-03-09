@@ -22,6 +22,8 @@ class Notepp extends React.Component {
     }
   }
 
+  // IDEA: PERHAPS USE LOCAL STORAGE TO CONTROL USER STATE
+
   unsubscribeFromAuth = null;
   
   componentDidMount() {
@@ -52,8 +54,9 @@ class Notepp extends React.Component {
             { this.state.currentUser 
               ? 
               <App currentUser={this.state.currentUser} />
-              : 
-              <Redirect from='/app' to='/login' />
+              :
+              // Don't forget to <Redirect /> 
+              <></>
             }
           </Route>
           {/* LOGIN ROUTE 
