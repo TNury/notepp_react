@@ -6,7 +6,7 @@
   height: 100vh;
   padding: 0;
   overflow: auto;
-  background-color: $bg-primary;
+  background: $bg-primary;
   border-right: 1px solid $bg-quaternary;
 
   &::-webkit-scrollbar {
@@ -14,25 +14,24 @@
   }
 
   &::-webkit-scrollbar-track {
-    background-color: $bg-secondary;
+    background: inherit;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 0.625rem;
-    background-color: $text-primary;
+    background: $text-secondary;
   }
 
   &-prev {
     height: 5rem;
     padding: 1rem;
     color: $text-primary;
-    // background-color: $bg-quaternary;
     transition: 300ms;
 
     p {
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
     
@@ -46,7 +45,7 @@
 
     &:hover {
       cursor: pointer;
-      background-color: $bg-quaternary-hv;
+      background: $bg-quaternary-hv;
     }
   }
 
