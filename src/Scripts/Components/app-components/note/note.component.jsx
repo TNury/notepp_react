@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEdit} from '@fortawesome/free-solid-svg-icons';
 
 
-function Note() {
+export const Note = () => {
   return (
     <div className="note">
       <textarea className="note__title" placeholder="Title"></textarea>
@@ -15,5 +15,3 @@ function Note() {
     </div>
   )
 }
-
-export {Note};
