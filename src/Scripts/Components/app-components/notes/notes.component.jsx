@@ -1,5 +1,8 @@
 // REACT
 import React from 'react';
+// REDUX 
+import { connect } from 'react-redux';
+import { setNoteTitle, setNoteBody } from '../../../Redux/actions/actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME LIBRARY DEFAULT ICON
@@ -11,64 +14,26 @@ import { db } from '../../../Firebase/Firebase.utils.js';
 
 
 class Notes extends React.Component {
-  constructor({user}) {
-    super();
-    this.state = {
-      collection: db.collection(user.uid),
-      // notesData: [],
-      // noteNumber: 0,
-      title: '',
-      body: ''
-    };
-  }
 
   componentDidMount() {
 
-    // const notes = [];
-
-    // this.state.collection.get().then(notesArray => {
-
-    //   notesArray.forEach(note => {
-
-    //     notes.push({title: note.data().title, body: note.data().body});
-    //     this.setState({notesData: notes});
-  
-    //   })
-  
-    // })
-  }
-
-  handleNoteChange() {
-
     const title = document.querySelector('.note__title');
     const body = document.querySelector('.note__body');
-
-
-    title.addEventListener('keydown', (event) => {
-      this.setState({ title: event.target.value })
+    
+    title.addEventListener('keyup', () => {
+      this.props.setNoteTitle(`${title.value}`);
     })
 
-    body.addEventListener('keydown', (event) => {
-      this.setState({ body: event.target.value })
+    body.addEventListener('keyup', () => {
+      this.props.setNoteBody(`${body.value}`);
     })
-
-  }
-
-  componentWillUnmount() {
-    this.setState({ title: '', body: '' })
-  }
-
-  newNote() {
     
   }
 
   render() {
     return (
       <div className="notes">
-        {/* {this.state.notesData.map((note, index) => ( */}
-          <NotePrev title='Lorem Ipsum' body='Lorem Ipsum dolor sit amet'/>
-          <NotePrev title='Lorem Ipsum' body='Lorem Ipsum dolor sit amet'/>
-        {/* ))} */}
+        <NotePrev title={this.props.title} body={this.props.body} />
         <button onClick={() => this.newNote()} className="notes-create">
           <FontAwesomeIcon icon={faPlus} />
         </button>
@@ -77,4 +42,14 @@ class Notes extends React.Component {
   }
 }
 
-export {Notes};
+const mapStateToProps = (currentState) => ({
+  title: currentState.note.currentTitle,
+  body: currentState.note.currentBody
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setNoteTitle: title => dispatch(setNoteTitle(title)),
+  setNoteBody: body => dispatch(setNoteBody(body))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Notes);
