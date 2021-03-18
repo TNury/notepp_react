@@ -1,6 +1,6 @@
 const INITIAL_STATE = {
-  currentTitle: 'New Note',
-  currentBody: 'Write Something'
+  title: 'New Note',
+  body: 'Write Something'
 }
 
 export const noteReducer = (currentState = INITIAL_STATE, action) => {
@@ -8,12 +8,12 @@ export const noteReducer = (currentState = INITIAL_STATE, action) => {
     case 'SET_NOTE_TITLE':
       return {
         ...currentState,
-        currentTitle: action.payload
+        title: action.payload
       }
     case 'SET_NOTE_BODY':
       return {
         ...currentState,
-        currentBody: action.payload
+        body: action.payload
       }
     default: 
       return currentState;
