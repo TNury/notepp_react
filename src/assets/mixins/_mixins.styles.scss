@@ -7,7 +7,6 @@
   font-size: 2.5rem;
 }
 
-
 @mixin button-styles {
   outline: none;
   padding: 0;
@@ -54,4 +53,11 @@
       background: $bg-primary;
     }
   }
+}
+
+@mixin lineClamp($clampAt) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $clampAt;
+  -webkit-box-orient: vertical;
 }
