@@ -1,9 +1,10 @@
 // REDUX LIBRARIES
-import { createStore, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
+import { createStore } from 'redux';
 // OUR ROOT REDUCER
 import rootReducer from '../rootReducer.js';
+// REDUX DEV TOOLS
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const middlewares = [logger];
+// const middlewares = [];
 
-export const store = createStore(rootReducer);
+export const store = createStore(rootReducer, composeWithDevTools());
