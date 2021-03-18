@@ -1,5 +1,3 @@
-// FIREBASE 
-import {auth} from '../../Firebase/Firebase.utils.js';
 // COMPONENTS
 import Header from './header/header.component.jsx';
 import {Main} from './main/main.component.jsx';
