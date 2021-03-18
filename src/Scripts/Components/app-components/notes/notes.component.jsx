@@ -2,7 +2,7 @@
 import React from 'react';
 // REDUX 
 import { connect } from 'react-redux';
-import { setNoteTitle, setNoteBody } from '../../../Redux/actions/actions.js';
+import { setNoteTitle, setNoteBody, setNotesCollection } from '../../../Redux/actions/actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME LIBRARY DEFAULT ICON
@@ -16,18 +16,22 @@ import { db } from '../../../Firebase/Firebase.utils.js';
 class Notes extends React.Component {
 
   componentDidMount() {
+    const docsRef = db.collection(this.props.user.uid);
 
-    const title = document.querySelector('.note__title');
-    const body = document.querySelector('.note__body');
-    
-    title.addEventListener('keyup', () => {
-      this.props.setNoteTitle(`${title.value}`);
+    docsRef.get().then((docsArray => {
+      const notes = this.props.notes;
+      this.props.setNotesCollection(docsArray.docs);
+    }))
+
+    docsRef.doc('test').get().then(doc => {
+
+      this.props.setNoteTitle(doc.data().title);
+      this.props.setNoteBody(doc.data().body);
+
     })
 
-    body.addEventListener('keyup', () => {
-      this.props.setNoteBody(`${body.value}`);
-    })
     
+
   }
 
   render() {
@@ -43,13 +47,16 @@ class Notes extends React.Component {
 }
 
 const mapStateToProps = (currentState) => ({
-  title: currentState.note.currentTitle,
-  body: currentState.note.currentBody
+  user: currentState.user.currentUser,
+  notes: currentState.notes.notes,
+  title: currentState.note.title,
+  body: currentState.note.body
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setNoteTitle: title => dispatch(setNoteTitle(title)),
-  setNoteBody: body => dispatch(setNoteBody(body))
+  setNotesCollection: (notes) => dispatch(setNotesCollection(notes)),
+  setNoteTitle: (title) => dispatch(setNoteTitle(title)),
+  setNoteBody: (body) => dispatch(setNoteBody(body))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Notes);
