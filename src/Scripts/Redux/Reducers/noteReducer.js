@@ -3,7 +3,7 @@ const INITIAL_STATE = {
   currentBody: 'Write Something'
 }
 
-export const noteContentReducer = (currentState = INITIAL_STATE, action) => {
+export const noteReducer = (currentState = INITIAL_STATE, action) => {
   switch(action.type) {
     case 'SET_NOTE_TITLE':
       return {
