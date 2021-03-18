@@ -1,6 +1,6 @@
 // COMPONENTS
 import Header from './header/header.component.jsx';
-import {Main} from './main/main.component.jsx';
+import { Main } from './main/main.component.jsx';
 
 
 export const Home = () => {
