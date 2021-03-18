@@ -2,7 +2,7 @@
 import {Link} from 'react-router-dom';
 // COMPONENTS
 import {Button} from './button-component/button.component.jsx';
-import {Loading} from '../../Components/loading-component/loading.component.jsx';
+// import {Loading} from '../../Components/loading-component/loading.component.jsx';
 // FONTAWESOME BRAND LIBRARY ICON
 import {faGoogle, faTwitter, faFacebookF, faApple} from '@fortawesome/free-brands-svg-icons';
 // FONTAWESOME LIBRARY DEFAULT ICON
