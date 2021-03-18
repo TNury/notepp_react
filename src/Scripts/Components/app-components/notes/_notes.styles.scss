@@ -27,20 +27,15 @@
     padding: 1rem;
     color: $text-primary;
     transition: 300ms;
-
-    p {
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
     
     &__title {
       margin: 0;
+      @include lineClamp(1);
     }
     
     &__body {
       color: $text-secondary;
+      @include lineClamp(3);
     }
 
     &:hover {
