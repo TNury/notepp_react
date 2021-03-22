@@ -27,15 +27,27 @@
     padding: 1rem;
     color: $text-primary;
     transition: 300ms;
+    position: relative;
     
     &__title {
-      margin: 0;
       @include lineClamp(1);
+      margin: 0;
     }
     
     &__body {
-      color: $text-secondary;
       @include lineClamp(3);
+      color: $text-secondary;
+    }
+
+    &__button {
+      @include button-styles;
+      position: absolute;
+      right: .3rem;
+      bottom: .3rem;
+    }
+
+    &__icon {
+      pointer-events: none;
     }
 
     &:hover {
