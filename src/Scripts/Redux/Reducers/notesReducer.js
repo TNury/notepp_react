@@ -1,19 +1,21 @@
 const INITIAL_STATE = {
-  notes: []
+  notesCollection: {
+    // size: 0,
+    docs: []
+  }
 }
-  
 
 export const notesReducer = (currentState = INITIAL_STATE, action) => {
   switch(action.type) {
-    case 'SET_NOTES_COLLECTION':
+    case 'SET_NOTE_CONTENT':
       return {
         ...currentState,
-        notes: [
-          ...currentState.notes, 
-          action.payload
-        ]
+        notesCollection: {
+          // size: action.payload,
+          docs: action.payload
+        }
       }
-    default:
+    default: 
       return currentState
   }
 }
