@@ -3,17 +3,7 @@ export const setCurrentUser = (user) => ({
   payload: user
 });
 
-export const setNoteTitle = (title) => ({
-  type: 'SET_NOTE_TITLE',
-  payload: title
-});
-
-export const setNoteBody = (body) => ({
-  type: 'SET_NOTE_BODY',
-  payload: body
-});
-
-export const setNotesCollection = (notes) => ({
-  type: 'SET_NOTES_COLLECTION',
+export const setNoteContent = (notes) => ({
+  type: 'SET_NOTE_CONTENT',
   payload: notes
-})
+});
