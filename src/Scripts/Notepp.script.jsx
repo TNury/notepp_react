@@ -3,7 +3,7 @@ import React from 'react';
 // REACT-ROUTER COMPONENTS
 import { Route, Switch, Redirect } from 'react-router-dom';
 // FIREBASE AUTH
-import { auth } from './Firebase/Firebase.utils.js';
+import { auth, db, createUserProfileDocument } from './Firebase/Firebase.utils.js';
 // REDUX
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/actions/actions.js';
@@ -19,10 +19,34 @@ import './Notepp.styles.scss';
 
 export class Notepp extends React.Component {
 
+  unsubscribeFromAuth = null;
+
   componentDidMount() {
-    auth.onAuthStateChanged((user) => {
-      this.props.setCurrentUser(user);
+
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (currentUser) => {
+    
+      if (currentUser) {
+
+        const userRef = await createUserProfileDocument(currentUser);
+
+        userRef.onSnapshot((user) => {
+          this.props.setCurrentUser({
+            id: user.id,
+            ...user.data()
+          });
+        });
+
+      } else {
+
+        this.props.setCurrentUser(null);
+        
+      }
     })
+
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
   }
 
   render() {
