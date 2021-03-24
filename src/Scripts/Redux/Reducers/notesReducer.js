@@ -1,17 +1,17 @@
+import { SET_NOTES_COLLECTION } from '../actions/types';
+
 const INITIAL_STATE = {
   notesCollection: {
-    // size: 0,
     docs: []
   }
 }
 
 export const notesReducer = (currentState = INITIAL_STATE, action) => {
   switch(action.type) {
-    case 'SET_NOTE_CONTENT':
+    case SET_NOTES_COLLECTION:
       return {
         ...currentState,
         notesCollection: {
-          // size: action.payload,
           docs: action.payload
         }
       }
