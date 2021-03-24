@@ -1,9 +1,12 @@
+import { SET_NOTES_COLLECTION, SET_CURRENT_USER } from './types.js';
+
+
 export const setCurrentUser = (user) => ({
-  type: 'SET_CURRENT_USER',
+  type: SET_CURRENT_USER,
   payload: user
 });
 
-export const setNoteContent = (notes) => ({
-  type: 'SET_NOTE_CONTENT',
+export const setNotesCollection = (notes) => ({
+  type: SET_NOTES_COLLECTION,
   payload: notes
 });
