@@ -3,7 +3,7 @@ import React from 'react';
 // REACT-ROUTER COMPONENTS
 import { Route, Switch, Redirect } from 'react-router-dom';
 // FIREBASE AUTH
-import { auth, db, createUserProfileDocument } from './Firebase/Firebase.utils.js';
+import { auth, db } from './Firebase/Firebase.utils.js';
 // REDUX
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/actions/actions.js';
@@ -23,26 +23,28 @@ export class Notepp extends React.Component {
 
   componentDidMount() {
 
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (currentUser) => {
-    
+    this.unsubscribeFromAuth = auth.onAuthStateChanged( (currentUser) => {
+
       if (currentUser) {
-
-        const userRef = await createUserProfileDocument(currentUser);
-
-        userRef.onSnapshot((user) => {
-          this.props.setCurrentUser({
-            id: user.id,
-            ...user.data()
-          });
-        });
-
-      } else {
-
-        this.props.setCurrentUser(null);
-        
+        this.props.setCurrentUser(currentUser);
+        this.createUserProfileDoc(currentUser);
       }
+
     })
 
+  }
+
+  createUserProfileDoc(currentUser) {
+
+    if (!currentUser) return;
+
+    const userDocRef = db.doc(`users/${currentUser.displayName}`);
+    const creationDate = new Date();
+
+    userDocRef.set({
+      createdAt: creationDate
+    })
+    
   }
 
   componentWillUnmount() {
@@ -103,8 +105,4 @@ const mapStateToProps = (currentState) => ({
   currentUser: currentState.user.currentUser
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Notepp);
+export default connect(mapStateToProps, { setCurrentUser })(Notepp);
