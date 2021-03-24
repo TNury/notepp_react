@@ -22,36 +22,6 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-// CREATE USER PROFILE
-const createUserProfileDocument = async (currentUser, additionalData) => {
-
-  if (!currentUser) return;
-  // CREATE USER DOC
-  const userDocRef = db.doc(`users/${currentUser.uid}`);
-  const docSnapShot = await userDocRef.get();
-
-  if(!docSnapShot.exist) {
-    const { displayName, email } = currentUser;
-
-    try {
-      await userDocRef.set({
-        displayName,
-        email,
-        ...additionalData
-      })
-    } catch (err) {
-      console.error('Error creating user', err.message);
-    }
-  }
-
-  // CREATE USER NOTES DOC
-
-
-  return userDocRef;
-}
-
-
-
 // Auth defaults
 
 const provider = new firebase.auth.GoogleAuthProvider();
@@ -59,4 +29,4 @@ provider.setCustomParameters({ prompt: 'select_account' });
 
 const signInWithGoogle = () => auth.signInWithPopup(provider);
 
-export {auth, db, signInWithGoogle, createUserProfileDocument};
+export {auth, db, signInWithGoogle};
