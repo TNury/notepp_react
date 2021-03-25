@@ -11,7 +11,8 @@ const Header = ({ currentUser }) => {
     <header className="header">
       <nav className="header-nav">
         <Link className="header-nav__link header-nav__logo" to="/">Notepp</Link>
-        { currentUser 
+        { 
+          currentUser 
           ?
           <>
             <button onClick={() => auth.signOut()} className="header-nav__button header-nav__item">Logout</button>
@@ -29,7 +30,7 @@ const Header = ({ currentUser }) => {
 }
 
 const mapStateToProps = (currentState) => ({
-  currentUser: currentState.user.currentUser
+  currentUser: currentState.user
 })
 
 export default connect(mapStateToProps)(Header);

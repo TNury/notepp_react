@@ -66,7 +66,7 @@ class Notes extends React.Component {
             />
           ))
         }
-        <button onClick={ () => this.newNote(this.props) } className="notes-create">
+        <button onClick={() => this.newNote(this.props)} className="notes-create">
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>

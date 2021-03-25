@@ -1,7 +1,7 @@
 
 
-function Main() {
-  return(
+export const Main = () => {
+  return (
     <main className="content-wrapper">
       <section className="content-header">
         <h1>Simply Simple</h1>
@@ -20,5 +20,3 @@ function Main() {
     </main>
   )
 }
-
-export {Main};

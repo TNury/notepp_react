@@ -10,11 +10,11 @@ import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import { db } from '../../../../Firebase/Firebase.utils.js';
 
 
-const NotePrev = ({id, currentUser, title, body}) => {
+const NotePrev = ({ id, currentUser, title, body }) => {
 
   function deleteNote() {
 
-    const notesRef = db.collection(`users/${currentUser.displayName}/notes`);
+    const notesRef = db.collection(`users/${ currentUser.displayName }/notes`);
 
     notesRef.where('id', '==', id)
       .get()

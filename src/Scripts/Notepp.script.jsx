@@ -59,14 +59,10 @@ export class Notepp extends React.Component {
           <Route exact path='/'>
             <Home />
           </Route>
-          {/* APP ROUTE
-          
-          If the user is logged in, the route /app becomes
-          available, if he tries to manually change to 
-          /app he will be redirected to login page
-        */}
+          {/* APP ROUTE */}
           <Route path='/app'>
-            {this.props.currentUser
+            {
+              this.props.currentUser
               ?
               <App />
               :
@@ -74,26 +70,18 @@ export class Notepp extends React.Component {
               <></>
             }
           </Route>
-          {/* LOGIN ROUTE 
-          
-          If the user is logged in, the /login route becomes
-          unavailable, if he tries to manually change to /login
-          he will be redirected to /app.
-        */}
+          {/* LOGIN ROUTE */}
           <Route path='/login'>
-            {this.props.currentUser
+            {
+              this.props.currentUser
               ?
               <Redirect from='/login' to='/app' />
               :
               <Login />
             }
           </Route>
-          {/* 404 ROUTE 
-        
-          If there's no route for the current URL, the 404
-          page gets rendered.
-        */}
-          <Route path='/*' component={NotFound} />
+          {/* 404 ROUTE */}
+          <Route path='/*' component={ NotFound } />
         </Switch>
       </>
     );
