@@ -1,6 +1,6 @@
 import React from 'react';
 // COMPONENTS
-import { Sidebar } from './sidebar/sidebar.component.jsx';
+import Sidebar from './sidebar/sidebar.component.jsx';
 import Notes from './notes/notes.component.jsx';
 import { Note } from './note/note.component.jsx';
 
