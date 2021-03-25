@@ -14,7 +14,7 @@ import Notepp from './scripts/Notepp.script.jsx';
 // import { reportWebVitals } from './scripts/Tools/reportWebVitals';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={ store }>
     <BrowserRouter>
       <Notepp />
     </BrowserRouter>
