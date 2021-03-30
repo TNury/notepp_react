@@ -42,8 +42,9 @@
     &__button {
       @include button-styles;
       position: absolute;
-      right: .3rem;
-      bottom: .3rem;
+      right: .05rem;
+      bottom: .05rem;
+      padding: .3rem;
     }
 
     &__icon {
