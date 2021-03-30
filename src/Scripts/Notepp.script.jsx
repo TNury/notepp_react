@@ -55,6 +55,9 @@ export class Notepp extends React.Component {
   }
 
   render() {
+
+    const isLoggedIn = this.props.reduxProps.currentUserProp;
+
     return (
       <>
         <Switch>
@@ -65,7 +68,7 @@ export class Notepp extends React.Component {
           {/* APP ROUTE */}
           <Route path='/app'>
             {
-              this.props.reduxProps.currentUser
+              isLoggedIn
               ?
               <App />
               :
@@ -76,7 +79,7 @@ export class Notepp extends React.Component {
           {/* LOGIN ROUTE */}
           <Route path='/login'>
             {
-              this.props.reduxProps.currentUser
+              isLoggedIn
               ?
               <Redirect from='/login' to='/app' />
               :
@@ -92,9 +95,9 @@ export class Notepp extends React.Component {
 }
 
 
-const mapStateToProps = (currentState) => ({
+const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    currentUser: currentState.user.value
+    currentUserProp: currentStore.userReducer.user
   }
 })
 
@@ -104,4 +107,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Notepp);
+export default connect(mapStoreToProps, mapDispatchToProps)(Notepp);
