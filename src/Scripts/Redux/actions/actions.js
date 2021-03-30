@@ -23,22 +23,22 @@ const setAppFont = (font) => ({
 
 
 // NOTE DISPLAY ACTIONS
-const displayNote = (boolean) => ({
+const displayEditor = (boolean) => ({
   type: 'DISPLAY_NOTE',
   payload: boolean
 });
 
-const setNoteId = (id) => ({
+const onEditorSetNoteId = (id) => ({
   type: 'SET_NOTE_ID',
   payload: id
 })
 
-const setNoteTitle = (title) => ({
+const onEditorSetNoteTitle = (title) => ({
   type: 'SET_NOTE_TITLE',
   payload: title
 });
 
-const setNoteBody = (body) => ({
+const onEditorSetNoteBody = (body) => ({
   type: 'SET_NOTE_BODY',
   payload: body
 });
@@ -47,9 +47,9 @@ export {
   setCurrentUser,
   setNotesCollection,
   setNotesCollectionRef,
-  displayNote,
-  setNoteId,
-  setNoteTitle,
-  setNoteBody,
+  displayEditor,
+  onEditorSetNoteId,
+  onEditorSetNoteTitle,
+  onEditorSetNoteBody,
   setAppFont
 };
