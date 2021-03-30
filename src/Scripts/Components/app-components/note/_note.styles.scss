@@ -10,6 +10,14 @@
   box-sizing: border-box;
   overflow: hidden;
 
+  &-close {
+    @include button-styles;
+    @include special-button-styles;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   &__title {
     font-size: 2rem;
     color: $text-primary;
@@ -18,14 +26,14 @@
   &__body {
     font-size: 1.5rem;
     color: $text-secondary;
-    height: 85%;
+    // THIS NEEDS TO BE FIXED WHEN CREATING THE 
+    // MOBILE VERSION
+    height: 70%;
   }
 
   &-save {
-    @include button-styles;
-    @include special-button-styles;
-    position: fixed; 
-    bottom: 0; 
-    right: 0;
+    @extend .note-close;
+    top: auto;
+    bottom: 0;
   }
 }
