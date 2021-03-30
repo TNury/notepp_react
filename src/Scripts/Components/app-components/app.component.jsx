@@ -15,10 +15,10 @@ class App extends React.Component {
 
   componentDidMount() {
 
-    const { currentUser } = this.props.reduxProps;
+    const { currentUserProp } = this.props.reduxProps;
     const { setNotesCollection, setNotesCollectionRef } = this.props.reduxActions;
 
-    const notesRef = db.collection(`users/${currentUser.displayName}/notes`);
+    const notesRef = db.collection(`users/${currentUserProp.displayName}/notes`);
 
     setNotesCollectionRef(notesRef);
 
@@ -50,9 +50,9 @@ class App extends React.Component {
 }
 
 // PROPS
-const mapStateToProps = (currentState) => ({
+const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    currentUser: currentState.user.value
+    currentUserProp: currentStore.userReducer.user
   }
 })
 
@@ -64,4 +64,4 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStoreToProps, mapDispatchToProps)(App);
