@@ -8,14 +8,14 @@ import { Link } from 'react-router-dom';
 
 const Header = (props) => {
 
-  const currentUser = props.reduxProps.currentUser;
+  const isLoggedIn = props.reduxProps.currentUserProp;
 
   return (
     <header className="header">
       <nav className="header-nav">
         <Link className="header-nav__link header-nav__logo" to="/">Notepp</Link>
         { 
-          currentUser 
+          isLoggedIn 
           ?
           <>
             <button onClick={() => auth.signOut()} className="header-nav__button header-nav__item">Logout</button>
@@ -32,10 +32,10 @@ const Header = (props) => {
   )
 }
 
-const mapStateToProps = (currentState) => ({
+const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    currentUser: currentState.user.value
+    currentUserProp: currentStore.userReducer.user
   }
 })
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStoreToProps)(Header);
