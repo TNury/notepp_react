@@ -2,7 +2,7 @@
 import React from 'react';
 // REDUX
 import { connect } from 'react-redux';
-import { displayNote, setNoteTitle, setNoteBody } from '../../../Redux/actions/actions.js';
+import { displayEditor, onEditorSetNoteTitle, onEditorSetNoteBody } from '../../../Redux/actions/actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME LIBRARY DEFAULT ICON
@@ -15,15 +15,15 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 class Note extends React.Component {
 
   closeNote() {
-    this.props.reduxActions.displayNote(false);
+    this.props.reduxActions.displayEditor(false);
   }
 
   saveNote() {
 
-    const { notesCollection } = this.props.reduxProps;
-    const { id, title, body } = this.props.reduxProps.openedNote;
+    const { notesCollectionProps } = this.props.reduxProps;
+    const { id, title, body } = this.props.reduxProps.noteEditorProp;
 
-    notesCollection.ref.where('id', '==', id)
+    notesCollectionProps.ref.where('id', '==', id)
     .get()
     .then((note) => {
       note.docs[0].ref.update({
@@ -36,20 +36,20 @@ class Note extends React.Component {
 
   handleChange(event) {
 
-    const { setNoteTitle, setNoteBody } = this.props.reduxActions;
+    const { onEditorSetNoteTitle, onEditorSetNoteBody } = this.props.reduxActions;
 
     event.target.className === 'note__title'
       ?
-    setNoteTitle(event.target.value)
+    onEditorSetNoteTitle(event.target.value)
       :
-    setNoteBody(event.target.value)
+    onEditorSetNoteBody(event.target.value)
      
   }
   
 
   render() {
 
-    const { display, title, body } = this.props.reduxProps.openedNote;
+    const { display, title, body } = this.props.reduxProps.noteEditorProp;
 
     return (
       <div className="note">
@@ -92,19 +92,19 @@ class Note extends React.Component {
  
 }
 
-const mapStateToProps = (currentState) => ({
+const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    openedNote: currentState.note.openedNote,
-    notesCollection: currentState.notes.notesCollection
+    noteEditorProp: currentStore.noteEditorReducer.noteEditor,
+    notesCollectionProps: currentStore.notesCollectionReducer.notesCollection
   }
 })
 
 const mapDispatchToProps = (dispatch) => ({
   reduxActions: {
-    displayNote: boolean => dispatch(displayNote(boolean)),
-    setNoteTitle: title => dispatch(setNoteTitle(title)),
-    setNoteBody: body => dispatch(setNoteBody(body))
+    displayEditor: boolean => dispatch(displayEditor(boolean)),
+    onEditorSetNoteTitle: title => dispatch(onEditorSetNoteTitle(title)),
+    onEditorSetNoteBody: body => dispatch(onEditorSetNoteBody(body)),
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Note);
+export default connect(mapStoreToProps, mapDispatchToProps)(Note);
