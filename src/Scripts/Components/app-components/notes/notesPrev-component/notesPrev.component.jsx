@@ -3,10 +3,10 @@ import React from 'react';
 // REDUX
 import { connect } from 'react-redux';
 import { 
-  displayNote, 
-  setNoteId,
-  setNoteTitle, 
-  setNoteBody 
+  displayEditor,
+  onEditorSetNoteId,
+  onEditorSetNoteTitle,
+  onEditorSetNoteBody
 } from '../../../../Redux/actions/actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,16 +20,18 @@ class NotesPrev extends React.Component {
 
     event.stopPropagation();
 
-    const { notesCollection } = this.props.reduxProps;
+    const { notesCollectionProps } = this.props.reduxProps;
     const { id } = this.props.drilledProps;
 
-    notesCollection.ref.where('id', '==', id)
+    notesCollectionProps.ref.where('id', '==', id)
       .get()
       .then(({docs}) => {
 
         docs[0].ref.delete();
 
       })
+
+    this.props.reduxActions.displayEditor(false);
 
   }
 
@@ -40,16 +42,16 @@ class NotesPrev extends React.Component {
 
     const { id, title, body } = this.props.drilledProps;
     const { 
-      displayNote, 
-      setNoteId,
-      setNoteTitle, 
-      setNoteBody 
+      displayEditor,
+      onEditorSetNoteId,
+      onEditorSetNoteTitle,
+      onEditorSetNoteBody
     } = this.props.reduxActions;
 
-    displayNote(true);
-    setNoteId(id);
-    setNoteTitle(title);
-    setNoteBody(body);
+    displayEditor(true);
+    onEditorSetNoteId(id);
+    onEditorSetNoteTitle(title);
+    onEditorSetNoteBody(body);
 
   }
 
@@ -76,21 +78,21 @@ class NotesPrev extends React.Component {
 }
 
 // PROPS
-const mapStatesToProps = (currentState) => ({
+const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    notesCollection: currentState.notes.notesCollection
+    notesCollectionProps: currentStore.notesCollectionReducer.notesCollection
   }
 })
 
 const mapDispatchToProps = (dispatch) => ({
   reduxActions: {
-    displayNote: boolean => dispatch(displayNote(boolean)),
-    setNoteId: id => dispatch(setNoteId(id)),
-    setNoteTitle: title => dispatch(setNoteTitle(title)),
-    setNoteBody: body => dispatch(setNoteBody(body)),
+    displayEditor: boolean => dispatch(displayEditor(boolean)),
+    onEditorSetNoteId: id => dispatch(onEditorSetNoteId(id)),
+    onEditorSetNoteTitle: title => dispatch(onEditorSetNoteTitle(title)),
+    onEditorSetNoteBody: body => dispatch(onEditorSetNoteBody(body)),
   }
 })
 
-export default connect(mapStatesToProps, mapDispatchToProps)(NotesPrev);
+export default connect(mapStoreToProps, mapDispatchToProps)(NotesPrev);
 
 
