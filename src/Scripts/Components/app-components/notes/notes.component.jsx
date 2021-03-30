@@ -2,7 +2,7 @@
 import React from 'react';
 // REDUX 
 import { connect } from 'react-redux';
-import { displayNote } from '../../../Redux/actions/actions.js';
+import { displayEditor } from '../../../Redux/actions/actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME LIBRARY DEFAULT ICON
@@ -14,15 +14,15 @@ class Notes extends React.Component {
 
   newNote() {
 
-    const { notesCollection } = this.props.reduxProps;
+    const { notesCollectionProps } = this.props.reduxProps;
 
     let id = 0;
 
-    notesCollection.docs.forEach(() => {
+    notesCollectionProps.docs.forEach(() => {
       id++
     })
 
-    notesCollection.ref.doc().set({
+    notesCollectionProps.ref.doc().set({
       id: id,
       title: 'New note',
       body: ''
@@ -31,11 +31,11 @@ class Notes extends React.Component {
   }
 
   closeNote() {
-    this.props.reduxActions.displayNote(false);
+    this.props.reduxActions.displayEditor(false);
   }
 
   render() {
-    const notes = this.props.reduxProps.notesCollection.docs;
+    const notes = this.props.reduxProps.notesCollectionProps.docs;
     
     return (
       <div onClick={() => this.closeNote()} className="notes">
@@ -61,17 +61,16 @@ class Notes extends React.Component {
 }
 
 // PROPS
-const mapStatesToProps = (currentState) => ({
+const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    currentUser: currentState.user.value,
-    notesCollection: currentState.notes.notesCollection
+    notesCollectionProps: currentStore.notesCollectionReducer.notesCollection
   }
 });
 
 const mapDispatchToProps = (dispatch) => ({
   reduxActions: {
-    displayNote: boolean => dispatch(displayNote(boolean))
+    displayEditor: boolean => dispatch(displayEditor(boolean))
   }
 });
 
-export default connect(mapStatesToProps, mapDispatchToProps)(Notes);
+export default connect(mapStoreToProps, mapDispatchToProps)(Notes);
