@@ -48,9 +48,9 @@ const Sidebar = (props) => {
   )
 }
 
-const mapStateToProps = (currentState) => ({
+const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    currentFont: currentState.font.currentFont
+    fontProp: currentStore.fontReducer.font
   }
 })
 
@@ -61,5 +61,5 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+export default connect(mapStoreToProps, mapDispatchToProps)(Sidebar);
 
