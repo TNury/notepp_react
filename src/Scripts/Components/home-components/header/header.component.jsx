@@ -6,7 +6,10 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
-const Header = ({ currentUser }) => {
+const Header = (props) => {
+
+  const currentUser = props.reduxProps.currentUser;
+
   return (
     <header className="header">
       <nav className="header-nav">
@@ -30,7 +33,9 @@ const Header = ({ currentUser }) => {
 }
 
 const mapStateToProps = (currentState) => ({
-  currentUser: currentState.user
+  reduxProps: {
+    currentUser: currentState.user.value
+  }
 })
 
 export default connect(mapStateToProps)(Header);
