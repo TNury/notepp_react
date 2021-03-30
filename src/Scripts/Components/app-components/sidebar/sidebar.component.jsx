@@ -15,20 +15,23 @@ const Sidebar = (props) => {
 
   function dyslexia() {
 
-    const App = document.querySelector('.App').style;
+    // const App = document.querySelector('.App').style;
 
-    if (props.currentFont === 'Gill Sans') {
+    // if (props.currentFont === 'Gill Sans') {
 
-      props.setAppFont('OpenDyslexic');
+    //   props.reduxActions.setAppFont('OpenDyslexic');
 
-      App.fontFamily = props.currentFont;
+    //   App.fontFamily = props.reduxProps.currentFont;
+    //   console.log(props.reduxProps.currentFont)
 
-    } else {
+    // } else {
 
-      props.setAppFont('Gill Sans');
-      App.fontFamily = props.currentFont;
-      
-    }
+    //   props.reduxActions.setAppFont('Gill Sans');
+
+    //   App.fontFamily = props.reduxProps.currentFont;
+    //   console.log(props.reduxProps.currentFont)
+    // }
+    console.log('Fix this later');
 
   }
   
@@ -46,9 +49,17 @@ const Sidebar = (props) => {
 }
 
 const mapStateToProps = (currentState) => ({
-  currentFont: currentState.font.currentFont
+  reduxProps: {
+    currentFont: currentState.font.currentFont
+  }
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  reduxActions: {
+    setAppFont: font => dispatch(setAppFont(font))
+  }
 })
 
 
-export default connect(mapStateToProps, { setAppFont })(Sidebar);
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
 
