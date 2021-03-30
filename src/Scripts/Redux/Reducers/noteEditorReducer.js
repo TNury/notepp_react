@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  openedNote: {
+  noteEditor: {
     display: false,
     id: 0,
     title: '',
@@ -7,37 +7,37 @@ const INITIAL_STATE = {
   }
 }
 
-export const noteReducer = (currentState = INITIAL_STATE, action) => {
+export const noteEditor = (currentState = INITIAL_STATE, action) => {
   switch(action.type) {
     case 'DISPLAY_NOTE':
       return {
         ...currentState,
-        openedNote: {
-          ...currentState.openedNote,
+        noteEditor: {
+          ...currentState.noteEditor,
           display: action.payload
         }
       }
     case 'SET_NOTE_ID':
       return {
         ...currentState,
-        openedNote: {
-          ...currentState.openedNote,
+        noteEditor: {
+          ...currentState.noteEditor,
           id: action.payload
         }
       }
     case 'SET_NOTE_TITLE':
       return {
         ...currentState,
-        openedNote: {
-          ...currentState.openedNote,
+        noteEditor: {
+          ...currentState.noteEditor,
           title: action.payload
         }
       }
     case 'SET_NOTE_BODY':
       return {
         ...currentState,
-        openedNote: {
-          ...currentState.openedNote,
+        noteEditor: {
+          ...currentState.noteEditor,
           body: action.payload
         }
       }
