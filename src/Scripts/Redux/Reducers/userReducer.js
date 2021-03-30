@@ -1,13 +1,13 @@
 const INITIAL_STATE = {
-  value: null
+  user: null
 }
 
-export const userReducer = (currentState = INITIAL_STATE, action) => {
+export const user = (currentState = INITIAL_STATE, action) => {
   switch(action.type) {
     case 'SET_CURRENT_USER':
       return {
         ...currentState,
-        value: action.payload
+        user: action.payload
       };
     default:
      return currentState;
