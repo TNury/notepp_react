@@ -2,13 +2,13 @@
 import React from 'react';
 // REDUX 
 import { connect } from 'react-redux';
-import { setNotesCollection } from '../../../Redux/actions/actions.js';
+import { displayNote } from '../../../Redux/actions/actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME LIBRARY DEFAULT ICON
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 // COMPONENTS
-import NotePrev from './notePrev-component/notePrev.component.jsx';
+import NotesPrev from './notesPrev-component/notesPrev.component.jsx';
 // FIRESTORE DB
 import { db } from '../../../Firebase/Firebase.utils.js';
 
@@ -17,19 +17,33 @@ import { db } from '../../../Firebase/Firebase.utils.js';
   so i'm passing props to them through arguments.
 */
 
-class Notes extends React.Component {
+const Notes = (props) => {
 
-  componentDidMount() {
-    this.loadNotes(this.props);
+  const { currentUser, userNotes} = props.reduxProps;
+  const { displayNote } = props.reduxActions; 
+
+  // KEEP AN EYE ON THIS 
+  // (function test() {
+  //   if (Object.keys(userNotes).length === 0) {
+  //     return
+  //   } else {
+  //     userNotes.get().then(data => console.log(data))
+  //   }
+  // })()
+
+  if (Object.keys(userNotes).length === 0) {
+    return
+  } else {
+    userNotes.get().then(data => console.log(data))
   }
 
-  newNote(props) {
+  function newNote() {
 
-    const notesRef = db.collection(`users/${props.currentUser.displayName}/notes`);
+    const notesRef = db.collection(`users/${currentUser.displayName}/notes`);
 
     let id = 0;
 
-    props.notesCollection.docs.forEach(() => {
+    userNotes.docs.forEach(() => {
       id++
     });
 
@@ -42,42 +56,44 @@ class Notes extends React.Component {
     
   }
 
-  loadNotes(props) {
-    
-    const notesRef = db.collection(`users/${props.currentUser.displayName}/notes`).orderBy('id');
-
-    notesRef.where('isNote', '==', true).onSnapshot(({docs}) => {
-      props.setNotesCollection(docs);
-    })
-   
+  function closeNote() {
+    displayNote(false);
   }
 
-  render() {
-    return (
-      <div className="notes">
-        {
-          this.props.notesCollection.docs.map((doc, index) => (
-            <NotePrev 
-              key={index}
-              currentUser={this.props.currentUser} 
-              id={doc.data().id} 
-              title={doc.data().title} 
-              body={doc.data().body} 
-            />
-          ))
-        }
-        <button onClick={() => this.newNote(this.props)} className="notes-create">
-          <FontAwesomeIcon icon={faPlus} />
-        </button>
-      </div>
-    )
-  }
+
+  return (
+    <div onClick={() => closeNote()} className="notes">
+      {/* {
+        userNotes.docs.map((doc, index) => (
+          <NotesPrev 
+            key={index}
+            drilledProps={{
+              id: doc.data().id,
+              title: doc.data().title,
+              body: doc.data().body
+            }}
+          />
+        ))
+      } */}
+      <button onClick={() => newNote()} className="notes-create">
+        <FontAwesomeIcon icon={faPlus} />
+      </button>
+    </div>
+  )
 }
 
 // PROPS
 const mapStatesToProps = (currentState) => ({
-  currentUser: currentState.user.currentUser,
-  notesCollection: currentState.notes.notesCollection
+  reduxProps: {
+    currentUser: currentState.user.value,
+    userNotes: currentState.notes.notesCollection
+  }
 });
 
-export default connect(mapStatesToProps, { setNotesCollection })(Notes);
+const mapDispatchToProps = (dispatch) => ({
+  reduxActions: {
+    displayNote: note => dispatch(displayNote(note))
+  }
+});
+
+export default connect(mapStatesToProps, mapDispatchToProps)(Notes);
