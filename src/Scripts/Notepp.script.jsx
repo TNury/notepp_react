@@ -8,7 +8,7 @@ import { auth, db } from './Firebase/Firebase.utils.js';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/actions/actions.js';
 // COMPONENTS
-import { App } from './Components/app-components/app.component.jsx';
+import App from './Components/app-components/app.component.jsx';
 import { Home } from './Components/home-components/home.component.jsx';
 import { Login } from './Components/login-components/login.component.jsx';
 import { NotFound } from './Components/not-found-component/notFound.component.jsx';
@@ -26,7 +26,7 @@ export class Notepp extends React.Component {
     this.unsubscribeFromAuth = auth.onAuthStateChanged( (currentUser) => {
 
       if (currentUser) {
-        this.props.setCurrentUser(currentUser);
+        this.props.reduxActions.setCurrentUser(currentUser);
         this.createUserProfileDoc(currentUser);
       }
 
@@ -39,11 +39,14 @@ export class Notepp extends React.Component {
     if (!currentUser) return;
 
     const userDocRef = db.doc(`users/${currentUser.displayName}`);
+    
     const creationDate = new Date();
 
     userDocRef.set({
       createdAt: creationDate
     })
+
+
     
   }
 
@@ -62,7 +65,7 @@ export class Notepp extends React.Component {
           {/* APP ROUTE */}
           <Route path='/app'>
             {
-              this.props.currentUser
+              this.props.reduxProps.currentUser
               ?
               <App />
               :
@@ -73,7 +76,7 @@ export class Notepp extends React.Component {
           {/* LOGIN ROUTE */}
           <Route path='/login'>
             {
-              this.props.currentUser
+              this.props.reduxProps.currentUser
               ?
               <Redirect from='/login' to='/app' />
               :
@@ -90,7 +93,15 @@ export class Notepp extends React.Component {
 
 
 const mapStateToProps = (currentState) => ({
-  currentUser: currentState.user.currentUser
+  reduxProps: {
+    currentUser: currentState.user.value
+  }
 })
 
-export default connect(mapStateToProps, { setCurrentUser })(Notepp);
+const mapDispatchToProps = (dispatch) => ({
+  reduxActions: {
+    setCurrentUser: user => dispatch(setCurrentUser(user))
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Notepp);
