@@ -1,13 +1,13 @@
 const INITIAL_STATE = {
-  currentFont: 'Gill Sans'
+  font: 'Gill Sans'
 }
 
-export const fontReducer = (currentState = INITIAL_STATE, action) => {
+export const font = (currentState = INITIAL_STATE, action) => {
   switch(action.type) {
     case 'SET_APP_FONT': 
       return {
         ...currentState,
-        currentFont: action.payload
+        font: action.payload
       }
     default:
       return currentState
