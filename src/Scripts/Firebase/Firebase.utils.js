@@ -15,18 +15,20 @@ const firebaseConfig = {
   appId: "1:248336961600:web:09ef17a4d13c6f9ef88fa5"
 };
 
-// Initialize Firebase
+// INITIALIZE FIREBASE
 firebase.initializeApp(firebaseConfig);
 
-// Libraries variables
+// LIBRARIES
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-// Auth defaults
+// GOOGLE AUTH
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: 'select_account' });
+const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: 'select_account' });
+// FACEBOOK AUTH
+const facebookProvider = new firebase.auth.FacebookAuthProvider();
+const signInWithFacebook = () => auth.signInWithPopup(facebookProvider);
 
-const signInWithGoogle = () => auth.signInWithPopup(provider);
-
-export {auth, db, signInWithGoogle};
+export { auth, db, signInWithGoogle, signInWithFacebook};
