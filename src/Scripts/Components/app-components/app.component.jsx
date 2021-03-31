@@ -4,7 +4,10 @@ import React from 'react';
 import { db } from '../../Firebase/Firebase.utils.js';
 // REDUX
 import { connect } from 'react-redux';
-import { setNotesCollection, setNotesCollectionRef } from '../../Redux/actions/actions.js';
+import { 
+  setNotesCollection, 
+  setNotesCollectionRef 
+} from '../../Redux/actions/notes-collection-actions/notes-collection-actions.js';
 // COMPONENTS
 import Sidebar from './sidebar/sidebar.component.jsx';
 import Notes from './notes/notes.component.jsx';

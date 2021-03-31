@@ -1,6 +1,6 @@
 // REDUX
 import { connect } from 'react-redux';
-import { setAppFont } from '../../../Redux/actions/actions.js';
+import { setAppFont } from '../../../Redux/actions/customize-app-actions/customize-app-actions.js';
 // COMPONENTS
 import { Button } from './button/button.component.jsx';
 // FIREBASE AUTH

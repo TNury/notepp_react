@@ -6,7 +6,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { auth, db } from './Firebase/Firebase.utils.js';
 // REDUX
 import { connect } from 'react-redux';
-import { setCurrentUser } from './Redux/actions/actions.js';
+import { setCurrentUser } from './Redux/actions/user-actions/user-actions.js';
 // COMPONENTS
 import App from './Components/app-components/app.component.jsx';
 import { Home } from './Components/home-components/home.component.jsx';

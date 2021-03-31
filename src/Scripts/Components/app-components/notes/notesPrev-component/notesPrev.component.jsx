@@ -7,7 +7,7 @@ import {
   onEditorSetNoteId,
   onEditorSetNoteTitle,
   onEditorSetNoteBody
-} from '../../../../Redux/actions/actions.js';
+} from '../../../../Redux/actions/editor-actions/editor-actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';

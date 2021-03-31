@@ -2,7 +2,11 @@
 import React from 'react';
 // REDUX
 import { connect } from 'react-redux';
-import { displayEditor, onEditorSetNoteTitle, onEditorSetNoteBody } from '../../../Redux/actions/actions.js';
+import { 
+  displayEditor, 
+  onEditorSetNoteTitle, 
+  onEditorSetNoteBody 
+} from '../../../Redux/actions/editor-actions/editor-actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME LIBRARY DEFAULT ICON
