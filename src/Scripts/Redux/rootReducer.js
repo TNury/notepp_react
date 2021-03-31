@@ -9,10 +9,11 @@ import { font } from './reducers/fontReducer.js';
 
 
 /*
-===================================================
-              COMPONENTS THAT USE
+================================================
+        REDUCERS AND IN WHICH COMPONENTS                 
+              THEY ARE BEING USED       
               
-  - userReducer: 
+  - user: 
 
     1. Notepp.script.jsx
     2. header.component.jsx
@@ -20,20 +21,21 @@ import { font } from './reducers/fontReducer.js';
     4. notes.component.jsx
     5. notes-prev.component.jsx
 
-  - notesReducer
+  - notesCollection
 
     1. app.component.jsx
     2. notes.component.jsx
     3. note.component.jsx
 
-  - displayedNoteReducer
+  - noteEditor
 
-    1. 
+    1. note.component.jsx
   
-  - fontReducer:
+  - font:
+  
     1. sidebar.component.jsx
 
-===================================================
+================================================
 */
 
 
