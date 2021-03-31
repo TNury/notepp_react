@@ -4,6 +4,7 @@
 // HEADER STYLES
 .header {
   background-color: $bg-tertiary;
+  border-bottom: 1px solid $text-primary;
 
   // NAVBAR STYLES
   &-nav {
