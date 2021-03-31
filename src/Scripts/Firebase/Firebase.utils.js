@@ -27,8 +27,25 @@ const googleProvider = new firebase.auth.GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });
 const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
+// TWITTER AUTH
+const twitterProvider = new firebase.auth.TwitterAuthProvider();
+const signInWithTwitter = () => auth.signInWithPopup(twitterProvider);
+
 // FACEBOOK AUTH
 const facebookProvider = new firebase.auth.FacebookAuthProvider();
 const signInWithFacebook = () => auth.signInWithPopup(facebookProvider);
 
-export { auth, db, signInWithGoogle, signInWithFacebook};
+// GITHUB AUTH
+const githubProvider = new firebase.auth.GithubAuthProvider();
+const signInWithGithub = () => auth.signInWithPopup(githubProvider);
+
+
+
+export { 
+  auth, 
+  db, 
+  signInWithGoogle,
+  signInWithTwitter, 
+  signInWithFacebook,
+  signInWithGithub
+};
