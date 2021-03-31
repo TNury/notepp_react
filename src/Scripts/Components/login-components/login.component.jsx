@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 // FIREBASE AUTH
 import { 
   signInWithGoogle,
-  signInWithFacebook 
+  signInWithTwitter,
+  signInWithFacebook,
+  signInWithGithub
 } from '../../Firebase/Firebase.utils.js';
 // COMPONENTS
 import { Button } from './button-component/button.component.jsx';
@@ -13,7 +15,7 @@ import {
   faGoogle, 
   faTwitter, 
   faFacebookF, 
-  faApple 
+  faGithub 
 } from '@fortawesome/free-brands-svg-icons';
 // FONTAWESOME LIBRARY DEFAULT ICON
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
@@ -31,9 +33,9 @@ export const Login = () => {
           <h2 className="wrap-form__head">Login with</h2>
           <div className="wrap-btn-group">
             <Button handler={() => signInWithGoogle()} className="_brand-g" icon={ faGoogle } text="Google" />
-            <Button handler={() => console.log('Not ready')} className="_brand-t" icon={ faTwitter } text="Twitter" />
+            <Button handler={() => signInWithTwitter()} className="_brand-t" icon={ faTwitter } text="Twitter" />
             <Button handler={() => signInWithFacebook()} className="_brand-f" icon={ faFacebookF } text="Facebook" />
-            <Button handler={() => console.log('Not ready')} className="_brand-a" icon={ faApple } text="Apple" />
+            <Button handler={() => signInWithGithub()} className="_brand-a" icon={ faGithub } text="GitHub" />
           </div>
           <div className="wrap-divider">
             <span className="wrap-divider__text">Or</span>
