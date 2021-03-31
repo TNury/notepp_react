@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  font: 'Gill Sans'
+  font: 'Gill Sans MT'
 }
 
 export const font = (currentState = INITIAL_STATE, action) => {
