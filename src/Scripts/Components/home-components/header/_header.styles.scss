@@ -54,3 +54,13 @@
     }
   }
 }
+
+.alert {
+  text-align: center;
+  box-sizing: border-box;
+  padding: .3rem 0;
+
+  &__text {
+    color: $text-primary;
+  }
+}
