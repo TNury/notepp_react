@@ -1,9 +1,14 @@
 @import '../variables/_colors.styles.scss';
 
+@font-face {
+  font-family: 'Futura Medium';
+  src: url(../fonts/futura/futura-medium-bt.ttf);
+}
+
 @mixin logo-styles {
   color: $text-primary;
   text-decoration: none;
-  font-family: Futura;
+  font-family: Futura Medium;
   font-size: 2.5rem;
 }
 

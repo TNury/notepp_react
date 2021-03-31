@@ -24,10 +24,15 @@
   font-size: 16px;
 }
 
+@font-face {
+  font-family: 'Gill Sans MT';
+  src: url(../assets/fonts/gill-sans-mt/GIL_____.TTF);
+}
+
 body {
   padding: 0;
   background-color: $bg-primary;
-  font-family: Gill Sans;
+  font-family: Gill Sans MT;
 }
 
 .Wrap {
