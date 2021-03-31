@@ -26,8 +26,8 @@ export const Login = () => {
             <Button className="_brand-a" icon={ faApple } text="Apple" />
           </div>
           <div className="wrap-divider">
-            <span className="wrap-divider__span">Or</span>
-            <span></span>
+            <span className="wrap-divider__text">Or</span>
+            <span className="wrap-divider__line"></span>
           </div>
           <div className="wrap-input">
             <label htmlFor="email" className="wrap-input__item label">Email</label>
