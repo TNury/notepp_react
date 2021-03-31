@@ -117,9 +117,16 @@
       width: 80%;
       position: relative;
       margin: .5rem auto;
-      
+
+      // "OR" STYLES
+      &__text {
+        display: block;
+        background-color: $bg-primary;
+        margin: 3rem 9rem;
+      }
+
       // LINE BEHIND "OR" STYLES
-      span:last-child {
+      &__line {
         display: block;
         position: absolute;
         top: 0.563rem;
@@ -127,13 +134,6 @@
         width: 100%;
         background-color: $text-primary;
         z-index: -1;
-      }
-      
-      // "OR" STYLES
-      &__span {
-        display: block;
-        background-color: $bg-primary;
-        margin: 3rem 6.5rem;
       }
     }
   }
