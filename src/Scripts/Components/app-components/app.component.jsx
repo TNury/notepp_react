@@ -21,7 +21,7 @@ class App extends React.Component {
     const { currentUserProp } = this.props.reduxProps;
     const { setNotesCollection, setNotesCollectionRef } = this.props.reduxActions;
 
-    const notesRef = db.collection(`users/${currentUserProp.displayName}/notes`);
+    const notesRef = db.collection(`users/${currentUserProp.uid}/notes`);
 
     setNotesCollectionRef(notesRef);
 

@@ -36,15 +36,13 @@ export class Notepp extends React.Component {
 
     if (!currentUser) return;
 
-    const userDocRef = db.doc(`users/${currentUser.displayName}`);
+    const userDocRef = db.doc(`users/${currentUser.uid}`);
     
     const creationDate = new Date();
 
     userDocRef.set({
       createdAt: creationDate
     })
-
-
     
   }
 
