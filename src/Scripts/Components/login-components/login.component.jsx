@@ -1,10 +1,20 @@
 // REACT ROUTER LINK COMPONENT
 import { Link } from 'react-router-dom';
+// FIREBASE AUTH
+import { 
+  signInWithGoogle,
+  signInWithFacebook 
+} from '../../Firebase/Firebase.utils.js';
 // COMPONENTS
 import { Button } from './button-component/button.component.jsx';
 // import {Loading} from '../../Components/loading-component/loading.component.jsx';
 // FONTAWESOME BRAND LIBRARY ICON
-import { faGoogle, faTwitter, faFacebookF, faApple } from '@fortawesome/free-brands-svg-icons';
+import { 
+  faGoogle, 
+  faTwitter, 
+  faFacebookF, 
+  faApple 
+} from '@fortawesome/free-brands-svg-icons';
 // FONTAWESOME LIBRARY DEFAULT ICON
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,10 +30,10 @@ export const Login = () => {
         <form className="wrap-form">
           <h2 className="wrap-form__head">Login with</h2>
           <div className="wrap-btn-group">
-            <Button className="_brand-g" icon={ faGoogle } text="Google" />
-            <Button className="_brand-t" icon={ faTwitter } text="Twitter" />
-            <Button className="_brand-f" icon={ faFacebookF } text="Facebook" />
-            <Button className="_brand-a" icon={ faApple } text="Apple" />
+            <Button handler={() => signInWithGoogle()} className="_brand-g" icon={ faGoogle } text="Google" />
+            <Button handler={() => console.log('Not ready')} className="_brand-t" icon={ faTwitter } text="Twitter" />
+            <Button handler={() => signInWithFacebook()} className="_brand-f" icon={ faFacebookF } text="Facebook" />
+            <Button handler={() => console.log('Not ready')} className="_brand-a" icon={ faApple } text="Apple" />
           </div>
           <div className="wrap-divider">
             <span className="wrap-divider__text">Or</span>
