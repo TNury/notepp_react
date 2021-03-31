@@ -28,7 +28,14 @@ export const Login = () => {
       <div className="wrap-login">
         <div className="wrap-head">
           <Link className="wrap-head__logo" to="/">Notepp</Link>
-        </div> 
+        </div>
+        <div className="alert">
+          <span className="alert__text">
+            Hello there! The only way to login right now is
+            through social networks as i'm still working on the 
+            sign up form.
+          </span>
+        </div>
         <form className="wrap-form">
           <h2 className="wrap-form__head">Login with</h2>
           <div className="wrap-btn-group">
