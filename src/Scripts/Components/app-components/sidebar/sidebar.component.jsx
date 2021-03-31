@@ -1,6 +1,8 @@
 // REDUX
 import { connect } from 'react-redux';
+// REDUX ACTIONS
 import { setAppFont } from '../../../Redux/actions/customize-app-actions/customize-app-actions.js';
+import { displayEditor } from '../../../Redux/actions/editor-actions/editor-actions.js';
 // COMPONENTS
 import { Button } from './button/button.component.jsx';
 // FIREBASE AUTH
@@ -34,6 +36,13 @@ const Sidebar = (props) => {
     console.log('Fix this later');
 
   }
+
+  function logOut() {
+
+    props.reduxActions.displayEditor(false);
+    auth.signOut();
+
+  }
   
   return (
     <nav className="sidebar">
@@ -42,7 +51,7 @@ const Sidebar = (props) => {
       <Button text="Themes" icon={ faTint } />
       <Button handler={ () => dyslexia() } text="Dyslexia"  icon={ faEye } />
       <Button text="About" icon={ faAddressCard } />
-      <Button handler={() => auth.signOut()} text="Logout" icon={ faSignOutAlt } />
+      <Button handler={() => logOut()} text="Logout" icon={ faSignOutAlt } />
       <Button text="Configs" icon={ faCogs } />
     </nav>
   )
@@ -56,7 +65,8 @@ const mapStoreToProps = (currentStore) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   reduxActions: {
-    setAppFont: font => dispatch(setAppFont(font))
+    setAppFont: font => dispatch(setAppFont(font)),
+    displayEditor: boolean => dispatch(displayEditor(boolean))
   }
 })
 
