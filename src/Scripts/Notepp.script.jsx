@@ -25,10 +25,8 @@ export class Notepp extends React.Component {
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged( (currentUser) => {
 
-      if (currentUser) {
         this.props.reduxActions.setCurrentUser(currentUser);
         this.createUserProfileDoc(currentUser);
-      }
 
     })
 
@@ -73,7 +71,7 @@ export class Notepp extends React.Component {
               <App />
               :
               // Don't forget to <Redirect /> 
-              <></>
+              <Redirect from='/app' to='/login'/>
             }
           </Route>
           {/* LOGIN ROUTE */}
