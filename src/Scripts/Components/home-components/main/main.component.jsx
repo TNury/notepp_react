@@ -36,19 +36,19 @@ export const Main = () => {
           </p>
           <ul className="column-list">
             <li className="column-list__item">
-              <a className="column-list__link" href="https://reactjs.org/" target="_blank">React.JS</a>
+              <a className="column-list__link" href="https://reactjs.org/" target="_blank" rel="noreferrer">React.JS</a>
               : library for building the UI & its components.
             </li>
             <li className="column-list__item">
-              <a className="column-list__link" href="https://firebase.google.com/products/firestore" target="_blank">Firebase Firestore</a>
+              <a className="column-list__link" href="https://firebase.google.com/products/firestore" target="_blank" rel="noreferrer">Firebase Firestore</a>
               : note storage.
             </li>
             <li className="column-list__item">
-              <a className="column-list__link" href="https://firebase.google.com/products/auth" target="_blank">Firebase Auth</a>
+              <a className="column-list__link" href="https://firebase.google.com/products/auth" target="_blank" rel="noreferrer">Firebase Auth</a>
               : user authentification.
             </li>
             <li className="column-list__item">
-              <a className="column-list__link" href="https://redux.js.org/" target="_blank">Redux</a> 
+              <a className="column-list__link" href="https://redux.js.org/" target="_blank" rel="noreferrer">Redux</a> 
               : the app's state control.
             </li>
           </ul>
