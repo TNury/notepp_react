@@ -1,23 +1,20 @@
-// HOME STYLES
-@import './Components/reusable-components/header/_header.styles.scss';
+// REUSABLE COMPONENTS STYLES
 @import './Components/home-components/_home.styles.scss';
-
-// LOADING STYLES
+@import './Components/reusable-components/footer/_footer.styles.scss';
+// HOME-PAGE STYLES
+@import './Components/reusable-components/header/_header.styles.scss';
+// LOADING-PAGE STYLES
 @import './Components/loading-component/_loading.styles.scss';
-
-// LOGIN STYLES
+// LOGIN-PAGE STYLES
 @import './Components/login-components/_login.styles.scss';
-
-// NOT-FOUND STYLES
+// NOT-FOUND-PAGE STYLES
 @import './Components/not-found-component/_notFound.styles.scss';
-
 // APP STYLES
 @import './Components/app-components/_app.styles.scss';
 @import './Components/app-components/sidebar/_sidebar.styles.scss';
 @import './Components/app-components/noteEditor/_noteEditor.styles.scss';
 @import './Components/app-components/notes/_notes.styles.scss';
-
-// LIBRARY STYLES
+// VARIABLE STYLES
 @import '../assets/variables/_colors.styles.scss';
 
 // DEFAULT STYLES
@@ -32,6 +29,6 @@
 
 body {
   padding: 0;
-  background-color: $bg-primary;
+  background-color: $bg-proto;
   font-family: Gill Sans MT;
 }
