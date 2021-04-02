@@ -7,11 +7,13 @@ import { auth, db } from './Firebase/Firebase.utils.js';
 // REDUX
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/actions/user-actions/user-actions.js';
-// COMPONENTS
+// PAGE COMPONENTS
 import App from './Components/app-components/app.component.jsx';
 import { Home } from './Components/home-components/home.component.jsx';
 import { Login } from './Components/login-components/login.component.jsx';
 import { NotFound } from './Components/not-found-component/notFound.component.jsx';
+// REUSABLE COMPONENTS
+import Header from './Components/reusable-components/header/header.component.jsx';
 // APP STYLES 
 import './normalizer.scss';
 import './Notepp.styles.scss';
@@ -59,6 +61,9 @@ export class Notepp extends React.Component {
         <Switch>
           {/* HOMEPAGE ROUTE */}
           <Route exact path='/'>
+            <Header drilledProps={{
+              text: 'Login'
+            }} />
             <Home />
           </Route>
           {/* APP ROUTE */}
@@ -79,7 +84,12 @@ export class Notepp extends React.Component {
               ?
               <Redirect from='/login' to='/app' />
               :
-              <Login />
+              <>
+                <Header drilledProps={{
+                  text: 'Sign Up'
+                }} />
+                <Login />
+              </>
             }
           </Route>
           {/* 404 ROUTE */}
