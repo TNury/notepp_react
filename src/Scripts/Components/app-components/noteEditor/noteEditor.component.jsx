@@ -56,14 +56,14 @@ class Note extends React.Component {
     const { display, title, body } = this.props.reduxProps.noteEditorProp;
 
     return (
-      <div className="note">
+      <div className="noteEditor">
 
         { 
           display
           ?
           <>
 
-            <button onClick={ () => this.closeNote() } className="note-close">
+            <button onClick={ () => this.closeNote() } className="noteEditor-close">
               <FontAwesomeIcon icon={faTimesCircle} />
             </button>
 
@@ -86,7 +86,7 @@ class Note extends React.Component {
           <></>
         }
         
-        <button onClick={() => this.saveNote()} className="note-save">
+        <button onClick={() => this.saveNote()} className="noteEditor-save">
           <FontAwesomeIcon icon={ faEdit } />
         </button>
       </div>

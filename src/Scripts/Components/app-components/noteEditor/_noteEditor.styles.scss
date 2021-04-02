@@ -1,7 +1,7 @@
 @import '../../../../assets/variables/_colors.styles.scss';
 @import '../../../../assets/mixins/_mixins.styles.scss';
 
-.note {
+.noteEditor {
   @include textarea-styles;
   width: 70vw;
   height: 100vh;
@@ -18,12 +18,12 @@
     right: 0;
   }
 
-  &__title {
+  .note__title {
     font-size: 2rem;
     color: $text-primary;
   }
 
-  &__body {
+  .note__body {
     font-size: 1.5rem;
     color: $text-secondary;
     // THIS NEEDS TO BE FIXED WHEN CREATING THE 
@@ -32,7 +32,7 @@
   }
 
   &-save {
-    @extend .note-close;
+    @extend .noteEditor-close;
     top: auto;
     bottom: 0;
   }
