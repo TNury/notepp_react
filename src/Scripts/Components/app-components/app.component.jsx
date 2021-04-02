@@ -11,7 +11,7 @@ import {
 // COMPONENTS
 import Sidebar from './sidebar/sidebar.component.jsx';
 import Notes from './notes/notes.component.jsx';
-import Note from './note/note.component.jsx';
+import NoteEditor from './noteEditor/noteEditor.component.jsx';
 
 
 class App extends React.Component {
@@ -41,11 +41,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <Sidebar />
-        <div className="Wrap">
+        <div className="wrap">
           <Notes />
-          <Note />
+          <NoteEditor />
         </div>
       </div>
     )
