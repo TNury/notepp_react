@@ -6,20 +6,6 @@
   text-align: center;
   z-index: -1;
 
-  // HEAD WRAPPER
-  .wrap-head {
-    border-bottom: 1px solid white;
-    padding: 1.3rem 0;
-    box-sizing: border-box;
-    background: $bg-tertiary;
-    width: 100%;
-
-    // LOGO STYLES
-    &__logo {
-      @include logo-styles;
-    }
-  }
-
   // FROM WRAPPER
   .wrap-form {
     color: $text-primary;
@@ -136,14 +122,5 @@
         z-index: -1;
       }
     }
-  }
-}
-
-.alert {
-  box-sizing: border-box;
-  padding: .3rem 0;
-
-  &__text {
-    color: $text-primary;
   }
 }
