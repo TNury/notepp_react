@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 const Header = (props) => {
 
   const isLoggedIn = props.reduxProps.currentUserProp;
+  const text = props.drilledProps.text;
 
   return (
     <>
@@ -23,9 +24,7 @@ const Header = (props) => {
               <Link className="header-nav__link header-nav__item" to="/app">Go To App</Link>
             </>
             :
-            <>
-              <Link className="header-nav__link header-nav__item _left" to="/login">Login</Link>
-            </>        
+            <Link className="header-nav__link header-nav__item _left" to="/login">{ text }</Link>       
           }
         </nav>
       </header>
