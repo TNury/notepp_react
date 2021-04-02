@@ -14,6 +14,7 @@ import { Login } from './Components/login-components/login.component.jsx';
 import { NotFound } from './Components/not-found-component/notFound.component.jsx';
 // REUSABLE COMPONENTS
 import Header from './Components/reusable-components/header/header.component.jsx';
+import { Footer } from './Components/reusable-components/footer/footer.component.jsx';
 // APP STYLES 
 import './normalizer.scss';
 import './Notepp.styles.scss';
@@ -62,9 +63,10 @@ export class Notepp extends React.Component {
           {/* HOMEPAGE ROUTE */}
           <Route exact path='/'>
             <Header drilledProps={{
-              text: 'Login'
+              location: 'home'
             }} />
             <Home />
+            <Footer />
           </Route>
           {/* APP ROUTE */}
           <Route path='/app'>
@@ -86,9 +88,10 @@ export class Notepp extends React.Component {
               :
               <>
                 <Header drilledProps={{
-                  text: 'Sign Up'
+                  location: 'login'
                 }} />
                 <Login />
+                <Footer />
               </>
             }
           </Route>
