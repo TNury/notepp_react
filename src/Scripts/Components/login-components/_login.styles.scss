@@ -2,26 +2,31 @@
 @import '../../../assets/variables/_colors.styles.scss';
 
 // LOGIN DIV WRAPPER
-.wrap-login {
+.login-wrap {
   text-align: center;
-  z-index: -1;
+  display: flex;
+  justify-content: center;
 
-  // FROM WRAPPER
-  .wrap-form {
+  // FORM WRAPPER
+  .login {
     color: $text-primary;
-    width: 60%;
+    width: 90%;
     max-width: 31.25rem;
-    margin: 2rem auto;
     box-sizing: content-box;
+    margin: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
 
-    // WRAP FORM HEAD STYLES
     &__head {
-      font-family: Futura;
+      font-size: 1.8rem;
+      margin: 0 0 2rem 0;
     }
 
-    // BUTTON STYLES
-    .wrap-btn {
+    // BUTTONS
+    .btn-group-btn {
       @include button-styles;
+      @include special-outline;
       width: 80%;
       height: 2.5rem;
       margin: .5rem 0;
@@ -29,15 +34,18 @@
       border: 1px solid $text-primary;
       -webkit-font-smoothing: antialiased;
 
-      // BUTTON TEXT STYLES
+      &__icon {
+        color: $text-primary;
+      }
+
+      // BUTTON TEXT
       &__text {
         margin-left: .5rem;
         color: $text-primary;
-        font-family: NovaMono;
       }
     }
 
-    // GOOGLE BUTTON STYLES
+    // GOOGLE BUTTON
     ._brand-g {
       background: linear-gradient(110deg, 
       #DB4437 25%, 
@@ -49,30 +57,52 @@
       #4285F4 100%);
     }
 
-    // FACEBOOK BUTTON STYLES
+    // FACEBOOK BUTTON
     ._brand-t {
       background: #55ACEE;
     }
 
-    // TWITTER BUTTON STYLES
+    // TWITTER BUTTON
     ._brand-f {
       background: #177BF2;
     }
 
-    // APPLE BUTTON STYLES
+    // APPLE BUTTON
     ._brand-a {
       background: #000;
     }
 
-    // LOGIN BUTTON STYLES
-    ._submit {
-      background: $bg-quaternary;
+    // DIVIDER
+    .divider {
+      width: 80%;
+      align-self: center;
+      margin: 2rem 0;
+      position: relative;
+
+      // DIVIDER TEXT
+      &__text {
+        z-index: 1;
+        background: $bg-proto;
+        padding: 0 1rem;
+      }
+
+      // DIVIDER LINE
+      &__line {
+        display: block;
+        width: 100%;
+        border-top: 1px solid $text-primary;
+        position: absolute;
+        top: .7rem;
+        z-index: -1;
+      }
+  
     }
 
-    // INPUT STYLES
-    .wrap-input {
+    // INPUTS
+    .input-group {
       display: flex;
       flex-direction: column;
+      margin-bottom: 1rem;
 
       // LABEL & INPUT SHARED STYLES
       &__item {
@@ -82,13 +112,8 @@
         background: inherit;
       }
 
-      // LABEL STYLES
-      .label {
-        font-size: 1.1rem;
-      }
-
-      // INPUT STYLES
-      .input {
+      // INPUT
+      ._input {
         height: 2.5rem;
         color: inherit;
         font-size: 1.1rem;
@@ -98,29 +123,25 @@
       }
     }
 
-    // "OR" WRAPPER STYLES
-    .wrap-divider {
-      width: 80%;
-      position: relative;
-      margin: .5rem auto;
-
-      // "OR" STYLES
-      &__text {
-        display: block;
-        background-color: $bg-primary;
-        margin: 3rem 9rem;
-      }
-
-      // LINE BEHIND "OR" STYLES
-      &__line {
-        display: block;
-        position: absolute;
-        top: 0.563rem;
-        height: 0.063rem;
-        width: 100%;
-        background-color: $text-primary;
-        z-index: -1;
-      }
+    // SUBMIT BUTTON
+    .login__submit-btn {
+      align-self: center;
+      background: $bg-quaternary;
     }
   }
+}
+
+@media only screen and (min-width: 768px) {
+  .login-wrap {
+    .login {
+      .btn-group {
+        &-btn {
+          &__icon {
+            color: inherit;
+          }
+        }
+      } 
+    }
+  }
+
 }
