@@ -6,10 +6,8 @@
     flex-direction: column;
 
     .column {
-      box-sizing: border-box;
-      padding: 1rem;
-      background: $bg-tertiary;
-      border: 1px solid $text-primary;
+      padding: 1rem 1rem 0 1rem;
+      border-bottom: 1px solid $text-primary;
       margin: 0 1rem 1rem 1rem;
 
       &__head {
@@ -23,6 +21,7 @@
 
       &-list {
         color: $text-secondary;
+        // Remember to change padding mixin to handle this!
         box-sizing: border-box;
         padding: 0 1.3rem;
         font-size: 1.3rem;
@@ -39,14 +38,19 @@
         }
       }
     }
+
+    ._col-3 {
+      border-bottom: none;
+    }
   }
 }
 
 @media only screen and (min-width: 768px) {
+
   .container {
-    @include padding(1rem);
     display: grid !important;
     gap: 1rem;
+    @include padding(1rem);
     grid-template-areas: 
       'col-1 col-2'
       'col-3 col-3'
@@ -54,19 +58,23 @@
 
     .column {
       margin: 0 !important;
+      border: 0 !important;
     }
-  }
 
-  ._col-1 {
-    grid-area: col-1;
-  }
+    ._col-1 {
+      grid-area: col-1;
+      border-right: 1px solid $text-primary !important;
+    }
 
-  ._col-2 {
-    grid-area: col-2;
-  }
+    ._col-2 {
+      grid-area: col-2;
+    }
 
-  ._col-3 {
-    grid-area: col-3;
+    ._col-3 {
+      border-top: 1px solid $text-primary !important;
+      // border-bottom: none !important;
+      grid-area: col-3;
+    }
   }
 }
 
@@ -75,15 +83,41 @@
   .main-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
   .container {
-    width: 90%;
-    box-sizing: border-box;
-    display: grid;
+    // max-width: 99%;
     grid-template-areas: 
     'col-1 col-3 col-2'
     !important;
+
+    ._col-3 {
+      border: 0 !important;
+    }
+
+    ._col-2 {
+      border-left: 1px solid $text-primary !important;
+    }
+  }
+}
+
+// @media only screen and (min-width: 1280px) {
+
+//   .container {
+//     max-width: 90%;
+//   }
+// }
+
+@media only screen and (min-width: 1440px) {
+
+  .container {
+    width: 80%;
+  }
+
+  .column {
+    border: none !important;
+    background: none !important;
   }
 }
