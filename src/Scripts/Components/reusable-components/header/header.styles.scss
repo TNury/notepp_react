@@ -6,7 +6,7 @@
 
 // HEADER
 .header {
-  background-color: $bg-tertiary;
+  background: inherit;
   border-bottom: 1px solid $text-primary;
   grid-area: header;
 
@@ -18,18 +18,19 @@
     // FLEXBOX
     display: flex;
     align-items: center;
+    justify-content: center;
     
 
     // NAVBAR BUTTON
-    .navbar-btn {
-      @include button-styles;
-      @include padding(1rem);
-      margin-left: auto;
+    // .navbar-btn {
+    //   @include button-styles;
+    //   @include padding(1rem);
+    //   margin-left: auto;
 
-      &__icon {
-        font-size: 1.8rem;
-      }
-    }
+    //   &__icon {
+    //     font-size: 1.8rem;
+    //   }
+    // }
 
     // NAVBAR LINKS
     &__link {
@@ -43,9 +44,9 @@
     }
   }
 
-  ._centralize {
-    text-align: center;
-  }
+  // ._centralize {
+  //   text-align: center;
+  // }
 }
 
 // @media only screen and (min-width: 768px) {
