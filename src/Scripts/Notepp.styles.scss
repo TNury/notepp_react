@@ -1,21 +1,22 @@
 // REUSABLE COMPONENTS STYLES
-@import './Components/home-components/_home.styles.scss';
-@import './Components/reusable-components/footer/_footer.styles.scss';
+@import './Components/reusable-components/header/header.styles.scss';
+@import './Components/reusable-components/footer/footer.styles.scss';
 // HOME-PAGE STYLES
-@import './Components/reusable-components/header/_header.styles.scss';
+@import './Components/home-components/home.styles.scss';
+@import './Components/home-components/main/main.styles.scss';
 // LOADING-PAGE STYLES
-@import './Components/loading-component/_loading.styles.scss';
+@import './Components/loading-component/loading.styles.scss';
 // LOGIN-PAGE STYLES
-@import './Components/login-components/_login.styles.scss';
+@import './Components/login-components/login.styles.scss';
 // NOT-FOUND-PAGE STYLES
-@import './Components/not-found-component/_notFound.styles.scss';
+@import './Components/not-found-component/notFound.styles.scss';
 // APP STYLES
-@import './Components/app-components/_app.styles.scss';
-@import './Components/app-components/sidebar/_sidebar.styles.scss';
-@import './Components/app-components/noteEditor/_noteEditor.styles.scss';
-@import './Components/app-components/notes/_notes.styles.scss';
+@import './Components/app-components/app.styles.scss';
+@import './Components/app-components/sidebar/sidebar.styles.scss';
+@import './Components/app-components/noteEditor/noteEditor.styles.scss';
+@import './Components/app-components/notes/notes.styles.scss';
 // VARIABLE STYLES
-@import '../assets/variables/_colors.styles.scss';
+@import '../assets/variables/colors.styles.scss';
 
 
 // DEFAULT STYLES
