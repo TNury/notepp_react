@@ -12,9 +12,6 @@ import App from './Components/app-components/app.component.jsx';
 import { Home } from './Components/home-components/home.component.jsx';
 import { Login } from './Components/login-components/login.component.jsx';
 import { NotFound } from './Components/not-found-component/notFound.component.jsx';
-// REUSABLE COMPONENTS
-import Header from './Components/reusable-components/header/header.component.jsx';
-import { Footer } from './Components/reusable-components/footer/footer.component.jsx';
 // STYLES
 import './normalizer.scss';
 import './Notepp.scss';
@@ -62,7 +59,7 @@ export class Notepp extends React.Component {
         <Switch>
           {/* HOMEPAGE ROUTE */}
           <Route exact path='/'>
-              <Home />
+            <Home />
           </Route>
           {/* APP ROUTE */}
           <Route path='/app'>
@@ -82,13 +79,7 @@ export class Notepp extends React.Component {
               ?
               <Redirect from='/login' to='/app' />
               :
-              <>
-                {/* <Header drilledProps={{
-                  location: 'login'
-                }} /> */}
-                <Login />
-                <Footer />
-              </>
+              <Login />
             }
           </Route>
           {/* 404 ROUTE */}
