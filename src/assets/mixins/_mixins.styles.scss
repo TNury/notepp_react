@@ -73,3 +73,8 @@
   -webkit-line-clamp: $clampAt;
   -webkit-box-orient: vertical;
 }
+
+@mixin padding ($value) {
+  box-sizing: border-box;
+  padding: $value;
+}
