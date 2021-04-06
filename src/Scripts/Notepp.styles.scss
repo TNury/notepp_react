@@ -17,6 +17,7 @@
 // VARIABLE STYLES
 @import '../assets/variables/_colors.styles.scss';
 
+
 // DEFAULT STYLES
 :root {
   font-size: 16px;
@@ -28,15 +29,27 @@
 }
 
 @font-face {
-  font-family: 'Iosevka Web';
-  src: 
-  url(../assets/fonts/iosevka/iosevka-regular.ttf) format('truetype'), 
-  url(../assets/fonts/iosevka/iosevka-bold.ttf) format('truetype');
+  font-family: 'Iosevka Light';
+  src: url(../assets/fonts/iosevka/iosevka-light.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Iosevka Regular';
+  src: url(../assets/fonts/iosevka/iosevka-regular.ttf) format('truetype');
+}
+
 
 body {
   padding: 0;
   background-color: $bg-proto;
   // font-family: Gill Sans MT;
-  font-family: Iosevka Web;
+  font-family: Iosevka Regular;
+  //@include scrollbar-styles($text-primary);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+p, li {
+  font-family: Iosevka Light;
 }
