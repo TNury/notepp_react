@@ -1,6 +1,11 @@
-
+// FOOTER 
 .footer {
-  height: 5rem;
+  /*
+    Why 8.9vh? Because the footer has a 1px border,
+    so i had to subtract .1 vh (1 px = .1 vh) in 
+    order to prevent overlap.
+  */
+  height: 8.9vh;
   background: $bg-tertiary;
   border-top: 1px solid $text-primary;
   display: flex;
