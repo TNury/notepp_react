@@ -15,9 +15,9 @@ import { NotFound } from './Components/not-found-component/notFound.component.js
 // REUSABLE COMPONENTS
 import Header from './Components/reusable-components/header/header.component.jsx';
 import { Footer } from './Components/reusable-components/footer/footer.component.jsx';
-// APP STYLES 
+// STYLES
 import './normalizer.scss';
-import './Notepp.styles.scss';
+import './Notepp.scss';
 
 
 export class Notepp extends React.Component {
@@ -62,11 +62,7 @@ export class Notepp extends React.Component {
         <Switch>
           {/* HOMEPAGE ROUTE */}
           <Route exact path='/'>
-            <Header drilledProps={{
-              location: 'home'
-            }} />
-            <Home />
-            <Footer />
+              <Home />
           </Route>
           {/* APP ROUTE */}
           <Route path='/app'>
