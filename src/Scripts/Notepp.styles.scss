@@ -24,11 +24,19 @@
 
 @font-face {
   font-family: 'Gill Sans MT';
-  src: url(../assets/fonts/gill-sans-mt/GIL_____.TTF);
+  src: url(../assets/fonts/gill-sans-mt/GIL_____.TTF) format('truetype');
+}
+
+@font-face {
+  font-family: 'Iosevka Web';
+  src: 
+  url(../assets/fonts/iosevka/iosevka-regular.ttf) format('truetype'), 
+  url(../assets/fonts/iosevka/iosevka-bold.ttf) format('truetype');
 }
 
 body {
   padding: 0;
   background-color: $bg-proto;
-  font-family: Gill Sans MT;
+  // font-family: Gill Sans MT;
+  font-family: Iosevka Web;
 }
