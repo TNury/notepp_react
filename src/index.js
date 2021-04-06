@@ -3,12 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
 // REDUX STORE
 import { store } from './scripts/Redux/store/store.js';
+// APP
+import Notepp from './scripts/Notepp.jsx';
 
-// COMPONENTS
-import Notepp from './scripts/Notepp.script.jsx';
+
 
 // PERFORMANCE MEASURING
 // import { reportWebVitals } from './scripts/Tools/reportWebVitals';
