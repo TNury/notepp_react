@@ -21,8 +21,8 @@ const Header = (props) => {
         </nav>
           :
         <nav className="navbar">
-          <Link className="navbar__link navbar__logo" to="/">Notepp</Link>
-          {
+          <Link className="navbar__link navbar__logo _centralize" to="/">Notepp</Link>
+          {/* {
             isLoggedIn
               ?
             <Link className="navbar__link navbar-btn" to="/app">
@@ -32,7 +32,7 @@ const Header = (props) => {
             <Link className="navbar__link navbar-btn" to="/login">
               <FontAwesomeIcon className="navbar-btn__icon" icon={faSignInAlt} />
             </Link>
-          }
+          } */}
         </nav>
       }
     </header>
