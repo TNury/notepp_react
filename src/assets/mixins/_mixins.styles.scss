@@ -46,6 +46,17 @@
   }
 }
 
+@mixin scrollbar-styles ($color) {
+  &::-webkit-scrollbar {
+    width: .4rem;
+    
+    &-thumb {
+      background: $color;
+      border-radius: 1rem;
+    }
+  }
+}
+
 @mixin textarea-styles {
   textarea {
     resize: none;
@@ -60,10 +71,7 @@
       color: $text-placeholder;
     }
 
-    &::-webkit-scrollbar {
-      width: .3rem;
-      background: $bg-primary;
-    }
+    @include scrollbar-styles ($bg-primary);
   }
 }
 
