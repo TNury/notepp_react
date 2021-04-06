@@ -13,7 +13,7 @@ export const Home = () => {
       </div>
       <main className="main-container">
         <div className="container">
-          <div className="column">
+          <div className="column _col-1">
             <h2 className="column__head">What is Notepp?</h2>
             <p className="column__p">
               Notepp is a simple note-taking app i've developed for
@@ -22,7 +22,7 @@ export const Home = () => {
               a full fledged (yet simple) note taking app.
           </p>
           </div>
-          <div className="column">
+          <div className="column _col-2">
             <h2 className="column__head">Is it usable?</h2>
             <p className="column__p">
               Of course, i've put more or less 3 months of work on to this
@@ -31,7 +31,7 @@ export const Home = () => {
               unused.
           </p>
           </div>
-          <div className="column">
+          <div className="column _col-3">
             <h2 className="column__head">What did you use to create this?</h2>
             <p className="column__p">
               Let's pretend you actually asked this question so i can tell you
