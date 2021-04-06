@@ -14,18 +14,18 @@
 
   // NAVBAR
   .navbar {
-    padding: 1rem;
     background-color: inherit;
-    position: relative;
+    display: flex;
+    align-items: center;
+    height: 8.9vh;
+    // position: relative;
+    
 
     // NAVBAR BUTTON
     .navbar-btn {
       @include button-styles;
-      position: absolute;
-      right: 0;
-      bottom: .45rem;
-      box-sizing: border-box;
-      padding: 1rem;
+      @include padding(1rem);
+      margin-left: auto;
 
       &__icon {
         font-size: 1.5rem;
@@ -40,6 +40,7 @@
     // LOGO
     &__logo {
       @include logo-styles;
+      @include padding(1rem);
     }
   }
 
@@ -47,5 +48,14 @@
     text-align: center;
   }
 }
+
+// @media only screen and (min-width: 768px) {
+//   .header {
+//     background: red;
+//     .navbar {
+//       height: 7.9vh;
+//     }
+//   }
+// }
 
 
