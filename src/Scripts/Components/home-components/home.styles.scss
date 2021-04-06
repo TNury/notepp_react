@@ -1,21 +1,22 @@
 .home {
-  //box-sizing: border-box;
   color: $text-primary;
   display: grid;
-  gap: 2rem;
   grid-template-areas: 
     'header'
     'banner'
     'main'
-    'footer'
-  ;
-
+    'footer';
+  grid-template-rows: 5rem 19.5rem 1fr 5rem;
+  position: relative;
 }
 
 .banner {
+  background: $bg-tertiary;
   grid-area: banner;
+  border-bottom: 1px solid $text-primary;
   color: $text-primary;
   text-align: center;
+  padding: 4rem 0;
 
   &__icon {
     font-size: 7rem;
@@ -23,7 +24,8 @@
   }
 
   &__head {
-    font-size: 3rem;
+    margin: 1rem 0 0 0;
+    font-size: 2.5rem;
     font-weight: 100;
   }
 }
