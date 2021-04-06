@@ -87,9 +87,9 @@ export class Notepp extends React.Component {
               <Redirect from='/login' to='/app' />
               :
               <>
-                <Header drilledProps={{
+                {/* <Header drilledProps={{
                   location: 'login'
-                }} />
+                }} /> */}
                 <Login />
                 <Footer />
               </>
