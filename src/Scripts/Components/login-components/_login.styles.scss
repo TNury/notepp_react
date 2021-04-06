@@ -12,7 +12,6 @@
     color: $text-primary;
     width: 90%;
     max-width: 31.25rem;
-    box-sizing: content-box;
     margin: 2.5rem 0;
     display: flex;
     flex-direction: column;
@@ -32,8 +31,8 @@
       margin: .5rem 0;
       background: inherit;
       border: 1px solid $text-primary;
-      -webkit-font-smoothing: antialiased;
 
+      // BUTTON ICON
       &__icon {
         color: $text-primary;
       }
@@ -41,6 +40,7 @@
       // BUTTON TEXT
       &__text {
         margin-left: .5rem;
+        font-size: 1.1rem;
         color: $text-primary;
       }
     }
