@@ -21,7 +21,7 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 export const Login = () => {
   return(
     <div className="login-wrap">
-      <form className="login">
+      {/* <form className="login">
         <h2 className="login__head">Login with</h2>
         <div className="btn-group">
           <Button handler={() => signInWithGoogle()} className="_brand-g" icon={ faGoogle } text="Google" />
@@ -40,7 +40,7 @@ export const Login = () => {
           <input id="password" className="input-group__item _input" type="password" placeholder="12345"></input>
         </div>
         <Button className="login__submit-btn" icon={ faSignInAlt } text="Submit" />
-      </form>
+      </form> */}
     </div>
   )
 }
