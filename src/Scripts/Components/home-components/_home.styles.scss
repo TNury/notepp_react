@@ -20,12 +20,8 @@
 
   &__head {
     font-size: 3rem;
+    font-weight: 100;
   }
-
-  // &__text {
-  //   font-size: 1.5rem;
-  // }
-
 }
 
 .main-container {
@@ -40,6 +36,10 @@
       background: $bg-tertiary;
       border: 1px solid $text-primary;
       margin: 0 1rem 1rem 1rem;
+
+      &__head {
+        font-weight: 100;
+      }
 
       &__p {
         color: $text-secondary;
