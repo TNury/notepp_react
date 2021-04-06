@@ -1,46 +1,60 @@
 // LOGIN DIV WRAPPER
 .login-wrap {
-  height: 90vh;
-  // text-align: center;
-  // display: flex;
-  // justify-content: center;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+    'header'
+    'form'
+    'footer'
+  ;
+  grid-template-rows: 5rem 1fr 5rem;
 
   // FORM WRAPPER
   .login {
+    grid-area: form;
+    // STYLES
+    width: 100%;
+    margin: 4rem auto;
     color: $text-primary;
-    width: 90%;
-    max-width: 31.25rem;
-    margin: 2.5rem 0;
+    // FLEXBOX
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    align-items: center;
+    
 
     &__head {
       font-size: 1.8rem;
       margin: 0 0 2rem 0;
     }
 
-    // BUTTONS
-    .btn-group-btn {
-      @include button-styles;
-      @include special-outline;
-      width: 80%;
-      height: 2.5rem;
-      margin: .5rem 0;
-      background: inherit;
-      border: 1px solid $text-primary;
+    .btn-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      // BUTTON ICON
-      &__icon {
-        color: $text-primary;
-      }
+      // BUTTONS
+      &-btn {
+        @include button-styles;
+        @include special-outline;
+        height: 2.5rem;
+        width: 80%;
+        margin: .5rem 0;
+        border: 1px solid $text-primary;
 
-      // BUTTON TEXT
-      &__text {
-        margin-left: .5rem;
-        font-size: 1.1rem;
-        color: $text-primary;
+        // BUTTON ICON
+        &__icon {
+          color: $text-primary;
+        }
+
+        // BUTTON TEXT
+        &__text {
+          margin-left: .5rem;
+          font-size: 1.1rem;
+          color: $text-primary;
+        }
       }
+      
     }
 
     // GOOGLE BUTTON
@@ -74,23 +88,28 @@
     .divider {
       width: 80%;
       align-self: center;
-      margin: 2rem 0;
+      margin: 1.5rem 0 2rem 0;
       position: relative;
+      // FLEXBOX
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
       // DIVIDER TEXT
       &__text {
-        z-index: 1;
         background: $bg-proto;
         padding: 0 1rem;
       }
 
       // DIVIDER LINE
       &__line {
-        display: block;
         width: 100%;
+        display: block;
         border-top: 1px solid $text-primary;
+        // POSITION 
         position: absolute;
-        top: .7rem;
+        top: .55rem;
         z-index: -1;
       }
   
@@ -98,9 +117,11 @@
 
     // INPUTS
     .input-group {
+      width: 100%;
+      margin-bottom: 1rem;
+      // FLEXBOX
       display: flex;
       flex-direction: column;
-      margin-bottom: 1rem;
 
       // LABEL & INPUT SHARED STYLES
       &__item {
@@ -130,16 +151,26 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .login-wrap {
-    .login {
-      .btn-group {
-        &-btn {
-          &__icon {
-            color: inherit;
-          }
-        }
-      } 
+
+  .login {
+    width: 60% !important; 
+
+    .btn-group-btn__icon {
+      color: inherit !important;
     }
   }
+}
 
+@media only screen and (min-width: 1080px) {
+
+  .login {
+    width: 40% !important; 
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .login {
+    width: 25% !important; 
+  }
 }
