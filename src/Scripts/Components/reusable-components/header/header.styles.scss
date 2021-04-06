@@ -11,14 +11,16 @@
 .header {
   background-color: $bg-tertiary;
   border-bottom: 1px solid $text-primary;
+  grid-area: header;
+
 
   // NAVBAR
   .navbar {
+    height: 5rem;
     background-color: inherit;
+    // FLEXBOX
     display: flex;
     align-items: center;
-    height: 8.9vh;
-    // position: relative;
     
 
     // NAVBAR BUTTON

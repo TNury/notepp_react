@@ -5,9 +5,13 @@
     so i had to subtract .1 vh (1 px = .1 vh) in 
     order to prevent overlap.
   */
-  height: 8.9vh;
+
+
+  height: 5rem;
+  grid-area: footer;
   background: $bg-tertiary;
   border-top: 1px solid $text-primary;
+  // FLEXBOX 
   display: flex;
   justify-content: center;
   align-items: center;
