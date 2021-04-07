@@ -5,9 +5,11 @@
 */
 
 // VARIABLES
-@import '../assets/variables/_colors.styles.scss';
+@import '../assets/variables/_colors.scss';
+// NORMALIZER
+@import '../assets/normalizer/normalizer.scss';
 // MIXINS
-@import '../assets/mixins/_mixins.styles.scss';
+@import '../assets/mixins/_mixins.scss';
 // PARAGRAPHS FONT
 @font-face {
   font-family: 'Iosevka Light';
@@ -23,6 +25,7 @@
   font-family: 'Futura Medium';
   src: url(../assets/fonts/futura/futura-medium-bt.ttf) format('truetype');
 }
+
 
 /* 
 ==================================================
