@@ -6,7 +6,7 @@
   @include flex-center-aligned(row);
 
   .not-found {
-    @include padding(3rem);
+    @include inner-padding(3rem);
     // FLEXBOX
     @include flex-center-aligned(column);
 
