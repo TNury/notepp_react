@@ -1,57 +1,74 @@
-// ASSETS
+/* 
+==================================================
+                      ASSETS                    
+==================================================                                                         
+*/
+
+// VARIABLES
 @import '../assets/variables/_colors.styles.scss';
+// MIXINS
 @import '../assets/mixins/_mixins.styles.scss';
-// REUSABLE COMPONENTS STYLES
+// PARAGRAPHS FONT
+@font-face {
+  font-family: 'Iosevka Light';
+  src: url(../assets/fonts/iosevka/iosevka-light.ttf) format('truetype');
+}
+// HEADERS FONT
+@font-face {
+  font-family: 'Iosevka Regular';
+  src: url(../assets/fonts/iosevka/iosevka-regular.ttf) format('truetype');
+}
+// LOGO FONT
+@font-face {
+  font-family: 'Futura Medium';
+  src: url(../assets/fonts/futura/futura-medium-bt.ttf) format('truetype');
+}
+
+/* 
+==================================================
+                    COMPONENTS                     
+==================================================
+*/
+
+// REUSABLE
 @import './Components/reusable-components/header/header.styles.scss';
 @import './Components/reusable-components/footer/footer.styles.scss';
-// HOME-PAGE STYLES
+// HOME-PAGE
 @import './Components/home-components/home.styles.scss';
 @import './Components/home-components/main/main.styles.scss';
-// LOADING-PAGE STYLES
+// LOADING-PAGE
 @import './Components/loading-component/loading.styles.scss';
-// LOGIN-PAGE STYLES
+// LOGIN-PAGE
 @import './Components/login-components/login.styles.scss';
-// NOT-FOUND-PAGE STYLES
+// NOT-FOUND-PAGE
 @import './Components/not-found-component/notFound.styles.scss';
-// APP STYLES
+// APP
 @import './Components/app-components/app.styles.scss';
 @import './Components/app-components/sidebar/sidebar.styles.scss';
 @import './Components/app-components/noteEditor/noteEditor.styles.scss';
 @import './Components/app-components/notes/notes.styles.scss';
 
+/* 
+==================================================
+                     DEFAULT                          
+==================================================                                                         
+*/
 
-// DEFAULT STYLES
+// ROOT FONT-SIZE
 :root {
   font-size: 16px;
 }
 
-@font-face {
-  font-family: 'Gill Sans MT';
-  src: url(../assets/fonts/gill-sans-mt/GIL_____.TTF) format('truetype');
-}
-
-@font-face {
-  font-family: 'Iosevka Light';
-  src: url(../assets/fonts/iosevka/iosevka-light.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Iosevka Regular';
-  src: url(../assets/fonts/iosevka/iosevka-regular.ttf) format('truetype');
-}
-
-
+// BODY DEFAULT
 body {
-  padding: 0;
   background-color: $bg-proto;
-  // font-family: Gill Sans MT;
-  font-family: Iosevka Regular;
-  //@include scrollbar-styles($text-primary);
+  font-family: Iosevka Light;
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
-p, li {
-  font-family: Iosevka Light;
+// HEADER DEFAULT
+h1, h2, h3 {
+  font-family: Iosevka Regular;
 }
