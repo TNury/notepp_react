@@ -13,9 +13,12 @@
     flex-direction: column;
 
     .column {
-      padding: 1rem 1rem 0 1rem;
-      border-bottom: 1px solid $text-primary;
-      margin: 0 1rem 1rem 1rem;
+      padding: 1rem;
+      margin: 0 1rem;
+      border-color: $text-primary;
+      border-style: solid;
+      border-width: 0 0 1px 0;
+
 
       &__head {
         font-weight: 100;
@@ -28,7 +31,6 @@
 
       &-list {
         color: $text-secondary;
-        // Remember to change padding mixin to handle this!
         box-sizing: border-box;
         padding: 0 1.3rem;
         font-size: 1.3rem;
@@ -65,12 +67,12 @@
 
     .column {
       margin: 0 !important;
-      border: 0 !important;
+      border-width: 0 0 0 0 !important;
     }
 
     ._col-1 {
       grid-area: col-1;
-      border-right: 1px solid $text-primary !important;
+      border-width: 0 1px 0 0 !important;
     }
 
     ._col-2 {
@@ -78,7 +80,7 @@
     }
 
     ._col-3 {
-      border-top: 1px solid $text-primary !important;
+      border-width: 1px 0 0 0 !important;
       grid-area: col-3;
     }
   }
@@ -95,12 +97,12 @@
     'col-1 col-3 col-2'
     !important;
 
-    ._col-3 {
-      border: 0 !important;
+    ._col-1 {
+      border-width: 0 1px 0 0 !important;
     }
 
-    ._col-2 {
-      border-left: 1px solid $text-primary !important;
+    ._col-3 {
+      border-width: 0 1px 0 0 !important;
     }
   }
 }
@@ -111,9 +113,5 @@
   .container {
     width: 80%;
   }
-
-  .column {
-    border: none !important;
-    background: none !important;
-  }
+  
 }
