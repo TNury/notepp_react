@@ -1,5 +1,8 @@
 .home {
   color: $text-primary;
+  // CSS POSITION
+  position: relative;
+  // GRID
   display: grid;
   grid-template-areas: 
     'header'
@@ -7,26 +10,51 @@
     'main'
     'footer';
   grid-template-rows: 5rem 19.5rem 1fr 5rem;
-  position: relative;
 }
 
-.banner {
-  background: $bg-tertiary;
+.banner-container {
+  // GRID-AREA
   grid-area: banner;
-  border-bottom: 1px solid $text-primary;
+  // STYLES
+  box-sizing: border-box;
   color: $text-primary;
-  text-align: center;
-  padding: 4rem 0;
+  background: $bg-tertiary;
+  border-bottom: 1px solid $text-primary;
+  // FLEXBOX
+  @include flex-center-aligned(column);
 
-  &__icon {
-    font-size: 7rem;
-    transform: rotate(330deg);
+  .banner {
+    // STYLES
+    padding-top: .7rem;
+    // FLEXBOX
+    @include flex-center-aligned(column);
+  
+    &__icon {
+      font-size: 7rem;
+      transform: rotate(330deg);
+    }
+
+    &__head {
+      margin: 1rem 0 0 0;
+      font-size: 2.5rem;
+      font-weight: 100;
+    }
   }
 
-  &__head {
-    margin: 1rem 0 0 0;
-    font-size: 2.5rem;
-    font-weight: 100;
+  .btn-group {
+    margin-top: 1.7rem;
+
+    &__btn {
+      @include button-styles;
+      @include padding(.5rem);
+      color: $text-primary;
+      border: 1px solid $text-primary;
+      background: $bg-quaternary;
+
+      &:hover {
+        background: $bg-quaternary-hv;
+      }
+    }
   }
 }
 
