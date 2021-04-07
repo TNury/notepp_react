@@ -33,9 +33,4 @@ Things we **NEED** to format:
 
 ## In `_login.styles.sscs`
 
-- Maybe to detach `btn-group` from inside `login-wrap` for better media querie access.
-- Fix the height problem.
-
-## In `_variables.colors.scss` 
-
-- Review variable names and change them if need be (i suggest starting with `$text-primary`).
+- Maybe separate `btn-group` & `input-group` into their own component.
