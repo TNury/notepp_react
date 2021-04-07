@@ -1,6 +1,7 @@
 // LOGIN DIV WRAPPER
 .login-wrap {
   height: 100vh;
+  // GRID
   display: grid;
   grid-template-areas: 
     'header'
@@ -11,16 +12,14 @@
 
   // FORM WRAPPER
   .login {
+    // GRID-AREA
     grid-area: form;
     // STYLES
     width: 100%;
     margin: 4rem auto;
     color: $text-primary;
     // FLEXBOX
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    @include flex-center-aligned(column);
 
     &__head {
       font-size: 1.8rem;
@@ -29,9 +28,9 @@
 
     .btn-group {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      // FLEXBOX
+      @include flex-center-aligned(column);
+
 
       // BUTTONS
       &-btn {
@@ -87,14 +86,13 @@
     // DIVIDER
     .divider {
       width: 80%;
-      align-self: center;
-      margin: 1.5rem 0 2rem 0;
+      // margin: 1.5rem 0 2rem 0;
+      margin: 4rem 0;
+      // CSS POSITION
       position: relative;
       // FLEXBOX
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      align-self: center;
+      @include flex-center-aligned(column);
 
       // DIVIDER TEXT
       &__text {
@@ -107,13 +105,19 @@
         width: 100%;
         display: block;
         border-top: 1px solid $text-primary;
-        // POSITION 
+        // CSS POSITION 
         position: absolute;
         top: .55rem;
         z-index: -1;
       }
-  
     }
+
+
+    /* 
+      Input-group is being automatically aligned
+      to the left so no need to add @include 
+      flex mixin
+    */
 
     // INPUTS
     .input-group {
@@ -125,7 +129,6 @@
 
       // LABEL & INPUT SHARED STYLES
       &__item {
-        text-align: left;
         width: 80%;
         margin: .5rem auto;
         background: inherit;
@@ -144,8 +147,9 @@
 
     // SUBMIT BUTTON
     .login__submit-btn {
-      align-self: center;
       background: $bg-quaternary;
+      // FLEXBOX
+      align-self: center;
     }
   }
 }
