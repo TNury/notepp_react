@@ -4,13 +4,13 @@
   grid-area: header;
   // STYLES
   background: inherit;
-  border-bottom: 1px solid $text-primary;
+  border-bottom: 1px solid $accent-primary;
 
 
   // NAVBAR
   .navbar {
     height: 5rem;
-    background-color: inherit;
+    background: inherit;
     // FLEXBOX
     @include flex-center-aligned(row);
     
@@ -21,7 +21,7 @@
 
     // LOGO
     &__logo {
-      color: $text-primary;
+      color: $accent-primary;
       text-decoration: none;
       font-family: Futura Medium;
       font-size: 2.5rem;
