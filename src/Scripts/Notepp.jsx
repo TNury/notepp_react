@@ -9,9 +9,9 @@ import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/actions/user-actions/user-actions.js';
 // PAGE COMPONENTS
 import App from './Components/app-components/app.component.jsx';
-import { Home } from './Components/home-components/home.component.jsx';
-import { Login } from './Components/login-components/login.component.jsx';
-import { NotFound } from './Components/not-found-component/notFound.component.jsx';
+import { Home } from './Components/home-components/home.jsx';
+import { Login } from './Components/login-components/login.jsx';
+import { NotFound } from './Components/not-found-component/notFound.jsx';
 // STYLES
 import './normalizer.scss';
 import './Notepp.scss';

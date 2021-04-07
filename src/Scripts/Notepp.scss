@@ -31,18 +31,19 @@
 */
 
 // REUSABLE
-@import './Components/reusable-components/header/header.styles.scss';
-@import './Components/reusable-components/footer/footer.styles.scss';
+@import './Components/reusable-components/header/header.scss';
+@import './Components/reusable-components/footer/footer.scss';
 // HOME-PAGE
-@import './Components/home-components/home.styles.scss';
-@import './Components/home-components/banner/banner.styles.scss';
-@import './Components/home-components/main/main.styles.scss';
-// LOADING-PAGE
-@import './Components/loading-component/loading.styles.scss';
+@import './Components/home-components/home.scss';
+@import './Components/home-components/banner/banner.scss';
+@import './Components/home-components/main/main.scss';
+// // LOADING-PAGE
+// @import './Components/loading-component/loading.styles.scss';
 // LOGIN-PAGE
-@import './Components/login-components/login.styles.scss';
+@import './Components/login-components/login.scss';
+@import './Components/login-components/button-group/button-group.scss';
 // NOT-FOUND-PAGE
-@import './Components/not-found-component/notFound.styles.scss';
+@import './Components/not-found-component/notFound.scss';
 // APP
 @import './Components/app-components/app.styles.scss';
 @import './Components/app-components/sidebar/sidebar.styles.scss';
