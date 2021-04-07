@@ -39,11 +39,11 @@
         height: 2.5rem;
         width: 80%;
         margin: .5rem 0;
-        border: 1px solid $text-primary;
+        border: 1px solid $accent-primary;
 
         // BUTTON ICON
         &__icon {
-          color: $text-primary;
+          color: $accent-primary;
         }
 
         // BUTTON TEXT
@@ -78,7 +78,7 @@
       background: #177BF2;
     }
 
-    // APPLE BUTTON
+    // GITHUB BUTTON
     ._brand-a {
       background: #000;
     }
@@ -86,7 +86,6 @@
     // DIVIDER
     .divider {
       width: 80%;
-      // margin: 1.5rem 0 2rem 0;
       margin: 4rem 0;
       // CSS POSITION
       position: relative;
@@ -96,7 +95,7 @@
 
       // DIVIDER TEXT
       &__text {
-        background: $bg-proto;
+        background: $bg-primary;
         padding: 0 1rem;
       }
 
@@ -104,7 +103,7 @@
       &__line {
         width: 100%;
         display: block;
-        border-top: 1px solid $text-primary;
+        border-top: 1px solid $accent-primary;
         // CSS POSITION 
         position: absolute;
         top: .55rem;
@@ -141,6 +140,10 @@
         font-size: 1.1rem;
         border: 0.063rem solid $text-primary;
         @include inner-padding(0 .5rem);
+
+        &::placeholder {
+          color: $text-tertiary;
+        }
       }
     }
 
