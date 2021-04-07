@@ -56,7 +56,7 @@
     width: 100%;
 
     &::placeholder {
-      color: $text-placeholder;
+      color: $text-tertiary;
     }
 
     @include scrollbar-styles ($bg-primary);
