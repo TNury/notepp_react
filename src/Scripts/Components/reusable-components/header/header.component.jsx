@@ -1,14 +1,7 @@
-// REDUX CONNECT
-import { connect } from 'react-redux';
 // REACT-ROUTER COMPONENTS
 import { Link } from 'react-router-dom';
-// FONTAWESOME COMPONENT
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDoorOpen, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
-const Header = (props) => {
-
-  const isLoggedIn = props.reduxProps.currentUserProp;
+export const Header = () => {
 
   return (
     <header className="header">
@@ -18,11 +11,3 @@ const Header = (props) => {
     </header>
   )
 }
-
-const mapStoreToProps = (currentStore) => ({
-  reduxProps: {
-    currentUserProp: currentStore.userReducer.user
-  }
-})
-
-export default connect(mapStoreToProps)(Header);
