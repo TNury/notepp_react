@@ -1,7 +1,8 @@
+// NOT FOUND PAGE
 .not-found-container {
-  color: $text-primary;
   width: 100vw;
   height: 100vh;
+  color: $text-primary;
   // FLEX-BOX
   @include flex-center-aligned(row);
 
