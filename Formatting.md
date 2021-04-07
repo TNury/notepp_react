@@ -10,6 +10,7 @@ Things we **NEED** to format:
 - Add coments all throughout the styles.
 - Change all fontawesome comentaries to "FONTAWESOME COMPONENTS".
 - Chack to see if its prudent to leave background colors in **inherit** or not.
+- Create a reusable `button` component
 
 ## In  `_sidebar.component.jsx`
 
