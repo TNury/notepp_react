@@ -18,7 +18,7 @@ For now your solution to this problem was setting `displayEditor` to false on lo
 
 Add features: 
 
-- A `require` attribute on inputs.
+- Login with email and password.
 
 ### On  sidebar's folder
 
@@ -28,7 +28,6 @@ Add features:
 
 ## On SCSS
 
-- Find a way for the header to be the same in `home.componen.jsx` and `login.component.jsx`, you know what to do. 
 - Change the `padding()` mixin so it can accept all padding values.
 
 ### On Header
