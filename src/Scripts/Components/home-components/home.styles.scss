@@ -25,9 +25,10 @@
 
   .banner {
     // STYLES
-    padding-top: .7rem;
+    // padding-top: .7rem;
     // FLEXBOX
     @include flex-center-aligned(column);
+    padding: 1rem;
   
     &__icon {
       font-size: 7rem;
@@ -41,12 +42,13 @@
     }
   }
 
-  .btn-group {
-    margin-top: 1.7rem;
+  .link-group {
+    @include flex-center-aligned(row);
 
-    &__btn {
+    &__link {
       @include button-styles;
-      @include padding(.5rem);
+      padding: 1rem;
+      text-decoration: none;
       color: $text-primary;
       border: 1px solid $text-primary;
       background: $bg-quaternary;
@@ -54,6 +56,10 @@
       &:hover {
         background: $bg-quaternary-hv;
       }
+    }
+
+    ._left {
+      margin-left: 1rem;
     }
   }
 }
