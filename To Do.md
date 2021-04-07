@@ -18,7 +18,6 @@ For now your solution to this problem was setting `displayEditor` to false on lo
 
 Add features: 
 
-- Login with: Twitter, Facebook and Apple accounts ou Email and Password.
 - A `require` attribute on inputs.
 
 ### On  sidebar's folder
