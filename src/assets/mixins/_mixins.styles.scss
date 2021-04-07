@@ -82,7 +82,7 @@
   -webkit-box-orient: vertical;
 }
 
-@mixin padding ($value) {
+@mixin inner-padding ($value) {
   box-sizing: border-box;
   padding: $value;
 }
