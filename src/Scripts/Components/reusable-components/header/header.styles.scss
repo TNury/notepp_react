@@ -6,9 +6,11 @@
 
 // HEADER
 .header {
+  // GRID-AREA
+  grid-area: header;
+  // STYLES
   background: inherit;
   border-bottom: 1px solid $text-primary;
-  grid-area: header;
 
 
   // NAVBAR
@@ -16,22 +18,8 @@
     height: 5rem;
     background-color: inherit;
     // FLEXBOX
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center-aligned(row);
     
-
-    // NAVBAR BUTTON
-    // .navbar-btn {
-    //   @include button-styles;
-    //   @include padding(1rem);
-    //   margin-left: auto;
-
-    //   &__icon {
-    //     font-size: 1.8rem;
-    //   }
-    // }
-
     // NAVBAR LINKS
     &__link {
       text-decoration: none;
@@ -43,16 +31,7 @@
       @include padding(1rem);
     }
   }
-
-  // ._centralize {
-  //   text-align: center;
-  // }
 }
 
-// @media only screen and (min-width: 768px) {
-//   .navbar-btn__icon {
-//     font-size: 1.8rem !important;
-//   }
-// }
 
 
