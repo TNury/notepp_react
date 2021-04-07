@@ -8,7 +8,7 @@ Things we **NEED** to format:
 
 - Maybe learn how to deep destructure so in functional components you won't need to define destructured variables.
 - Add coments all throughout the styles.
-- Change all fontawesome comentaries to "FONTAWESOME COMPONENT".
+- Change all fontawesome comentaries to "FONTAWESOME COMPONENTS".
 - Chack to see if its prudent to leave background colors in **inherit** or not.
 
 ## In  `_sidebar.component.jsx`
