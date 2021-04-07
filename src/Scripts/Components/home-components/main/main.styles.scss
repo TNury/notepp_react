@@ -57,7 +57,7 @@
   .container {
     display: grid !important;
     gap: 1rem;
-    @include padding(1rem);
+    @include inner-padding(1rem);
     grid-template-areas: 
       'col-1 col-2'
       'col-3 col-3'
