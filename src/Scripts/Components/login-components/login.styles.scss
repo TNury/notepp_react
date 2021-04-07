@@ -140,8 +140,7 @@
         color: inherit;
         font-size: 1.1rem;
         border: 0.063rem solid $text-primary;
-        box-sizing: border-box;
-        padding: 0 .5rem;
+        @include inner-padding(0 .5rem);
       }
     }
 

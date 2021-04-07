@@ -13,7 +13,7 @@
     flex-direction: column;
 
     .column {
-      padding: 1rem;
+      @include inner-padding(1rem);
       margin: 0 1rem;
       border-color: $text-primary;
       border-style: solid;
@@ -31,8 +31,7 @@
 
       &-list {
         color: $text-secondary;
-        box-sizing: border-box;
-        padding: 0 1.3rem;
+        @include inner-padding(0 1.3rem);
         font-size: 1.3rem;
         line-height: 1.7rem;
 
