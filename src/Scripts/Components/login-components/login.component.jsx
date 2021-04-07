@@ -23,9 +23,7 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 export const Login = () => {
   return(
     <div className="login-wrap">
-      <Header drilledProps={{
-        locations: 'login'
-      }}/>
+      <Header />
       <form className="login">
         <h2 className="login__head">Login with</h2>
         <div className="btn-group">

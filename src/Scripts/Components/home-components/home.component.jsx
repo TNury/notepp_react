@@ -17,9 +17,7 @@ const Home = (props) => {
 
   return (
     <div className="home">
-      <Header drilledProps={{
-        location: 'home'
-      }} />
+      <Header />
       <div className="banner-container">
         <div className="banner">
           <FontAwesomeIcon className="banner__icon" icon={faStickyNote} />
