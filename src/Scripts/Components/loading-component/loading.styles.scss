@@ -1,16 +1,18 @@
+// REVIEW THIS COMPONENTS STYLES BEFORE IMPLEMENTING IT
+
 .loading {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column-reverse;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  background: #ffffff3d;
-  z-index: 2;
   color: black;
+  box-sizing: border-box;
+  background: #ffffff3d;
+  // CSS POSITION
+  z-index: 2;  
+  position: fixed;
+  // FLEXBOX
+  @include flex-center-aligned(column-reverse);
+
 
   &__text {
     font-size: 1.5rem;
