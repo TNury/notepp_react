@@ -24,11 +24,9 @@
   @include flex-center-aligned(column);
 
   .banner {
-    // STYLES
-    // padding-top: .7rem;
+    padding: 1rem;
     // FLEXBOX
     @include flex-center-aligned(column);
-    padding: 1rem;
   
     &__icon {
       font-size: 7rem;
