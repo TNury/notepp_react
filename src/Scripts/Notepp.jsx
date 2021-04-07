@@ -13,7 +13,6 @@ import { Home } from './Components/home-components/home.jsx';
 import { Login } from './Components/login-components/login.jsx';
 import { NotFound } from './Components/not-found-component/notFound.jsx';
 // STYLES
-import './normalizer.scss';
 import './Notepp.scss';
 
 
