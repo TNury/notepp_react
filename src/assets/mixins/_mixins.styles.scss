@@ -86,3 +86,10 @@
   box-sizing: border-box;
   padding: $value;
 }
+
+@mixin flex-center-aligned($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
