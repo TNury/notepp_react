@@ -1,0 +1,63 @@
+.btn-group {
+  width: 100%;
+  // FLEXBOX
+  @include flex-center-aligned(column);
+
+  // BUTTONS
+  &-btn {
+    @include button-styles;
+    @include special-outline;
+    height: 2.5rem;
+    width: 80%;
+    margin: .5rem 0;
+    border: 1px solid $accent-primary;
+
+    // BUTTON ICON
+    &__icon {
+      color: $accent-primary;
+    }
+
+    // BUTTON TEXT
+    &__text {
+      margin-left: .5rem;
+      font-size: 1.1rem;
+      color: $text-primary;
+    }
+  }
+
+  // GOOGLE BUTTON
+  ._brand-g {
+    background: linear-gradient(110deg, 
+    #DB4437 25%, 
+    #F4B400 25%, 
+    #F4B400 50%,
+    #0F9D58 50%, 
+    #0F9D58 75%,
+    #4285F4 75%,
+    #4285F4 100%);
+  }
+
+  // FACEBOOK BUTTON
+  ._brand-t {
+    background: #55ACEE;
+  }
+
+  // TWITTER BUTTON
+  ._brand-f {
+    background: #177BF2;
+  }
+
+  // GITHUB BUTTON
+  ._brand-a {
+    background: #000;
+  }
+  
+}
+
+@media only screen and (min-width: 768px) {
+
+  .btn-group-btn__icon {
+    color: inherit !important;
+  }
+  
+}
