@@ -1,5 +1,7 @@
 // REDUX
 import { connect } from 'react-redux';
+// REACT-ROUTER
+import { Link } from 'react-router-dom';
 // COMPONENTS 
 import { Main } from './main/main.component.jsx'
 import Header from '../reusable-components/header/header.component.jsx';
@@ -24,15 +26,15 @@ const Home = (props) => {
           <h1 className="banner__head">Welcome to Notepp!</h1>
         </div>
         {
-          false
+          isLoggedIn
           ?
-          <div className="btn-group">
-            <button className="btn-group__btn">Go to App!</button>
+          <div className="link-group">
+            <Link className="link-group__link" to="/app">Go to App!</Link>
           </div>
           :
-          <div className="btn-group">
-            <button className="btn-group__btn">Login</button>
-            <button className="btn-group__btn">Sign Up</button>
+          <div className="link-group">
+            <Link className="link-group__link" to="/login">Login</Link>
+            <Link className="link-group__link _left" to="/login">Sign Up</Link>
           </div>
         }
       </div>
