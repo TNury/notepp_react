@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 // COMPONENTS 
 import { Main } from './main/main.component.jsx'
-import Header from '../reusable-components/header/header.component.jsx';
+import { Header } from '../reusable-components/header/header.component.jsx';
 import { Footer } from '../reusable-components/footer/footer.component.jsx';
 // FONTAWESOME COMPONENTS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
