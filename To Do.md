@@ -28,8 +28,6 @@ Add features:
 
 ## On SCSS
 
-- Change the `padding()` mixin so it can accept all padding values.
-
 ### On Header
 
 - Add an hover animation on logo and background.
