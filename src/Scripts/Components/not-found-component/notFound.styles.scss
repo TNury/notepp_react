@@ -2,7 +2,7 @@
 .not-found-container {
   width: 100vw;
   height: 100vh;
-  color: $text-primary;
+  color: $accent-primary;
   // FLEX-BOX
   @include flex-center-aligned(row);
 
