@@ -18,9 +18,11 @@ const Home = (props) => {
       <Header drilledProps={{
         location: 'home'
       }} />
-      <div className="banner">
-        <FontAwesomeIcon className="banner__icon" icon={faStickyNote} />
-        <h1 className="banner__head">Welcome to Notepp!</h1>
+      <div className="banner-container">
+        <div className="banner">
+          <FontAwesomeIcon className="banner__icon" icon={faStickyNote} />
+          <h1 className="banner__head">Welcome to Notepp!</h1>
+        </div>
         {
           false
           ?
