@@ -28,7 +28,7 @@
     // LOGO
     &__logo {
       @include logo-styles;
-      @include padding(1rem);
+      @include inner-padding(1rem);
     }
   }
 }
