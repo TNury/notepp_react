@@ -1,7 +1,14 @@
 .main-container {
+  // GRID-AREA
   grid-area: main;
 
+  /*
+    .container Doesn't need to be center-aligned,
+    so no need to add @include flex mixin
+  */ 
+
   .container {
+    // FLEXBOX
     display: flex;
     flex-direction: column;
 
@@ -72,7 +79,6 @@
 
     ._col-3 {
       border-top: 1px solid $text-primary !important;
-      // border-bottom: none !important;
       grid-area: col-3;
     }
   }
@@ -81,14 +87,10 @@
 @media only screen and (min-width: 1080px) {
 
   .main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-aligned(column);
   }
 
   .container {
-    // max-width: 99%;
     grid-template-areas: 
     'col-1 col-3 col-2'
     !important;
@@ -103,12 +105,6 @@
   }
 }
 
-// @media only screen and (min-width: 1280px) {
-
-//   .container {
-//     max-width: 90%;
-//   }
-// }
 
 @media only screen and (min-width: 1440px) {
 
