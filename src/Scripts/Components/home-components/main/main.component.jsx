@@ -1,6 +1,6 @@
 
-
 export const Main = () => {
+ 
   return (
     <main className="main-container">
       <div className="container">
