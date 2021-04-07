@@ -3,10 +3,10 @@
   height: 100vh;
   position: fixed;
   transition: .2s;
-  background: $bg-secondary;
+  background: $bg-primary;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid $bg-tertiary;
+  border-right: 1px solid white;
   z-index: 1;
 
   // LOGO STYLES 
@@ -20,11 +20,11 @@
     grid-template-columns: 5rem 1fr;
 
     &:hover {
-      background: $bg-primary;
+      background: $bg-secondary;
     }
 
     &:focus {
-      background: $bg-primary;
+      background: $bg-secondary;
     }
 
     &:nth-last-child(2) {
