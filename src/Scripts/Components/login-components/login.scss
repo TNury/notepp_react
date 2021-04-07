@@ -1,0 +1,131 @@
+// LOGIN DIV WRAPPER
+.login-wrapper {
+  height: 100vh;
+  // GRID
+  display: grid;
+  grid-template-areas: 
+    'header'
+    'form'
+    'footer'
+  ;
+  grid-template-rows: 5rem 1fr 5rem;
+
+  // FORM WRAPPER
+  .login {
+    // GRID-AREA
+    grid-area: form;
+    // STYLES
+    width: 100%;
+    margin: 4rem auto;
+    color: $text-primary;
+    // FLEXBOX
+    @include flex-center-aligned(column);
+
+    &__head {
+      font-size: 1.8rem;
+      margin: 0 0 2rem 0;
+    }
+
+    /* 
+      Input-group is being automatically aligned
+      to the left so no need to add @include 
+      flex mixin
+    */
+
+    // DIVIDER
+  .divider {
+    width: 80%;
+    margin: 4rem 0;
+    // CSS POSITION
+    position: relative;
+    // FLEXBOX
+    align-self: center;
+    @include flex-center-aligned(column);
+
+    // DIVIDER TEXT
+    &__text {
+      background: $bg-primary;
+      padding: 0 1rem;
+    }
+
+    // DIVIDER LINE
+    &__line {
+      width: 100%;
+      display: block;
+      border-top: 1px solid $accent-primary;
+      // CSS POSITION 
+      position: absolute;
+      top: .55rem;
+      z-index: -1;
+    }
+  }
+
+    // INPUTS
+    .input-group {
+      width: 100%;
+      margin-bottom: 1rem;
+      // FLEXBOX
+      display: flex;
+      flex-direction: column;
+
+      // LABEL & INPUT SHARED STYLES
+      &__item {
+        width: 80%;
+        margin: .5rem auto;
+        background: inherit;
+      }
+
+      // INPUT
+      ._input {
+        height: 2.5rem;
+        color: inherit;
+        font-size: 1.1rem;
+        border: 0.063rem solid $text-primary;
+        @include inner-padding(0 .5rem);
+
+        &::placeholder {
+          color: $text-tertiary;
+        }
+      }
+    }
+
+    // SUBMIT BUTTON
+    .submit-btn {
+      @extend .btn-group-btn;
+
+      &__icon {
+        @extend .btn-group-btn__icon;
+      }
+
+      &__text {
+        @extend .btn-group-btn__text;
+      }
+      // FLEXBOX
+      align-self: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .login {
+    width: 60% !important;
+  }
+
+}
+
+@media only screen and (min-width: 1080px) {
+
+  .login {
+    width: 40% !important; 
+  }
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .login {
+    width: 25% !important; 
+  }
+  
+}
