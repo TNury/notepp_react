@@ -7,7 +7,7 @@
 // VARIABLES
 @import '../assets/variables/_colors.scss';
 // NORMALIZER
-@import '../assets/normalizer/normalizer.scss';
+@import '../assets/normalize/normalize.scss';
 // MIXINS
 @import '../assets/mixins/_mixins.scss';
 // PARAGRAPHS FONT
@@ -44,7 +44,6 @@
 // @import './Components/loading-component/loading.styles.scss';
 // LOGIN-PAGE
 @import './Components/login-components/login.scss';
-@import './Components/login-components/button-group/button-group.scss';
 // NOT-FOUND-PAGE
 @import './Components/not-found-component/notFound.scss';
 // APP
