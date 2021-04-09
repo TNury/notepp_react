@@ -2,12 +2,12 @@
   padding: 0;
   border: none;
   background: none;
-  color: $text-secondary;
+  color: $accent-secondary;
   transition: all .4s;
 
   &:hover {
     cursor: pointer;
-    color: $text-primary;
+    color: $accent-primary;
   }
 }
 
@@ -28,13 +28,17 @@
 
   &:focus {
     transform: scale(1.05);
-    color: $text-primary;
+    color: $accent-primary;
   }
 }
 
 @mixin scrollbar-styles ($color) {
   &::-webkit-scrollbar {
     width: .4rem;
+
+    &-track {
+      background: inherit;
+    }
     
     &-thumb {
       background: $color;
@@ -44,20 +48,15 @@
 }
 
 @mixin textarea-styles {
-  textarea {
-    resize: none;
-    border: none;  
-    outline: none;
-    background: inherit;
-    padding: 1rem;
-    box-sizing: border-box;
-    width: 100%;
+  width: 100%;
+  resize: none;
+  border: none;  
+  outline: none;
+  background: inherit;
+  @include inner-padding(1rem);
 
-    &::placeholder {
-      color: $text-tertiary;
-    }
-
-    @include scrollbar-styles ($bg-primary);
+  &::placeholder {
+    color: $text-tertiary;
   }
 }
 
