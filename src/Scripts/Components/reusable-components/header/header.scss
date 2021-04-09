@@ -43,7 +43,7 @@
 
       &__pencil {
         pointer-events: none;
-        color: $accent-secondary;
+        color: $accent-primary;
         font-size: 2rem;
         // CSS POSITION
         position: absolute;
@@ -60,10 +60,12 @@
 @media only screen and (min-width: 1080px) {
   .navbar {
     
+    .logo__pencil {color: $accent-secondary !important};
+
     &:hover {
 
       .logo__pencil {
-        color: $accent-primary;
+        color: $accent-primary !important;
         transform: none;
         // CSS POSITION
         top: -.2rem;

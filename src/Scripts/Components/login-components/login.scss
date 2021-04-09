@@ -35,7 +35,6 @@
       // BUTTONS
       .button {
         @include button-styles;
-        @include special-outline;
         height: 2.5rem;
         width: 80%;
         margin: .5rem 0;
@@ -147,10 +146,6 @@
 
   .login {
     width: 60% !important;
-
-    .button__icon {
-      color: inherit !important;
-    }
   }
 
 }
@@ -159,6 +154,14 @@
 
   .login {
     width: 40% !important; 
+
+    .button {
+      @include special-outline;
+      
+       .button__icon {
+        color: inherit !important;
+      }
+    }
   }
 
 }
