@@ -4,8 +4,6 @@ import { signInWithGoogle, signInWithTwitter, signInWithFacebook, signInWithGith
 import { Header } from '../reusable-components/header/header.jsx';
 import { Button } from '../reusable-components/button/button.jsx';
 import { Footer } from '../reusable-components/footer/footer.jsx';
-// FONTAWESOME COMPONENT 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME ICONS
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faTwitter, faFacebookF, faGithub } from '@fortawesome/free-brands-svg-icons';
