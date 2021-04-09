@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { setAppFont } from '../../../Redux/actions/customize-app-actions/customize-app-actions.js';
 import { displayEditor } from '../../../Redux/actions/editor-actions/editor-actions.js';
 // COMPONENTS
-import { Button } from './button/button.component.jsx';
+import { Button } from '../../reusable-components/button/button.jsx';
 // FIREBASE AUTH
 import { auth } from '../../../Firebase/Firebase.utils.js';
-// FONTAWESOME LIBRARY DEFAULT ICON
+// FONTAWESOME ICON
 import {
   faEye,faStickyNote, faSearch, faTint, 
   faAddressCard, faSignOutAlt, faCogs
@@ -46,13 +46,13 @@ const Sidebar = (props) => {
   
   return (
     <nav className="sidebar">
-      <Button text="Notes" icon={ faStickyNote } />
-      <Button text="Search" icon={ faSearch } />
-      <Button text="Themes" icon={ faTint } />
-      <Button handler={ () => dyslexia() } text="Dyslexia"  icon={ faEye } />
-      <Button text="About" icon={ faAddressCard } />
-      <Button handler={() => logOut()} text="Logout" icon={ faSignOutAlt } />
-      <Button text="Configs" icon={ faCogs } />
+      <Button type="button" handler={null} text="Notes" modifier='' icon={ faStickyNote } />
+      <Button type="button" handler={null} text="Search" modifier='' icon={ faSearch } />
+      <Button type="button" handler={null} text="Themes" modifier='' icon={ faTint } />
+      <Button type="button" handler={null} text="Dyslexia" modifier='' icon={ faEye } />
+      <Button type="button" handler={null} text="About" modifier='' icon={ faAddressCard } />
+      <Button type="button" handler={null} text="Logout" modifier='_bottom' icon={ faSignOutAlt } />
+      <Button type="button" handler={null} text="Configs" modifier='' icon={ faCogs } />
     </nav>
   )
 }

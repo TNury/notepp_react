@@ -1,47 +1,39 @@
+// SIDEBAR
 .sidebar {
   width: 5rem;
   height: 100vh;
   position: fixed;
   transition: .2s;
   background: $bg-primary;
+  @include flex-center-aligned(column);
   display: flex;
-  flex-direction: column;
-  border-right: 1px solid white;
+  border-right: 1px solid $accent-primary;
   z-index: 1;
 
-  // LOGO STYLES 
-
   // BUTTON STYLES 
-  &-button {
+  .button {
     @include button-styles;
-    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     width: 100%;
-    display: grid;
-    grid-template-columns: 5rem 1fr;
-
-    &:hover {
-      background: $bg-secondary;
-    }
-
-    &:focus {
-      background: $bg-secondary;
-    }
-
-    &:nth-last-child(2) {
-      margin-top: auto;
-    }
+    height: 5rem;
 
     &__icon {
-      font-size: 2rem;
-      margin: 0 auto;
-      align-self: center;
+      font-size: 2.5rem;
     }
 
     &__text {
-      margin-right: 2rem;
-      align-self: center;
-      visibility: hidden;
+      position: absolute;
+      left: 7rem;
+      display: none;
     }
+  }
+
+  ._bottom {
+    margin-top: auto;
   }
 
   // HOVER ANIMATION
