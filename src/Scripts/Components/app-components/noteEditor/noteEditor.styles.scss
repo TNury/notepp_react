@@ -1,5 +1,5 @@
+// NOTE EDITOR
 .noteEditor {
-  @include textarea-styles;
   width: 70vw;
   height: 100vh;
   padding: 2rem;
@@ -7,6 +7,7 @@
   box-sizing: border-box;
   overflow: hidden;
 
+  // EDITOR CLOSE NOTE BUTTON
   &-close {
     @include button-styles;
     @include special-button-styles;
@@ -15,19 +16,26 @@
     right: 0;
   }
 
-  .note__title {
+  // OPENED NOTE TITLE
+  &__title {
     font-size: 2rem;
     color: $text-primary;
+    @include textarea-styles;
+    @include scrollbar-styles($accent-secondary);
   }
 
-  .note__body {
+  // OPENED NOTE BODY
+  &__body {
     font-size: 1.5rem;
     color: $text-secondary;
     // THIS NEEDS TO BE FIXED WHEN CREATING THE 
     // MOBILE VERSION
-    height: 70%;
+    height: 70vh;
+    @include textarea-styles;
+    @include scrollbar-styles($accent-secondary);
   }
 
+  // EDITOR SAVE NOTE BUTTON
   &-save {
     @extend .noteEditor-close;
     top: auto;

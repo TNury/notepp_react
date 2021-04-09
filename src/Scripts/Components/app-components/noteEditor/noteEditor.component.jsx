@@ -2,11 +2,7 @@
 import React from 'react';
 // REDUX
 import { connect } from 'react-redux';
-import { 
-  displayEditor, 
-  onEditorSetNoteTitle, 
-  onEditorSetNoteBody 
-} from '../../../Redux/actions/editor-actions/editor-actions.js';
+import { displayEditor,  onEditorSetNoteTitle, onEditorSetNoteBody } from '../../../Redux/actions/editor-actions/editor-actions.js';
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME LIBRARY DEFAULT ICON
@@ -42,7 +38,7 @@ class Note extends React.Component {
 
     const { onEditorSetNoteTitle, onEditorSetNoteBody } = this.props.reduxActions;
 
-    event.target.className === 'note__title'
+    event.target.className === 'noteEditor__title'
       ?
     onEditorSetNoteTitle(event.target.value)
       :
@@ -57,7 +53,6 @@ class Note extends React.Component {
 
     return (
       <div className="noteEditor">
-
         { 
           display
           ?
@@ -68,27 +63,26 @@ class Note extends React.Component {
             </button>
 
             <textarea 
-              className="note__title" 
+              className="noteEditor__title" 
               placeholder="Title"
               value={title}
               onChange={(event) => this.handleChange(event)} 
             />  
           
             <textarea 
-              className="note__body"           
+              className="noteEditor__body"           
               placeholder="Write here"
               value={body}
               onChange={(event) => this.handleChange(event)}  
             />
 
+            <button onClick={() => this.saveNote()} className="noteEditor-save">
+              <FontAwesomeIcon icon={faEdit} />
+            </button>
           </>
           :
           <></>
         }
-        
-        <button onClick={() => this.saveNote()} className="noteEditor-save">
-          <FontAwesomeIcon icon={ faEdit } />
-        </button>
       </div>
     )
   }
