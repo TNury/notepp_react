@@ -17,10 +17,10 @@ export const Login = () => {
       <form className="login">
         <h2 className="login__head">Login with</h2>
         <div className="button-wrap">
-          <Button type="button" handler={() => signInWithGoogle} modifier="_brand-g" icon={faGoogle} text="Google"/>
-          <Button type="button" handler={() => signInWithTwitter} modifier="_brand-t" icon={faTwitter} text="Twitter"/>
-          <Button type="button" handler={() => signInWithFacebook} modifier="_brand-f" icon={faFacebookF} text="Facebook"/>
-          <Button type="button" handler={() => signInWithGithub} modifier="_brand-git" icon={faGithub} text="GitHub"/>
+          <Button type="button" handler={ signInWithGoogle } modifier="_brand-g" icon={ faGoogle } text="Google"/>
+          <Button type="button" handler={ signInWithTwitter } modifier="_brand-t" icon={ faTwitter } text="Twitter"/>
+          <Button type="button" handler={ signInWithFacebook } modifier="_brand-f" icon={ faFacebookF } text="Facebook"/>
+          <Button type="button" handler={ signInWithGithub } modifier="_brand-git" icon={ faGithub } text="GitHub"/>
         </div>
         <div className="divider">
           <span className="divider__text">Or</span>
@@ -33,7 +33,7 @@ export const Login = () => {
           <input id="password" className="input-group__item _input" type="password" placeholder="12345" required />
         </div>
         <div className="button-wrap">
-          <Button type="submit" handler={() => console.log('Hi')} modifier="_submit" icon={faSignInAlt} text="Submit" />
+          <Button type="submit" handler={() => console.log('Hi')} modifier="_submit" icon={ faSignInAlt } text="Submit" />
         </div>
       </form>
       <Footer />
