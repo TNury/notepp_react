@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME LIBRARY DEFAULT ICON
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 // COMPONENTS
-import NotesPrev from './notesPrev-component/notesPrev.component.jsx';
+import Note from './note/note.jsx';
 
-class Notes extends React.Component {
+class NotesCollection extends React.Component {
 
   newNote() {
 
@@ -38,10 +38,10 @@ class Notes extends React.Component {
     const notes = this.props.reduxProps.notesCollectionProps.docs;
     
     return (
-      <div onClick={() => this.closeNote()} className="notes">
+      <div onClick={() => this.closeNote()} className="notes-collection">
         {
           notes.map(({ id, title, body }, index) => (
-            <NotesPrev 
+            <Note 
               key={index}
               drilledProps={{
                 id: id,
@@ -51,7 +51,8 @@ class Notes extends React.Component {
             />
           ))
         }
-        <button onClick={() => this.newNote()} className="notes-create">
+        {/* USE REUSABLE BUTTON COMPONENT */}
+        <button onClick={() => this.newNote()} className="notes-collection__button">
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
@@ -73,4 +74,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-export default connect(mapStoreToProps, mapDispatchToProps)(Notes);
+export default connect(mapStoreToProps, mapDispatchToProps)(NotesCollection);
