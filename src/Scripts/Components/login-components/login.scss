@@ -21,44 +21,95 @@
     // FLEXBOX
     @include flex-center-aligned(column);
 
+    // LOGIN HEAD
     &__head {
       font-size: 1.8rem;
       margin: 0 0 2rem 0;
     }
 
-    /* 
-      Input-group is being automatically aligned
-      to the left so no need to add @include 
-      flex mixin
-    */
+    .button-wrap {
+      width: 100%;
+      // FLEXBOX
+      @include flex-center-aligned(column);
+
+      // BUTTONS
+      .button {
+        @include button-styles;
+        @include special-outline;
+        height: 2.5rem;
+        width: 80%;
+        margin: .5rem 0;
+        border: 1px solid $accent-primary;
+
+        // BUTTON ICON
+        &__icon {
+          color: $accent-primary;
+        }
+
+        // BUTTON TEXT
+        &__text {
+          margin-left: .5rem;
+          font-size: 1.1rem;
+          color: $text-primary;
+        }
+      }
+
+      // GOOGLE BUTTON
+      ._brand-g {
+        background: linear-gradient(110deg, 
+        #DB4437 25%, 
+        #F4B400 25%, 
+        #F4B400 50%,
+        #0F9D58 50%, 
+        #0F9D58 75%,
+        #4285F4 75%,
+        #4285F4 100%);
+      }
+
+      // FACEBOOK BUTTON
+      ._brand-t {
+        background: #55ACEE;
+      }
+
+      // TWITTER BUTTON
+      ._brand-f {
+        background: #177BF2;
+      }
+
+      // GITHUB BUTTON
+      ._brand-git {
+        background: #000;
+      }
+      
+    }
 
     // DIVIDER
-  .divider {
-    width: 80%;
-    margin: 4rem 0;
-    // CSS POSITION
-    position: relative;
-    // FLEXBOX
-    align-self: center;
-    @include flex-center-aligned(column);
+    .divider {
+      width: 80%;
+      margin: 4rem 0;
+      // CSS POSITION
+      position: relative;
+      // FLEXBOX
+      align-self: center;
+      @include flex-center-aligned(column);
 
-    // DIVIDER TEXT
-    &__text {
-      background: $bg-primary;
-      padding: 0 1rem;
-    }
+      // DIVIDER TEXT
+      &__text {
+        background: $bg-primary;
+        padding: 0 1rem;
+      }
 
-    // DIVIDER LINE
-    &__line {
-      width: 100%;
-      display: block;
-      border-top: 1px solid $accent-primary;
-      // CSS POSITION 
-      position: absolute;
-      top: .55rem;
-      z-index: -1;
+      // DIVIDER LINE
+      &__line {
+        width: 100%;
+        display: block;
+        border-top: 1px solid $accent-primary;
+        // CSS POSITION 
+        position: absolute;
+        top: .55rem;
+        z-index: -1;
+      }
     }
-  }
 
     // INPUTS
     .input-group {
@@ -89,20 +140,6 @@
       }
     }
 
-    // SUBMIT BUTTON
-    .submit-btn {
-      @extend .btn-group-btn;
-
-      &__icon {
-        @extend .btn-group-btn__icon;
-      }
-
-      &__text {
-        @extend .btn-group-btn__text;
-      }
-      // FLEXBOX
-      align-self: center;
-    }
   }
 }
 
@@ -110,6 +147,10 @@
 
   .login {
     width: 60% !important;
+
+    .button__icon {
+      color: inherit !important;
+    }
   }
 
 }
