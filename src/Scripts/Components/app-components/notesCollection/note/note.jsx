@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 
 
-class NotesPrev extends React.Component {
+class Note extends React.Component {
 
   // DELETE NOTE HANDLER
   deleteNote(event) {
@@ -58,19 +58,18 @@ class NotesPrev extends React.Component {
   render() {
 
     const { title, body } = this.props.drilledProps;
-
+    // REVIEW THE NECESSITY OF THE DIV ABOVE BUTTON
     return(
       <>  
-        <div onClick={ (event) => this.renderNote(event) } className="notes-prev">
-          <p className="notes-prev__title">{title}</p>
-          <p className="notes-prev__body">{body}</p>
-          <div>
-            <button onClick={ (event) => this.deleteNote(event) } className="notes-prev__button">
-              <FontAwesomeIcon className="notes-prev__icon" icon={ faMinusCircle } />
-            </button>
-          </div>
+        <div onClick={ (event) => this.renderNote(event) } className="note">
+          <p className="note__title">{title}</p>
+          <p className="note__body">{body}</p>
+          {/* USE REUSABLE BUTTON COMPONENT HERE AS WELL */}
+          <button onClick={ (event) => this.deleteNote(event) } className="button">
+            <FontAwesomeIcon className="button__icon" icon={ faMinusCircle } />
+          </button>
         </div>
-        <hr className="notes__line" />
+        <hr className="notes__divider" />
       </>
     )
   }
@@ -93,6 +92,6 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-export default connect(mapStoreToProps, mapDispatchToProps)(NotesPrev);
+export default connect(mapStoreToProps, mapDispatchToProps)(Note);
 
 
