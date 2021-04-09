@@ -13,19 +13,62 @@
     background: inherit;
     // FLEXBOX
     @include flex-center-aligned(row);
-    
-    // NAVBAR LINKS
-    &__link {
-      text-decoration: none;
-    }
 
-    // LOGO
-    &__logo {
-      color: $accent-primary;
-      text-decoration: none;
-      font-family: Futura Medium;
-      font-size: 2.5rem;
-      @include inner-padding(1rem);
+    .logo {
+      box-sizing: border-box;
+      position: relative;
+
+      // NAVBAR LINK
+      &__text {
+        color: $accent-primary;
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-family: Futura Medium;
+        margin-bottom: 1px;
+      }
+
+      // LINE
+      &__line {
+        width: 9rem;
+        border-top: 4px solid $bg-primary;
+        position: absolute;
+        top: 1.6rem;
+        left: -11rem;
+        transition: left 600ms 300ms;
+        pointer-events: none;
+      }
+
+      &__pencil {
+        color: $accent-primary;
+        font-size: 2rem;
+        position: absolute;
+        top: .5rem;
+        left: -2rem;
+        transform: rotate(-45deg);
+        transition: transform 300ms 600ms, top 300ms 900ms, left 600ms 300ms;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .navbar {
+    
+    &:hover {
+
+      .logo__pencil {
+        transform: none;
+        top: -.2rem;
+        left: 8.75rem;
+        transition: transform 300ms 300ms, top 300ms, left 600ms 600ms;
+      }
+
+      .logo__line {
+        left: -.2em;
+        transition: left 600ms 600ms;
+      }
+
     }
   }
 }
