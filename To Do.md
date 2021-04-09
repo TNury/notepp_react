@@ -27,7 +27,3 @@ Add features:
 ------
 
 ## On SCSS
-
-### On Header
-
-- Add an hover animation on logo and background.
