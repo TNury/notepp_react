@@ -16,6 +16,7 @@
 
     .logo {
       box-sizing: border-box;
+      // CSS POSITION
       position: relative;
 
       // NAVBAR LINK
@@ -29,24 +30,28 @@
 
       // LINE
       &__line {
+        pointer-events: none;
         width: 9rem;
         border-top: 4px solid $bg-primary;
+        // CSS POSITION
         position: absolute;
         top: 1.6rem;
         left: -11rem;
+        // CSS TRANSITION
         transition: left 600ms 300ms;
-        pointer-events: none;
       }
 
       &__pencil {
+        pointer-events: none;
         color: $accent-secondary;
         font-size: 2rem;
+        // CSS POSITION
         position: absolute;
         top: .5rem;
         left: -2rem;
         transform: rotate(-45deg);
+        // CSS TRANSITION
         transition: color 300ms 1200ms, transform 300ms 600ms, top 300ms 900ms, left 600ms 300ms;
-        pointer-events: none;
       }
     }
   }
@@ -60,13 +65,17 @@
       .logo__pencil {
         color: $accent-primary;
         transform: none;
+        // CSS POSITION
         top: -.2rem;
         left: 8.75rem;
+        // CSS TRANSITION
         transition: color 300ms, transform 300ms 300ms, top 300ms, left 600ms 600ms;
       }
 
       .logo__line {
+        // CSS POSITION
         left: -.2em;
+        // CSS TRANSITION
         transition: left 600ms 600ms;
       }
 
