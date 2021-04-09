@@ -9,8 +9,8 @@ import {
   setNotesCollectionRef 
 } from '../../Redux/actions/notes-collection-actions/notes-collection-actions.js';
 // COMPONENTS
-import Sidebar from './sidebar/sidebar.component.jsx';
-import Notes from './notes/notes.component.jsx';
+import Sidebar from './sidebar/sidebar.jsx';
+import NotesCollection from './notesCollection/notesCollection.jsx';
 import NoteEditor from './noteEditor/noteEditor.component.jsx';
 
 
@@ -44,7 +44,7 @@ class App extends React.Component {
       <div className="app">
         <Sidebar />
         <div className="wrap">
-          <Notes />
+          <NotesCollection />
           <NoteEditor />
         </div>
       </div>
