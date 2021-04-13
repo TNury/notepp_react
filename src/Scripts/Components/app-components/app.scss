@@ -1,9 +1,11 @@
-// WRAP
-.wrap {
+.app {
   height: 100vh;
-  margin-left: 5rem;
-  display: flex;
-  flex-direction: row;
+  // CSS POSITION
+  position: relative;
+  // GRID
+  display: grid;
+  grid-template-areas: 
+    'navbar notesCollection'
+  ;
+  grid-template-columns: 4.5rem 1fr;
 }
-
-// WHEN RE-CREATING APP STYLES, USE GRID!!!
