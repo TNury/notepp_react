@@ -11,10 +11,14 @@ Things we **NEED** to format:
 - Chack to see if its prudent to leave background colors in **inherit** or not.
 - Change the **scripts** file name to something more adequate.
 
-## In  `_sidebar.component.jsx`
+## React
+
+### In  `_sidebar.component.jsx`
 
 - Extend it to a class component and, if need be, format it.
+- Change its classname to something more coherent.
 
-## In `_mixins.styles.scss`
+### In `_mixins.styles.scss`
 
 - Find an alternative to focus on buttons.
+

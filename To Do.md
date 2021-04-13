@@ -27,3 +27,8 @@ Add features:
 ------
 
 ## On SCSS
+
+- Create variables for font-size, transition speed and others if need be.
+- Accelerate transition speed for mobile.
+- Upgrade the mixing `flex-center-aligned` so it receives both `align-items` and `justify-content`;
+
