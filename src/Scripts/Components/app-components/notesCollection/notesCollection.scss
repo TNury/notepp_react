@@ -1,20 +1,21 @@
 // NOTES COLLECTION
 .notes-collection {
-  width: 30vw;
-  height: 100vh;
-  padding: 0;
+  grid-area: notesCollection;
   overflow: auto;
-  background: $bg-secondary;
-  border-right: 1px solid $accent-primary; 
+  background: $bg-primary;
+  position: relative;
 
   // SCROLLBAR
   @include scrollbar-styles($accent-secondary);
 
-  &__button {
+  ._create {
     @include button-styles;
-    @include special-button-styles;
     position: fixed;
-    bottom: 0;
-    left: 29%;
+    right: 1rem;
+    bottom: 1rem;
+
+    .button__icon {
+      font-size: 2.3rem;
+    }
   }
 }
