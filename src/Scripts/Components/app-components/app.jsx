@@ -13,7 +13,6 @@ import Sidebar from './sidebar/sidebar.jsx';
 import NotesCollection from './notesCollection/notesCollection.jsx';
 import NoteEditor from './noteEditor/noteEditor.component.jsx';
 
-
 class App extends React.Component {
 
   componentDidMount() {
@@ -43,10 +42,8 @@ class App extends React.Component {
     return (
       <div className="app">
         <Sidebar />
-        <div className="wrap">
-          <NotesCollection />
-          <NoteEditor />
-        </div>
+        <NotesCollection />
+        {/* <NoteEditor /> */}
       </div>
     )
   }
