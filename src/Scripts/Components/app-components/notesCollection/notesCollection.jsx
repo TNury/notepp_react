@@ -3,12 +3,11 @@ import React from 'react';
 // REDUX 
 import { connect } from 'react-redux';
 import { displayEditor } from '../../../Redux/actions/editor-actions/editor-actions.js';
-// FONTAWESOME REACT LIBRARY COMPONENT
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// FONTAWESOME LIBRARY DEFAULT ICON
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+// FONTAWESOME ICON
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 // COMPONENTS
 import Note from './note/note.jsx';
+import { Button } from '../../reusable-components/button/button.jsx';
 
 class NotesCollection extends React.Component {
 
@@ -51,10 +50,7 @@ class NotesCollection extends React.Component {
             />
           ))
         }
-        {/* USE REUSABLE BUTTON COMPONENT */}
-        <button onClick={() => this.newNote()} className="notes-collection__button">
-          <FontAwesomeIcon icon={faPlus} />
-        </button>
+        <Button type="button" handler={() => this.newNote() } text={null} modifier="_create" icon={ faPlusCircle } />
       </div>
     )
   }
