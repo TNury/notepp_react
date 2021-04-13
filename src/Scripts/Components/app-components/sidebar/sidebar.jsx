@@ -8,10 +8,7 @@ import { Button } from '../../reusable-components/button/button.jsx';
 // FIREBASE AUTH
 import { auth } from '../../../Firebase/Firebase.utils.js';
 // FONTAWESOME ICON
-import {
-  faEye,faStickyNote, faSearch, faTint, 
-  faAddressCard, faSignOutAlt, faCogs
-} from '@fortawesome/free-solid-svg-icons';
+import { faCaretSquareRight, faStickyNote, faSearch, faEye, faPalette, faAddressCard, faSignOutAlt, faCogs} from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = (props) => {
 
@@ -45,15 +42,31 @@ const Sidebar = (props) => {
   }
   
   return (
-    <nav className="sidebar">
-      <Button type="button" handler={null} text="Notes" modifier='' icon={ faStickyNote } />
-      <Button type="button" handler={null} text="Search" modifier='' icon={ faSearch } />
-      <Button type="button" handler={null} text="Themes" modifier='' icon={ faTint } />
-      <Button type="button" handler={null} text="Dyslexia" modifier='' icon={ faEye } />
-      <Button type="button" handler={null} text="About" modifier='' icon={ faAddressCard } />
-      <Button type="button" handler={null} text="Logout" modifier='_bottom' icon={ faSignOutAlt } />
-      <Button type="button" handler={null} text="Configs" modifier='' icon={ faCogs } />
-    </nav>
+      <nav className="sidebar-wrap">
+        <div className="sidebar">
+          <div className="sidebar-item">
+            <Button type="button" handler={null} text="Notes" modifier="" icon={ faStickyNote } />
+          </div>
+          <div className="sidebar-item">
+            <Button type="button" handler={null} text="Search" modifier="" icon={ faSearch } />
+          </div>
+          <div className="sidebar-item">
+            <Button type="button" handler={null} text="Dyslexia" modifier="" icon={ faEye } />
+          </div>
+          <div className="sidebar-item">
+            <Button type="button" handler={null} text="Themes" modifier="" icon={ faPalette } />
+          </div>
+          <div className="sidebar-item">
+            <Button type="button" handler={null} text="About" modifier="" icon={ faAddressCard } />
+          </div>
+          <div className="sidebar-item">
+            <Button type="button" handler={null} text="Logout" modifier="" icon={ faSignOutAlt } />
+          </div>
+          <div className="sidebar-item">
+            <Button type="button" handler={null} text="Settings" modifier="" icon={ faCogs } />
+          </div>
+        </div>
+      </nav>
   )
 }
 
