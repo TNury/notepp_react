@@ -33,6 +33,7 @@
 }
 
 @mixin scrollbar-styles ($color) {
+  // FOR CHROME
   &::-webkit-scrollbar {
     width: .4rem;
 
@@ -45,6 +46,9 @@
       border-radius: 1rem;
     }
   }
+  // FIREFOX
+  scrollbar-color: $accent-secondary $bg-primary;
+  scrollbar-width: thin;
 }
 
 @mixin textarea-styles {
