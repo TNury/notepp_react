@@ -1,4 +1,4 @@
-.not-found-container {
+.not-found-wrap {
   width: 100vw;
   height: 100vh;
   color: $accent-primary;
@@ -6,16 +6,27 @@
   @include flex(row, center, center);
 
   .not-found {
-    @include inner-padding(3rem);
+    @include inner-padding(2rem);
     // FLEXBOX
     @include flex(column, center, center);
+    
+    .error {      
+      margin-bottom: 2rem;
+      // FLEXBOX
+      @include flex(row, center, center);
+      
+      &__text {
+        font-size: 3rem;
+      }
 
-    &__head {
-      font-size: 2.5rem;
+      &__icon {
+        font-size: 3rem;
+        margin-left: 1rem;
+      }
     }
 
     &__text {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
     }
   }
 }
