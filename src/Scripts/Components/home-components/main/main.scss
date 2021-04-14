@@ -84,7 +84,7 @@
 
   .main-container {
     // FLEXBOX
-    @include flex-center-aligned(column, center, center);
+    @include flex(column, center, center);
   }
 
   .container {
