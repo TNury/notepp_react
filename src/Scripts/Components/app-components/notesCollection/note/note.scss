@@ -1,33 +1,31 @@
-// NOTE
 .note {
   height: 5rem;
   padding: 1rem;
-  transition: 300ms;
-  position: relative;
   font-size: 1.2rem;
+  // POSITION
+  position: relative;
+  // TRANSITION
+  transition: 300ms;
 
-  // NOTE TITLE
   &__title {
     @include lineClamp(1);
     margin: 0;
     color: $text-primary;
   }
   
-  // NOTE BODY
   &__body {
     @include lineClamp(3);
     color: $text-secondary;
   }
 
-  // NOTE BUTTON (REVIEW)
   .button {
     @include button-styles;
+    // POSITION
     position: absolute;
     right: .05rem;
     bottom: .05rem;
     padding: .3rem; 
 
-    // NOTE BUTTON ICON
     &__icon {
       pointer-events: none;
     }
@@ -39,7 +37,6 @@
   }
 }
 
-// NOTES DIVIDER
 .notes__divider {
   margin: .5rem;
   border-color: $accent-secondary;
