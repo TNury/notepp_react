@@ -27,9 +27,9 @@ export const Login = () => {
           <span className="divider__line"></span>
         </div>
         <div className="input-group">
-          <label htmlFor="email" className="input-group__item _label">Email</label>
+          <label htmlFor="email" className="input-group__item">Email</label>
           <input id="email" className="input-group__item _input" type="email" placeholder="jon-doe@something.com" required />
-          <label htmlFor="password" className="input-group__item _label">Password</label>
+          <label htmlFor="password" className="input-group__item">Password</label>
           <input id="password" className="input-group__item _input" type="password" placeholder="12345" required />
         </div>
         <div className="button-wrap">
