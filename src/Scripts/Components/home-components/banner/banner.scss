@@ -1,18 +1,17 @@
 .banner-container {
-  // GRID-AREA
-  grid-area: banner;
-  // STYLES
   box-sizing: border-box;
   color: $text-primary;
   background: $bg-secondary;
   border-bottom: 1px solid $text-primary;
+  // GRID-AREA
+  grid-area: banner;
   // FLEXBOX
-  @include flex-center-aligned(column);
+  @include flex-center-aligned(column, center, center);
 
   .banner {
     padding: 1rem;
     // FLEXBOX
-    @include flex-center-aligned(column);
+    @include flex-center-aligned(column, center, center);
   
     &__icon {
       font-size: 7rem;
@@ -27,7 +26,7 @@
   }
 
   .link-group {
-    @include flex-center-aligned(row);
+    @include flex-center-aligned(row, center, center);
 
     &__link {
       @include button-styles;
@@ -41,7 +40,7 @@
         background: $bg-tertiary-hv;
       }
     }
-
+    
     ._left {
       margin-left: 1rem;
     }
