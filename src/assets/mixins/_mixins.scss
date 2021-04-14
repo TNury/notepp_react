@@ -79,6 +79,6 @@
 @mixin flex($direction, $x, $y) {
   display: flex;
   flex-direction: $direction;
-  align-items: center;
-  justify-content: center;
+  align-items: $x;
+  justify-content: $y;
 }
