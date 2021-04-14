@@ -11,7 +11,7 @@ import {
 // COMPONENTS
 import Sidebar from './sidebar/sidebar.jsx';
 import NotesCollection from './notesCollection/notesCollection.jsx';
-import NoteEditor from './noteEditor/noteEditor.component.jsx';
+import NoteEditor from './noteEditor/noteEditor.jsx';
 
 class App extends React.Component {
 
