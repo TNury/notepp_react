@@ -60,7 +60,7 @@ const Sidebar = (props) => {
             <Button type="button" handler={null} text="About" modifier="" icon={ faAddressCard } />
           </div>
           <div className="sidebar-item">
-            <Button type="button" handler={null} text="Logout" modifier="" icon={ faSignOutAlt } />
+            <Button type="button" handler={() => logOut()} text="Logout" modifier="" icon={ faSignOutAlt } />
           </div>
           <div className="sidebar-item">
             <Button type="button" handler={null} text="Settings" modifier="" icon={ faCogs } />
