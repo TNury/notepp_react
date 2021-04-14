@@ -1,25 +1,20 @@
-// HEADER
 .header {
-  // GRID-AREA
-  grid-area: header;
-  // STYLES
   background: inherit;
   border-bottom: 1px solid $accent-primary;
+  // GRID-AREA
+  grid-area: header;
 
-
-  // NAVBAR
   .navbar {
     height: 5rem;
     background: inherit;
     // FLEXBOX
-    @include flex-center-aligned(row);
+    @include flex(row, center, center);
 
     .logo {
       box-sizing: border-box;
-      // CSS POSITION
+      // POSITION
       position: relative;
 
-      // NAVBAR LINK
       &__text {
         color: $accent-primary;
         text-decoration: none;
@@ -28,16 +23,20 @@
         margin-bottom: 1px;
       }
 
-      // LINE
+      /*
+        This is the line that cuts through the logo
+        in the hover animation.
+      */
+
       &__line {
         pointer-events: none;
         width: 9rem;
         border-top: 4px solid $bg-primary;
-        // CSS POSITION
+        // POSITION
         position: absolute;
         top: 1.6rem;
         left: -11rem;
-        // CSS TRANSITION
+        // TRANSITION
         transition: left 600ms 300ms;
       }
 
@@ -45,12 +44,12 @@
         pointer-events: none;
         color: $accent-primary;
         font-size: 2rem;
-        // CSS POSITION
+        // POSITION
         position: absolute;
         top: .5rem;
         left: -2rem;
         transform: rotate(-45deg);
-        // CSS TRANSITION
+        // TRANSITION
         transition: color 300ms 1200ms, transform 300ms 600ms, top 300ms 900ms, left 600ms 300ms;
       }
     }
@@ -67,17 +66,17 @@
       .logo__pencil {
         color: $accent-primary !important;
         transform: none;
-        // CSS POSITION
+        // POSITION
         top: -.2rem;
         left: 8.75rem;
-        // CSS TRANSITION
+        // TRANSITION
         transition: color 300ms, transform 300ms 300ms, top 300ms, left 600ms 600ms;
       }
 
       .logo__line {
-        // CSS POSITION
+        // POSITION
         left: -.2em;
-        // CSS TRANSITION
+        // TRANSITION
         transition: left 600ms 600ms;
       }
 
