@@ -2,15 +2,9 @@
   // GRID-AREA
   grid-area: main;
 
-  /*
-    .container Doesn't need to be center-aligned,
-    so no need to add @include flex mixin
-  */ 
-
   .container {
     // FLEXBOX
-    display: flex;
-    flex-direction: column;
+    @include flex(column, normal, normal);
 
     .column {
       @include inner-padding(1rem);
@@ -89,7 +83,8 @@
 @media only screen and (min-width: 1080px) {
 
   .main-container {
-    @include flex-center-aligned(column);
+    // FLEXBOX
+    @include flex-center-aligned(column, center, center);
   }
 
   .container {
