@@ -42,8 +42,8 @@ class App extends React.Component {
     return (
       <div className="app">
         <Sidebar />
-        <NotesCollection />
-        {/* <NoteEditor /> */}
+        {/* <NotesCollection /> */}
+        <NoteEditor />
       </div>
     )
   }
