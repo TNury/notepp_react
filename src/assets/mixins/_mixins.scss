@@ -76,7 +76,7 @@
   padding: $value;
 }
 
-@mixin flex-center-aligned($direction) {
+@mixin flex($direction, $x, $y) {
   display: flex;
   flex-direction: $direction;
   align-items: center;
