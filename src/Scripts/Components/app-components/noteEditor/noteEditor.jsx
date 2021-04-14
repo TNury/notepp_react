@@ -3,14 +3,13 @@ import React from 'react';
 // REDUX
 import { connect } from 'react-redux';
 import { displayEditor,  onEditorSetNoteTitle, onEditorSetNoteBody } from '../../../Redux/actions/editor-actions/editor-actions.js';
-// FONTAWESOME REACT LIBRARY COMPONENT
+// FONTAWESOME COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// FONTAWESOME LIBRARY DEFAULT ICON
+// FONTAWESOME ICONS
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
-
-// STUDY FIRESTORE ref PROPERTY, THIS IS THE KEY FOR SOMETHING BIG
-
+// COMPONENTS
+import { Button } from '../../reusable-components/button/button.jsx';
 
 class Note extends React.Component {
 
@@ -52,38 +51,29 @@ class Note extends React.Component {
     const { display, title, body } = this.props.reduxProps.noteEditorProp;
 
     return (
+      display
+      ?
       <div className="noteEditor">
-        { 
-          display
-          ?
-          <>
+        <Button type="button" handler={() => this.closeNote()} modifier="" icon={ faTimesCircle } text={null} />
 
-            <button onClick={ () => this.closeNote() } className="noteEditor-close">
-              <FontAwesomeIcon icon={faTimesCircle} />
-            </button>
+        <textarea 
+          className="noteEditor__title" 
+          placeholder="Title"
+          value={title}
+          onChange={(event) => this.handleChange(event)} 
+        />  
+      
+        <textarea 
+          className="noteEditor__body"           
+          placeholder="Write here"
+          value={body}
+          onChange={(event) => this.handleChange(event)}  
+        />
 
-            <textarea 
-              className="noteEditor__title" 
-              placeholder="Title"
-              value={title}
-              onChange={(event) => this.handleChange(event)} 
-            />  
-          
-            <textarea 
-              className="noteEditor__body"           
-              placeholder="Write here"
-              value={body}
-              onChange={(event) => this.handleChange(event)}  
-            />
-
-            <button onClick={() => this.saveNote()} className="noteEditor-save">
-              <FontAwesomeIcon icon={faEdit} />
-            </button>
-          </>
-          :
-          <></>
-        }
+        <Button type="button" handler={() => this.saveNote()} modifier="_save" icon={ faEdit } text={null} />
       </div>
+      :
+      <></>
     )
   }
 
