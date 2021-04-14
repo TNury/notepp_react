@@ -4,7 +4,7 @@
   // POSITION
   position: relative;
   // GRID-AREA
-  grid-area: notesCollection;
+  grid-area: content;
 
   @include scrollbar-styles($accent-secondary);
 

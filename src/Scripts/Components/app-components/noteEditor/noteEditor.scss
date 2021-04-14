@@ -1,17 +1,27 @@
 .noteEditor {
-  width: 70vw;
+  width: 100%;
   height: 100vh;
   background-color: $bg-primary;
   overflow: hidden;
   @include inner-padding(2rem);
+  // GRID AREA
+  grid-area: content;
+  // POSITION
+  position: relative;
 
-  &-close {
+  .button {
     @include button-styles;
     @include special-button-styles;
     // POSITION
     position: absolute;
     top: 0;
     right: 0;
+
+    &:last-child {
+      // POSITION
+      top: auto;
+      bottom: 0;
+    }
   }
 
   &__title {
@@ -22,19 +32,10 @@
   }
 
   &__body {
+    height: 80vh;
     font-size: 1.5rem;
     color: $text-secondary;
-    // THIS NEEDS TO BE FIXED WHEN CREATING THE 
-    // MOBILE VERSION
-    height: 70vh;
     @include textarea-styles;
     @include scrollbar-styles($accent-secondary);
-  }
-
-  &-save {
-    @extend .noteEditor-close;
-    // POSITION
-    top: auto;
-    bottom: 0;
   }
 }
