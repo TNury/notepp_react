@@ -1,4 +1,3 @@
-// LOGIN DIV WRAPPER
 .login-wrapper {
   height: 100vh;
   // GRID
@@ -10,18 +9,15 @@
   ;
   grid-template-rows: 5rem 1fr 5rem;
 
-  // FORM WRAPPER
   .login {
-    // GRID-AREA
-    grid-area: form;
-    // STYLES
     width: 100%;
     margin: 4rem auto;
     color: $text-primary;
     // FLEXBOX
-    @include flex-center-aligned(column);
+    @include flex(column, center, center);
+    // GRID-AREA
+    grid-area: form;
 
-    // LOGIN HEAD
     &__head {
       font-size: 1.8rem;
       margin: 0 0 2rem 0;
@@ -30,9 +26,8 @@
     .button-wrap {
       width: 100%;
       // FLEXBOX
-      @include flex-center-aligned(column);
+      @include flex(column, center, center);
 
-      // BUTTONS
       .button {
         @include button-styles;
         height: 2.5rem;
@@ -40,12 +35,10 @@
         margin: .5rem 0;
         border: 1px solid $accent-primary;
 
-        // BUTTON ICON
         &__icon {
           color: $accent-primary;
         }
 
-        // BUTTON TEXT
         &__text {
           margin-left: .5rem;
           font-size: 1.1rem;
@@ -82,41 +75,35 @@
       
     }
 
-    // DIVIDER
     .divider {
       width: 80%;
       margin: 4rem 0;
-      // CSS POSITION
+      // POSITION
       position: relative;
       // FLEXBOX
       align-self: center;
-      @include flex-center-aligned(column);
+      @include flex(column, center, center);
 
-      // DIVIDER TEXT
       &__text {
         background: $bg-primary;
         padding: 0 1rem;
       }
 
-      // DIVIDER LINE
       &__line {
         width: 100%;
-        display: block;
         border-top: 1px solid $accent-primary;
-        // CSS POSITION 
+        // POSITION 
         position: absolute;
         top: .55rem;
         z-index: -1;
       }
     }
 
-    // INPUTS
     .input-group {
       width: 100%;
       margin-bottom: 1rem;
       // FLEXBOX
-      display: flex;
-      flex-direction: column;
+      @include flex(column, normal, normal);
 
       // LABEL & INPUT SHARED STYLES
       &__item {
@@ -125,7 +112,7 @@
         background: inherit;
       }
 
-      // INPUT
+      // INPUT MODIFIER
       ._input {
         height: 2.5rem;
         color: inherit;
