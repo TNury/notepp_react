@@ -1,22 +1,20 @@
-// NOTE EDITOR
 .noteEditor {
+  display: none;
   width: 70vw;
   height: 100vh;
-  padding: 2rem;
   background-color: $bg-primary;
-  box-sizing: border-box;
   overflow: hidden;
+  @include inner-padding(2rem);
 
-  // EDITOR CLOSE NOTE BUTTON
   &-close {
     @include button-styles;
     @include special-button-styles;
+    // POSITION
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  // OPENED NOTE TITLE
   &__title {
     font-size: 2rem;
     color: $text-primary;
@@ -24,7 +22,6 @@
     @include scrollbar-styles($accent-secondary);
   }
 
-  // OPENED NOTE BODY
   &__body {
     font-size: 1.5rem;
     color: $text-secondary;
@@ -35,9 +32,9 @@
     @include scrollbar-styles($accent-secondary);
   }
 
-  // EDITOR SAVE NOTE BUTTON
   &-save {
     @extend .noteEditor-close;
+    // POSITION
     top: auto;
     bottom: 0;
   }
