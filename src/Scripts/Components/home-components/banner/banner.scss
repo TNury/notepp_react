@@ -6,12 +6,12 @@
   // GRID-AREA
   grid-area: banner;
   // FLEXBOX
-  @include flex-center-aligned(column, center, center);
+  @include flex(column, center, center);
 
   .banner {
     padding: 1rem;
     // FLEXBOX
-    @include flex-center-aligned(column, center, center);
+    @include flex(column, center, center);
   
     &__icon {
       font-size: 7rem;
@@ -26,7 +26,7 @@
   }
 
   .link-group {
-    @include flex-center-aligned(row, center, center);
+    @include flex(row, center, center);
 
     &__link {
       @include button-styles;
