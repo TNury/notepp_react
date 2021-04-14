@@ -30,5 +30,6 @@ Add features:
 
 - Create variables for font-size, transition speed and others if need be.
 - Accelerate transition speed for mobile.
-- Upgrade the mixing `flex-center-aligned` so it receives both `align-items` and `justify-content`;
+- Upgrade the mixing `flex-center-aligned` so it receives both `align-items` and `justify-content`.
+- Review `special-button-styles` mixing.
 
