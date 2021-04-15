@@ -50,7 +50,9 @@ class NotesCollection extends React.Component {
             />
           ))
         }
-        <Button type="button" handler={() => this.newNote() } text={null} modifier="_create" icon={ faPlusCircle } />
+        <div className="button-wrap">
+          <Button type="button" handler={() => this.newNote()} text={null} modifier="_create" icon={faPlusCircle} />
+        </div>
       </div>
     )
   }
