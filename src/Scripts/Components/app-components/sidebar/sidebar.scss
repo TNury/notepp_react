@@ -23,7 +23,6 @@
       width: 100%;
 
       .button {
-        @include button-styles;
         height: 4.5rem;
         width: 100%;
         // FLEXBOX
@@ -32,6 +31,10 @@
 
         &__icon {
           font-size: 2.3rem;
+          /*
+            For some reason, if instead of `min-width` i use
+            width, it causes content jumping.
+          */ 
           min-width: 4.5rem;
         }
 
