@@ -3,8 +3,6 @@ import React from 'react';
 // REDUX
 import { connect } from 'react-redux';
 import { displayEditor,  onEditorSetNoteTitle, onEditorSetNoteBody } from '../../../Redux/actions/editor-actions/editor-actions.js';
-// FONTAWESOME COMPONENT
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // FONTAWESOME ICONS
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
@@ -48,11 +46,9 @@ class Note extends React.Component {
 
   render() {
 
-    const { display, title, body } = this.props.reduxProps.noteEditorProp;
+    const { title, body } = this.props.reduxProps.noteEditorProp;
 
     return (
-      display
-      ?
       <div className="noteEditor">
         <Button type="button" handler={() => this.closeNote()} modifier="" icon={ faTimesCircle } text={null} />
 
@@ -72,12 +68,8 @@ class Note extends React.Component {
 
         <Button type="button" handler={() => this.saveNote()} modifier="_save" icon={ faEdit } text={null} />
       </div>
-      :
-      <></>
     )
   }
-
- 
 }
 
 const mapStoreToProps = (currentStore) => ({
