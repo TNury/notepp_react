@@ -1,34 +1,9 @@
-@mixin button-styles {
-  padding: 0;
-  border: none;
-  background: none;
-  color: $accent-secondary;
-  transition: all .4s;
-
-  &:hover {
-    cursor: pointer;
-    color: $accent-primary;
-  }
-}
-
 @mixin special-button-styles {
   padding: 1rem;
   font-size: 2rem;
   
   svg {
     pointer-events: none;
-  }
-}
-
-@mixin special-outline {
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  &:focus {
-    transform: scale(1.05);
-    color: $accent-primary;
   }
 }
 
