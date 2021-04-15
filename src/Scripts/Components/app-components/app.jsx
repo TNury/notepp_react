@@ -4,10 +4,7 @@ import React from 'react';
 import { db } from '../../Firebase/Firebase.utils.js';
 // REDUX
 import { connect } from 'react-redux';
-import { 
-  setNotesCollection, 
-  setNotesCollectionRef 
-} from '../../Redux/actions/notes-collection-actions/notes-collection-actions.js';
+import { setNotesCollection, setNotesCollectionRef } from '../../Redux/actions/notes-collection-actions/notes-collection-actions.js';
 // COMPONENTS
 import Sidebar from './sidebar/sidebar.jsx';
 import NotesCollection from './notesCollection/notesCollection.jsx';
@@ -16,6 +13,10 @@ import NoteEditor from './noteEditor/noteEditor.jsx';
 class App extends React.Component {
 
   componentDidMount() {
+
+    window.onresize = () => {
+      
+    }
 
     const { currentUserProp } = this.props.reduxProps;
     const { setNotesCollection, setNotesCollectionRef } = this.props.reduxActions;
@@ -39,11 +40,21 @@ class App extends React.Component {
   }
 
   render() {
+
+    const { display } = this.props.reduxProps.noteEditorProp;
+
     return (
       <div className="app">
         <Sidebar />
-        {/* <NotesCollection /> */}
-        <NoteEditor />
+        <div className="app-root">
+          {
+            display
+            ?
+            <NoteEditor />
+            :
+            <NotesCollection />
+          }
+        </div>
       </div>
     )
   }
@@ -52,7 +63,8 @@ class App extends React.Component {
 // PROPS
 const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    currentUserProp: currentStore.userReducer.user
+    currentUserProp: currentStore.userReducer.user,
+    noteEditorProp: currentStore.noteEditorReducer.noteEditor
   }
 })
 
