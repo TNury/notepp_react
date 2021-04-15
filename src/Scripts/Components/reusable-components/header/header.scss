@@ -16,7 +16,7 @@
       position: relative;
 
       &__text {
-        color: $accent-primary;
+        color: $text-primary;
         text-decoration: none;
         font-size: 2.5rem;
         font-family: Futura Medium;
@@ -36,7 +36,7 @@
         position: absolute;
         top: 1.6rem;
         left: -11rem;
-        // TRANSITION
+        // TRANSITION ON HOVER OUT
         transition: left 600ms 300ms;
       }
 
@@ -49,8 +49,12 @@
         top: .5rem;
         left: -2rem;
         transform: rotate(-45deg);
-        // TRANSITION
-        transition: color 300ms 1200ms, transform 300ms 600ms, top 300ms 900ms, left 600ms 300ms;
+        // TRANSITION ON HOVER OUT
+        transition: 
+          color 300ms 1200ms, 
+          transform 300ms 600ms, 
+          top 300ms 900ms, 
+          left 600ms 300ms;
       }
     }
   }
@@ -59,9 +63,7 @@
 @media only screen and (min-width: 1080px) {
   .logo {
     
-    &__pencil {
-      color: $accent-secondary !important;
-    }
+    &__pencil {color: $accent-secondary !important}
 
     &:hover {
 
@@ -71,14 +73,18 @@
         // POSITION
         top: -.2rem;
         left: 8.75rem;
-        // TRANSITION
-        transition: color 300ms, transform 300ms 300ms, top 300ms, left 600ms 600ms;
+        // TRANSITION ON HOVER IN
+        transition: 
+          color 300ms, 
+          transform 300ms 300ms, 
+          top 300ms, 
+          left 600ms 600ms;
       }
 
       .logo__line {
         // POSITION
         left: -.2em;
-        // TRANSITION
+        // TRANSITION ON HOVER IN
         transition: left 600ms 600ms;
       }
 
