@@ -19,7 +19,6 @@
   }
 
   .button {
-    @include button-styles;
     // POSITION
     position: absolute;
     right: .05rem;
