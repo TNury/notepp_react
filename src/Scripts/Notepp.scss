@@ -5,7 +5,7 @@
 */
 
 // VARIABLES
-@import '../assets/variables/_colors.scss';
+@import '../assets/variables/_variables.scss';
 // NORMALIZER
 @import '../assets/normalize/normalize.scss';
 // MIXINS
@@ -34,6 +34,7 @@
 */
 
 // REUSABLE
+@import './Components/reusable-components/button/button.scss';
 @import './Components/reusable-components/header/header.scss';
 @import './Components/reusable-components/footer/footer.scss';
 // HOME-PAGE
