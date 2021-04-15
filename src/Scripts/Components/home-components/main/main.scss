@@ -36,7 +36,7 @@
 
         &__link {
           color: $text-primary;
-          text-decoration: underline;
+          text-decoration: underline solid $accent-primary;
           margin-right: .3rem;
         }
       }
