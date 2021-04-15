@@ -2,7 +2,7 @@
   box-sizing: border-box;
   color: $text-primary;
   background: $bg-secondary;
-  border-bottom: 1px solid $text-primary;
+  border-bottom: 1px solid $accent-primary;
   // GRID-AREA
   grid-area: banner;
   // FLEXBOX
@@ -29,12 +29,12 @@
     @include flex(row, center, center);
 
     &__link {
-      @include button-styles;
       padding: 1rem;
       text-decoration: none;
       color: $text-primary;
-      border: 1px solid $text-primary;
+      border: 1px solid $accent-primary;
       background: $bg-tertiary;
+      transition: background 300ms;
 
       &:hover {
         background: $bg-tertiary-hv;
