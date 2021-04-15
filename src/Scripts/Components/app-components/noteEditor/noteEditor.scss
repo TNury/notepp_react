@@ -4,13 +4,10 @@
   background-color: $bg-primary;
   overflow: hidden;
   @include inner-padding(2rem);
-  // GRID AREA
-  grid-area: content;
   // POSITION
   position: relative;
 
   .button {
-    @include button-styles;
     @include special-button-styles;
     // POSITION
     position: absolute;
@@ -39,3 +36,10 @@
     @include scrollbar-styles($accent-secondary);
   }
 }
+
+
+// @media only screen and (min-width: 768px) {
+//   .noteEditor {
+//     grid-area: noteEditor;
+//   }
+// }
