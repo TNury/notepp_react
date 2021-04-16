@@ -15,25 +15,25 @@ import { font } from './reducers/fontReducer.js';
               
   - user: 
 
-    1. Notepp.script.jsx
-    2. header.component.jsx
-    3. app.component.jsx
-    4. notes.component.jsx
-    5. notes-prev.component.jsx
+    1. Notepp.jsx
+    2. header.jsx
+    3. app.jsx
+    4. notes.jsx
+    5. notes-prev.jsx
 
   - notesCollection
 
-    1. app.component.jsx
-    2. notes.component.jsx
-    3. note.component.jsx
+    1. app.jsx
+    2. notes.jsx
+    3. note.jsx
 
   - noteEditor
 
-    1. note.component.jsx
+    1. note.jsx
   
   - font:
   
-    1. sidebar.component.jsx
+    1. sidebar.jsx
 
 ================================================
 */
