@@ -20,6 +20,10 @@ Add features:
 
 - Login with email and password.
 
+### On `button.jsx`
+
+- Add conditional render to the `span`tag, only render it if the `text` prop isn't null.
+
 ### On  sidebar's folder
 
 - Create a folder called **handlers**, in there you will place the handlers to each button in `sidebar.component.jsx`.
