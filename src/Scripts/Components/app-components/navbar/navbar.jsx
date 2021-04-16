@@ -8,9 +8,9 @@ import { Button } from '../../reusable-components/button/button.jsx';
 // FIREBASE AUTH
 import { auth } from '../../../Firebase/Firebase.utils.js';
 // FONTAWESOME ICON
-import { faCaretSquareRight, faStickyNote, faSearch, faEye, faPalette, faAddressCard, faSignOutAlt, faCogs} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const Sidebar = (props) => {
+const Navbar = (props) => {
 
   function dyslexia() {
 
@@ -42,29 +42,15 @@ const Sidebar = (props) => {
   }
   
   return (
-      <nav className="sidebar-wrap">
-        <div className="sidebar">
-          <div className="sidebar-item">
-            <Button type="button" handler={null} text="Notes" modifier="" icon={ faStickyNote } />
+      <nav className="navbar">
+        <div className="navbar-components">
+          <Button type="button" handler={null} text={null} modifier="" icon={ faBars } />
+          {/* <PLACEHOLDER> */}
+          <div className="logo">
+            <span>Notepp</span>
           </div>
-          <div className="sidebar-item">
-            <Button type="button" handler={null} text="Search" modifier="" icon={ faSearch } />
-          </div>
-          <div className="sidebar-item">
-            <Button type="button" handler={null} text="Dyslexia" modifier="" icon={ faEye } />
-          </div>
-          <div className="sidebar-item">
-            <Button type="button" handler={null} text="Themes" modifier="" icon={ faPalette } />
-          </div>
-          <div className="sidebar-item">
-            <Button type="button" handler={null} text="About" modifier="" icon={ faAddressCard } />
-          </div>
-          <div className="sidebar-item">
-            <Button type="button" handler={() => logOut()} text="Logout" modifier="" icon={ faSignOutAlt } />
-          </div>
-          <div className="sidebar-item">
-            <Button type="button" handler={null} text="Settings" modifier="" icon={ faCogs } />
-          </div>
+          {/* </PLACEHOLDER> */}
+          <Button type="button" handler={null} text={null} modifier="" icon={ faSearch } />
         </div>
       </nav>
   )
@@ -84,5 +70,5 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStoreToProps, mapDispatchToProps)(Sidebar);
+export default connect(mapStoreToProps, mapDispatchToProps)(Navbar);
 
