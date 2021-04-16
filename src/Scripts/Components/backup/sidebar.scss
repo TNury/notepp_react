@@ -1,0 +1,77 @@
+.sidebar-wrap {
+  width: 4.5rem;
+  height: 100vh;
+  background: $bg-secondary;
+  border-right: 1px solid $accent-primary;
+  margin-right: -1px;
+   // GRID AREA
+  grid-area: sidebar;
+  // POSITION
+  position: fixed;
+  z-index: 1;
+  // TRANSITION
+  transition: width 200ms ease;
+
+  .sidebar {
+    height: 100%;  
+    // FLEXBOX
+    @include flex(column, center, normal);
+    // POSITION
+    position: relative;
+
+    &-item {
+      width: 100%;
+
+      .button {
+        height: 4.5rem;
+        width: 100%;
+        // FLEXBOX
+        @include flex(row, center, normal);
+      
+
+        &__icon {
+          font-size: 2.3rem;
+          /*
+            For some reason, if instead of `min-width` i use
+            width, it causes content jumping.
+          */ 
+          min-width: 4.5rem;
+        }
+
+        &__text {
+          display: none;
+          visibility: hidden;
+          margin-left: 3rem;
+        }
+
+        &:hover {
+          background: $bg-primary;
+        }
+      }
+
+      &:nth-last-child(2) {
+        margin-top: auto;
+      }
+    }
+  }
+
+  &:hover {
+    width: 15rem;
+
+    .button__text {
+      display: block;
+      animation: fade-in 300ms;
+      visibility: visible;
+    }
+  }
+
+  // FADE-IN ANIMATION
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
