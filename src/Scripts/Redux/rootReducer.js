@@ -1,12 +1,10 @@
 // REDUX FUNCTION
 import { combineReducers } from 'redux';
-// OUR REDUCERS
+// REDUCERS
 import { user } from './reducers/userReducer.js';
 import { notesCollection } from './reducers/notesCollectionReducer.js';
 import { noteEditor } from './reducers/noteEditorReducer.js';
 import { font } from './reducers/fontReducer.js';
-
-
 
 /*
 ================================================
@@ -37,7 +35,6 @@ import { font } from './reducers/fontReducer.js';
 
 ================================================
 */
-
 
 export default combineReducers ({
   userReducer: user,
