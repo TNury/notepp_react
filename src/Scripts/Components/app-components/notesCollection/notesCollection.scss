@@ -1,10 +1,11 @@
 .notes-collection {
   overflow: auto;
   background: $bg-primary;
-  // POSITION
-  position: relative;
-  grid-area: notesCollection;
   border-right: 1px solid $accent-primary;
+   // POSITION
+  position: relative;
+  // GRID-AREA
+  grid-area: notesCollection;
 
   @include scrollbar-styles($accent-secondary);
 
