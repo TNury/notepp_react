@@ -1,5 +1,4 @@
 @mixin special-button-styles {
-  padding: 1rem;
   font-size: 2rem;
   
   svg {
@@ -27,7 +26,6 @@
 }
 
 @mixin textarea-styles {
-  width: 100%;
   resize: none;
   border: none;  
   outline: none;
