@@ -49,10 +49,11 @@
 @import './Components/not-found-component/notFound.scss';
 // APP
 @import './Components/app-components/app.scss';
-@import './Components/app-components/sidebar/sidebar.scss';
+@import './Components/app-components/navbar/navbar.scss';
 @import './Components/app-components/notesCollection/notesCollection.scss';
 @import './Components/app-components/notesCollection/note/note.scss';
 @import './Components/app-components/noteEditor/noteEditor.scss';
+@import './Components/app-components/bottom-menu/bottom-menu.scss';
 
 /* 
 ==================================================
@@ -68,7 +69,7 @@
 // BODY DEFAULT
 body {
   background: $bg-primary;
-  font-family: Gill Sans;
+  font-family: Iosevka Light;
   &::-webkit-scrollbar {
     display: none;
   }
