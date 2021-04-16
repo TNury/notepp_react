@@ -19,11 +19,11 @@
   }
 
   .button {
+    bottom: .05rem;
+    padding: .3rem;
     // POSITION
     position: absolute;
     right: .05rem;
-    bottom: .05rem;
-    padding: .3rem; 
 
     &__icon {
       pointer-events: none;
