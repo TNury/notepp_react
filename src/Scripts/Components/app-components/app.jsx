@@ -8,7 +8,7 @@ import { setNotesCollection, setNotesCollectionRef } from '../../Redux/actions/n
 // COMPONENTS
 import Sidebar from './sidebar/sidebar.jsx';
 import NotesCollection from './notesCollection/notesCollection.jsx';
-import NoteEditor from './noteEditor/noteEditor.jsx';
+import NotesEditor from './notesEditor/notesEditor.jsx';
 
 class App extends React.Component {
 
@@ -51,8 +51,9 @@ class App extends React.Component {
 
   render() {
 
-    const displayEditor = this.props.reduxProps.noteEditorProp.display;
-
+    const displayEditor = this.props.reduxProps.displayEditorProp;
+    console.log(displayEditor);
+    
     return (
       <div className="app">
         <Sidebar />
@@ -60,7 +61,7 @@ class App extends React.Component {
         {
           displayEditor
           ?
-          <NoteEditor />
+          <NotesEditor />
           :
           <></>
         }
@@ -73,7 +74,7 @@ class App extends React.Component {
 const mapStoreToProps = (currentStore) => ({
   reduxProps: {
     currentUserProp: currentStore.userReducer.user,
-    noteEditorProp: currentStore.noteEditorReducer.noteEditor,
+    displayEditorProp: currentStore.notesEditorReducer.notesEditor.display
   }
 })
 
