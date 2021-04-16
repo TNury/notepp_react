@@ -9,7 +9,7 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 // COMPONENTS
 import { Button } from '../../reusable-components/button/button.jsx';
 
-class Note extends React.Component {
+class NotesEditor extends React.Component {
 
   closeNote() {
     this.props.reduxActions.displayEditor(false);
@@ -35,7 +35,7 @@ class Note extends React.Component {
 
     const { onEditorSetNoteTitle, onEditorSetNoteBody } = this.props.reduxActions;
 
-    event.target.className === 'noteEditor__title'
+    event.target.className === 'notesEditor__title'
       ?
     onEditorSetNoteTitle(event.target.value)
       :
@@ -46,14 +46,14 @@ class Note extends React.Component {
 
   render() {
 
-    const { title, body } = this.props.reduxProps.noteEditorProp;
+    const { title, body } = this.props.reduxProps.notesEditorProps;
 
     return (
-      <div className='noteEditor'>
+      <div className='notesEditor'>
         {/* <Button type="button" handler={() => this.closeNote()} modifier="" icon={ faTimesCircle } text={null} /> */}
 
         <input 
-          className="noteEditor__title"
+          className="notesEditor__title"
           type="text" 
           placeholder="Title"
           value={title}
@@ -61,7 +61,7 @@ class Note extends React.Component {
         />  
       
         <textarea 
-          className="noteEditor__body"           
+          className="notesEditor__body"           
           placeholder="Write here"
           value={body}
           onChange={(event) => this.handleChange(event)}  
@@ -75,7 +75,7 @@ class Note extends React.Component {
 
 const mapStoreToProps = (currentStore) => ({
   reduxProps: {
-    noteEditorProp: currentStore.noteEditorReducer.noteEditor,
+    notesEditorProps: currentStore.notesEditorReducer.notesEditor,
     notesCollectionProps: currentStore.notesCollectionReducer.notesCollection
   }
 })
@@ -88,4 +88,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 })
 
-export default connect(mapStoreToProps, mapDispatchToProps)(Note);
+export default connect(mapStoreToProps, mapDispatchToProps)(NotesEditor);

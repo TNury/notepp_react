@@ -1,10 +1,10 @@
-.noteEditor {
+.notesEditor {
   background-color: $bg-primary;
   overflow: hidden;
   // POSITION
   position: relative;
   // GRID
-  grid-area: noteEditor;
+  grid-area: notesEditor;
   display: grid;
   grid-template-areas: 
     'title'
