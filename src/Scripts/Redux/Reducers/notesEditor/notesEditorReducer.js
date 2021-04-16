@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  noteEditor: {
+  notesEditor: {
     display: false,
     id: 0,
     title: '',
@@ -7,37 +7,37 @@ const INITIAL_STATE = {
   }
 }
 
-export const noteEditor = (currentState = INITIAL_STATE, action) => {
+export const notesEditor = (currentState = INITIAL_STATE, action) => {
   switch(action.type) {
     case 'DISPLAY_NOTE':
       return {
         ...currentState,
-        noteEditor: {
-          ...currentState.noteEditor,
+        notesEditor: {
+          ...currentState.notesEditor,
           display: action.payload
         }
       }
     case 'SET_NOTE_ID':
       return {
         ...currentState,
-        noteEditor: {
-          ...currentState.noteEditor,
+        notesEditor: {
+          ...currentState.notesEditor,
           id: action.payload
         }
       }
     case 'SET_NOTE_TITLE':
       return {
         ...currentState,
-        noteEditor: {
-          ...currentState.noteEditor,
+        notesEditor: {
+          ...currentState.notesEditor,
           title: action.payload
         }
       }
     case 'SET_NOTE_BODY':
       return {
         ...currentState,
-        noteEditor: {
-          ...currentState.noteEditor,
+        notesEditor: {
+          ...currentState.notesEditor,
           body: action.payload
         }
       }
