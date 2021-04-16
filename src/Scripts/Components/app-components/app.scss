@@ -5,44 +5,8 @@
   position: relative;
   // GRID
   display: grid;
-  grid-template-areas: 
-    'sidebar'
-    'test-area'
-  ;
-  grid-template-columns: 1fr;
-  grid-template-rows: 4rem 1fr;
-}
-
-h1 {
-  grid-area: head;
-  color: white;
-}
-
-.test-area {
-  grid-area: test-area;
-  display: grid;
   grid-template-areas:
-    'content'
+    'sidebar notesCollection noteEditor'
   ;
-  grid-template-columns: 1fr;
-}
-
-@media only screen and (min-width: 768px) {
-  .test-area {
-    grid-template-areas:
-      'notesCollection noteEditor'
-    ;
-    grid-template-columns: 15rem 1fr;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .test-area {
-    grid-template-columns: 23rem 1fr;
-  }
-}
-
-
-.placeholder {
-  border-bottom: solid 1px white;
+  grid-template-columns: 5rem 20rem 1fr;
 }

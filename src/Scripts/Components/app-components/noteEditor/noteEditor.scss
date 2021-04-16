@@ -4,16 +4,16 @@
   // POSITION
   position: relative;
   // GRID
-  grid-area: content;
+  grid-area: noteEditor;
   display: grid;
   grid-template-areas: 
     'title'
     'body'
   ;
   grid-template-rows: 4rem 1fr;
+  @include inner-padding(1rem);
 
   .button {
-    // margin-left: 1rem;
     // GRID-AREA
     grid-area: close-note;
 
@@ -23,7 +23,6 @@
 
     &:last-child {
       // GRID-AREA
-      // margin: 0;
       grid-area: save-note;
     }
   }
@@ -43,12 +42,5 @@
     color: $text-secondary;
     @include textarea-styles;
     @include scrollbar-styles($accent-secondary);
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .noteEditor {
-    grid-area: noteEditor;
-    @include inner-padding(2rem 0 0 2rem);
   }
 }

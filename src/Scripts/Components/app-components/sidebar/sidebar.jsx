@@ -8,7 +8,7 @@ import { Button } from '../../reusable-components/button/button.jsx';
 // FIREBASE AUTH
 import { auth } from '../../../Firebase/Firebase.utils.js';
 // FONTAWESOME ICON
-import { faCaretSquareRight, faStickyNote, faSearch, faEye, faPalette, faAddressCard, faSignOutAlt, faCogs} from '@fortawesome/free-solid-svg-icons';
+import { faStickyNote, faSearch, faEye, faPalette, faAddressCard, faSignOutAlt, faCogs} from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = (props) => {
 

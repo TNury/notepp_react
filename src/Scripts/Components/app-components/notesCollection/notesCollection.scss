@@ -3,7 +3,8 @@
   background: $bg-primary;
   // POSITION
   position: relative;
-  grid-area: content;
+  grid-area: notesCollection;
+  border-right: 1px solid $accent-primary;
 
   @include scrollbar-styles($accent-secondary);
 
@@ -17,12 +18,5 @@
       @include special-button-styles;
     }
 
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .notes-collection {
-    grid-area: notesCollection;
-    border-right: 1px solid $accent-primary;
   }
 }

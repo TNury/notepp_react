@@ -6,11 +6,9 @@ import { db } from '../../Firebase/Firebase.utils.js';
 import { connect } from 'react-redux';
 import { setNotesCollection, setNotesCollectionRef } from '../../Redux/actions/notes-collection-actions/notes-collection-actions.js';
 // COMPONENTS
-import Sidebar from './navbar/navbar.jsx';
+import Sidebar from './sidebar/sidebar.jsx';
 import NotesCollection from './notesCollection/notesCollection.jsx';
 import NoteEditor from './noteEditor/noteEditor.jsx';
-import { RudderNav } from './rudder-nav/rudder-nav.jsx';
-
 
 class App extends React.Component {
 
@@ -58,9 +56,14 @@ class App extends React.Component {
     return (
       <div className="app">
         <Sidebar />
-        <div className="test-area">
-          <NotesCollection />
-        </div>
+        <NotesCollection />
+        {
+          displayEditor
+          ?
+          <NoteEditor />
+          :
+          <></>
+        }
       </div>
     )
   }
@@ -70,7 +73,7 @@ class App extends React.Component {
 const mapStoreToProps = (currentStore) => ({
   reduxProps: {
     currentUserProp: currentStore.userReducer.user,
-    noteEditorProp: currentStore.noteEditorReducer.noteEditor
+    noteEditorProp: currentStore.noteEditorReducer.noteEditor,
   }
 })
 
