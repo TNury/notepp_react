@@ -1,6 +1,5 @@
 .notesEditor {
   background-color: $bg-primary;
-  overflow: hidden;
   // POSITION
   position: relative;
   // GRID
@@ -11,7 +10,7 @@
     'body'
   ;
   grid-template-rows: 4rem 1fr;
-  @include inner-padding(1rem);
+  @include inner-padding(2rem);
 
   .button {
     // GRID-AREA
@@ -29,8 +28,9 @@
 
   &__title {
     grid-area: title;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: $text-primary;
+    // UPDATE THIS MIXIN'S NAME
     @include textarea-styles;
     @include scrollbar-styles($accent-secondary);
   }
@@ -38,7 +38,7 @@
   &__body {
     grid-area: body;
     height: 80vh;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     color: $text-secondary;
     @include textarea-styles;
     @include scrollbar-styles($accent-secondary);
