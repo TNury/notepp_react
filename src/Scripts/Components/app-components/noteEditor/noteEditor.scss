@@ -1,38 +1,54 @@
 .noteEditor {
-  width: 100%;
-  height: 100vh;
   background-color: $bg-primary;
   overflow: hidden;
-  @include inner-padding(2rem);
   // POSITION
   position: relative;
+  // GRID
+  grid-area: content;
+  display: grid;
+  grid-template-areas: 
+    'title'
+    'body'
+  ;
+  grid-template-rows: 4rem 1fr;
 
   .button {
-    @include special-button-styles;
-    // POSITION
-    position: absolute;
-    top: 0;
-    right: 0;
+    // margin-left: 1rem;
+    // GRID-AREA
+    grid-area: close-note;
+
+    &__icon {
+      font-size: 2rem;
+    }
 
     &:last-child {
-      // POSITION
-      top: auto;
-      bottom: 0;
+      // GRID-AREA
+      // margin: 0;
+      grid-area: save-note;
     }
   }
 
   &__title {
-    font-size: 2rem;
+    grid-area: title;
+    font-size: 1.7rem;
     color: $text-primary;
     @include textarea-styles;
     @include scrollbar-styles($accent-secondary);
   }
 
   &__body {
+    grid-area: body;
     height: 80vh;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: $text-secondary;
     @include textarea-styles;
     @include scrollbar-styles($accent-secondary);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .noteEditor {
+    grid-area: noteEditor;
+    @include inner-padding(2rem 0 0 2rem);
   }
 }

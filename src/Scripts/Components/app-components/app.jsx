@@ -6,17 +6,17 @@ import { db } from '../../Firebase/Firebase.utils.js';
 import { connect } from 'react-redux';
 import { setNotesCollection, setNotesCollectionRef } from '../../Redux/actions/notes-collection-actions/notes-collection-actions.js';
 // COMPONENTS
-import Sidebar from './sidebar/sidebar.jsx';
+import Sidebar from './navbar/navbar.jsx';
 import NotesCollection from './notesCollection/notesCollection.jsx';
 import NoteEditor from './noteEditor/noteEditor.jsx';
+import { RudderNav } from './rudder-nav/rudder-nav.jsx';
+
 
 class App extends React.Component {
 
   componentDidMount() {
 
-    window.onresize = () => {
-      
-    }
+    // this.detectDevice();
 
     const { currentUserProp } = this.props.reduxProps;
     const { setNotesCollection, setNotesCollectionRef } = this.props.reduxActions;
@@ -39,21 +39,27 @@ class App extends React.Component {
 
   }
 
+  detectDevice() {
+
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+
+
+    } else {
+
+
+    }
+
+  }
+
   render() {
 
-    const { display } = this.props.reduxProps.noteEditorProp;
+    const displayEditor = this.props.reduxProps.noteEditorProp.display;
 
     return (
       <div className="app">
         <Sidebar />
-        <div className="app-root">
-          {
-            display
-            ?
-            <NoteEditor />
-            :
-            <NotesCollection />
-          }
+        <div className="test-area">
+          <NotesCollection />
         </div>
       </div>
     )

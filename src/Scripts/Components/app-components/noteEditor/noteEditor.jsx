@@ -49,11 +49,12 @@ class Note extends React.Component {
     const { title, body } = this.props.reduxProps.noteEditorProp;
 
     return (
-      <div className="noteEditor">
-        <Button type="button" handler={() => this.closeNote()} modifier="" icon={ faTimesCircle } text={null} />
+      <div className='noteEditor'>
+        {/* <Button type="button" handler={() => this.closeNote()} modifier="" icon={ faTimesCircle } text={null} /> */}
 
-        <textarea 
-          className="noteEditor__title" 
+        <input 
+          className="noteEditor__title"
+          type="text" 
           placeholder="Title"
           value={title}
           onChange={(event) => this.handleChange(event)} 
@@ -66,7 +67,7 @@ class Note extends React.Component {
           onChange={(event) => this.handleChange(event)}  
         />
 
-        <Button type="button" handler={() => this.saveNote()} modifier="_save" icon={ faEdit } text={null} />
+        {/* <Button type="button" handler={() => this.saveNote()} modifier="" icon={ faEdit } text={null} /> */}
       </div>
     )
   }

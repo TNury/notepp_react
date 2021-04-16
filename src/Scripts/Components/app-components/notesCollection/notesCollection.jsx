@@ -37,7 +37,7 @@ class NotesCollection extends React.Component {
     const notes = this.props.reduxProps.notesCollectionProps.docs;
     
     return (
-      <div onClick={() => this.closeNote()} className="notes-collection">
+      <div onClick={() => this.closeNote()} className='notes-collection'>
         {
           notes.map(({ id, title, body }, index) => (
             <Note 
@@ -50,9 +50,9 @@ class NotesCollection extends React.Component {
             />
           ))
         }
-        <div className="button-wrap">
+        {/* <div className="button-wrap">
           <Button type="button" handler={() => this.newNote()} text={null} modifier="" icon={faPlusCircle} />
-        </div>
+        </div> */}
       </div>
     )
   }
