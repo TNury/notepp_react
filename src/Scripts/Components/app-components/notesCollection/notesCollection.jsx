@@ -27,22 +27,27 @@ class NotesCollection extends React.Component {
   }
 
   render() {
-    const notes = this.props.reduxProps.notesCollectionProps.docs;
+    const notesArray = this.props.reduxProps.notesCollectionProps.docs;
     
     return (
-      <div className='notes-collection'>
-        {
-          notes.map(({ id, title, body }, index) => (
-            <Note 
-              key={index}
-              drilledProps={{
-                id: id,
-                title: title,
-                body: body
-              }} 
-            />
-          ))
-        }
+      <div className="notes-collection">
+        {/* <div className="testing">
+          <h1>Notes</h1>
+        </div> */}
+        {/* <div> */}
+          {
+            notesArray.map(({ id, title, body }, index) => (
+              <Note
+                key={ index }
+                drilledProps={{
+                  id: id,
+                  title: title,
+                  body: body
+                }}
+              />
+            ))
+          }
+        {/* </div> */}
         {/* <div className="button-wrap">
           <Button type="button" handler={() => this.newNote()} text={null} modifier="" icon={faPlusCircle} />
         </div> */}
