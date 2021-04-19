@@ -52,19 +52,18 @@ class App extends React.Component {
   render() {
 
     const displayEditor = this.props.reduxProps.displayEditorProp;
-    console.log(displayEditor);
     
     return (
       <div className="app">
         <Sidebar />
         <NotesCollection />
-        {
+        {/* {
           displayEditor
           ?
           <NotesEditor />
           :
           <></>
-        }
+        } */}
       </div>
     )
   }
