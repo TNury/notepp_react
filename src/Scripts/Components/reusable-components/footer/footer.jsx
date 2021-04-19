@@ -1,6 +1,16 @@
 
 
 export const Footer = () => {
+
+  /*
+  ======================================
+        THIS COMPONENT IS USED IN
+
+    1. home.jsx
+    2. login.jsx
+
+  ======================================
+  */
   
   return (
     <footer className="footer">
