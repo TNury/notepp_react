@@ -1,5 +1,5 @@
 .note {
-  height: 5rem;
+  height: 7rem;
   padding: 1rem;
   font-size: 1.2rem;
   // POSITION
@@ -8,14 +8,15 @@
   transition: 300ms;
 
   &__title {
-    @include lineClamp(1);
     margin: 0;
     color: $text-primary;
+    // font-size: 1.5rem;
+    @include lineClamp(1);
   }
   
   &__body {
-    @include lineClamp(3);
     color: $text-secondary;
+    @include lineClamp(3);
   }
 
   .button {
