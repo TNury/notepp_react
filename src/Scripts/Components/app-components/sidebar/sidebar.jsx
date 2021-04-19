@@ -45,25 +45,25 @@ const Sidebar = (props) => {
       <nav className="sidebar-wrap">
         <div className="sidebar">
           <div className="sidebar-item">
-            <Button type="button" handler={null} text="Notes" modifier="" icon={ faStickyNote } />
+          <Button handler={ null }  icon={faStickyNote} modifier={ null } text="Notes" type="button" />
           </div>
           <div className="sidebar-item">
-            <Button type="button" handler={null} text="Search" modifier="" icon={ faSearch } />
+            <Button handler={ null }   icon={ faSearch } modifier={ null } text="Search" type="button" />
           </div>
           <div className="sidebar-item">
-            <Button type="button" handler={null} text="Dyslexia" modifier="" icon={ faEye } />
+            <Button handler={ null }   icon={ faEye } modifier={ null } text="Dyslexia" type="button" />
           </div>
           <div className="sidebar-item">
-            <Button type="button" handler={null} text="Themes" modifier="" icon={ faPalette } />
+            <Button handler={ null }   icon={ faPalette } modifier={ null } text="Themes" type="button" />
           </div>
           <div className="sidebar-item">
-            <Button type="button" handler={null} text="About" modifier="" icon={ faAddressCard } />
+            <Button handler={ null }   icon={ faAddressCard } modifier={ null } text="About" type="button" />
           </div>
           <div className="sidebar-item">
-            <Button type="button" handler={() => logOut()} text="Logout" modifier="" icon={ faSignOutAlt } />
+            <Button handler={ null } icon={ faSignOutAlt }  modifier={ null } text="Logout"  type="button" />
           </div>
           <div className="sidebar-item">
-            <Button type="button" handler={null} text="Settings" modifier="" icon={ faCogs } />
+            <Button handler={ null } icon={ faCogs } modifier={ null } text="Settings" type="button" />
           </div>
         </div>
       </nav>
