@@ -11,6 +11,8 @@ import {
 // FONTAWESOME REACT LIBRARY COMPONENT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
+// COMPONENTS
+import { Button } from '../../../reusable-components/button/button.jsx';
 
 
 class Note extends React.Component {
@@ -48,6 +50,8 @@ class Note extends React.Component {
       onEditorSetNoteBody
     } = this.props.reduxActions;
 
+    // MAYBE REFACTOR THIS
+
     displayEditor(true);
     onEditorSetNoteId(id);
     onEditorSetNoteTitle(title);
@@ -58,16 +62,18 @@ class Note extends React.Component {
   render() {
 
     const { title, body } = this.props.drilledProps;
-    // REVIEW THE NECESSITY OF THE DIV ABOVE BUTTON
+
     return(
       <>  
         <div onClick={ (event) => this.renderNote(event) } className="note">
           <p className="note__title">{title}</p>
           <p className="note__body">{body}</p>
           {/* USE REUSABLE BUTTON COMPONENT HERE AS WELL */}
-          <button onClick={ (event) => this.deleteNote(event) } className="button">
+          {/* <button onClick={ (event) => this.deleteNote(event) } className="button">
             <FontAwesomeIcon className="button__icon" icon={ faMinusCircle } />
-          </button>
+          </button> */}
+          <Button  handler={(event) => this.deleteNote(event)} icon={ faMinusCircle } text={ null } modifier={ null }  type="button" />
+
         </div>
         <hr className="notes__divider" />
       </>
